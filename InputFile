@@ -1,0 +1,9 @@
+ALG:             		ON
+AGM:             		ON
+Geometry_Infomation_Filename:	GeoInfo
+ALG_Output_Filename:		ALG_Output
+AGM_Output_Filename:		AGM_Result
+GMRES_Maximum_iteration:        20000
+GMRES_Tolerance:                1.0E-13
+GMRES_Krylov_dimension:         600
+The_number_of_iterations:       1
