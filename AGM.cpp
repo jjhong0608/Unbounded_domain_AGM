@@ -1,5 +1,5 @@
 // Axial Line Generator Hear files
-#include "ALG_Header/AXLGEN.h"
+#include "Header/AXLGEN.h"
 
 int main(int argc, char const *argv[]) {
   int    krylov_dim, max_itr, nIter;

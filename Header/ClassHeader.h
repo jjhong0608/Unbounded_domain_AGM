@@ -43,6 +43,9 @@ class Section;
 class Region;
 class AxialLine;
 class Thing_AxialLine;
+class ControlData;
+class AxialData;
+class Point;
 
 /****************************************************************************/
 /*+------------------------------------------------------------------------+*/
@@ -714,6 +717,203 @@ public:
 
 /****************************************************************************/
 /*+------------------------------------------------------------------------+*/
+/*|                              ControlData                               |*/
+/*+------------------------------------------------------------------------+*/
+/****************************************************************************/
+
+class ControlData {
+private:
+  double   gmres_tol       ; //GMRES tolerance
+  double   dt              ; //time interval
+  double   terminal_t      ; //terminal time
+  double   t               ; //Present time
+  int      krylov_dim      ; //Dimension of krylov subspace
+  int      tstep           ; //time step
+  int      rest_out_intvl  ; //out interval
+  int      max_itr         ; //maximum ieration number of GMRES
+  string   AxialFile       ; //axial data file name
+  string   output_sol      ; //output solution file name
+  string   output_del      ; //output derivative file name
+
+public:
+  ControlData ();
+  virtual ~ControlData ();
+
+  double GMRES_Tol () {return this->gmres_tol;}
+  double Dt () {return this->dt;}
+  double Terminal_T () {return this->terminal_t;}
+  double T () {return this->t;}
+
+  int Krylov_Dim () {return this->krylov_dim;}
+  int Tstep () {return this->tstep;}
+  int Rest_Out_Intvl () {return this->rest_out_intvl;}
+  int Max_Itr () {return this->max_itr;}
+
+  string Axialfile () {return this->AxialFile;};
+  string Output_Sol () {return this->output_sol;}
+  string Output_Del () {return this->output_del;}
+
+  ControlData & LoadCtrlData (string, string, int, double, int);
+  ControlData & ShowCtrlData ();
+};
+
+ControlData::ControlData () {}
+ControlData::~ControlData () {}
+
+/****************************************************************************/
+/*+------------------------------------------------------------------------+*/
+/*|                               AxialData                                |*/
+/*+------------------------------------------------------------------------+*/
+/****************************************************************************/
+
+class AxialData {
+private:
+  int      nx           ; // total number of x-axial line
+  int      ny           ; // total number of y-axial line
+  int      bd_pts_num   ; // total number of the boundary poins
+  int      xaxial_num   ; // total number of x-axial lines
+  int      yaxial_num   ; // total number of y-axial lines
+  int      xxaxial_num  ; // size of xxaxial
+  int      yyaxial_num  ; // size of yyaxial
+  int      in_pts_num   ; // total number of the cross points
+  int      phi_pts_num  ; // total number of the cross points except interface points
+  int      pts_num      ; // total number of points
+
+  int    **EWNS_index   ; // EWNS index of the point    [ 4 * n + i ] ( 6 * in_pts_num   )
+  int     *xaxial_index ; // index of points along x-axial line
+  int     *yaxial_index ; // index of points along y-axial line
+  int     *xxaxial_index; // first number of each x-axial line
+  int     *yyaxial_index; // first number of each y-axial line
+  int     *ptsTOin_pts  ; // all points to inner points
+  int     *in_ptsTOpts  ; // inner points to all points
+  int     *ptsTOphi_pts ; // all points to inner points
+  int     *phi_ptsTOpts ; // inner points to all points
+  int    **axial_index  ; // index of the axial line      [ 3 * n + i ] ( 3 * nx * ny * nz )
+
+  double **pts          ; // coordinate of the points     [ 2 * n + i ] ( 2 * pts_num      )
+  double **xaxial       ; // x-axial lines                [ 4 * l + i ] ( 4 * nx           )
+  double **yaxial       ; // y-axial lines                [ 4 * l + i ] ( 4 * ny           )
+  double  *b_u          ; // bd value u      [      n + i ] (      1 * in_pts_num )
+  double  *mp_u         ; // material property
+
+  char    *bc_u         ; // bd condition u  [      n + i ] (      1 * in_pts_num )
+
+public:
+  AxialData ();
+  virtual ~AxialData ();
+
+  double Pts (int, char);
+  double XYaxial (char, int, int);
+  double Boundaryvalue (int);
+  double MaterialProperty (int);
+
+  char Boundarycondition (int);
+
+  int Pts_Num ();
+  int In_Pts_Num ();
+  int Phi_Pts_Num () const {return phi_pts_num;}
+  int XXYYaxial_Num (char);
+  int EWNS_Index (int, char);
+  int XXYYaxial_Index (char, int);
+  int XYaxial_Index (char, int);
+  int PtsTOPts (char, int);
+  int Axial_index (int, char);
+
+  AxialData & SetPtsTOpts (char, int, int);
+  AxialData & AllocatePhipts (int);
+  AxialData & SortEWNS ();
+
+  AxialData & ExportAxialData ();
+  AxialData & LoadAxialData (string);
+  AxialData & AssignBoundaryValue ();
+};
+
+/****************************************************************************/
+/*+------------------------------------------------------------------------+*/
+/*|                                 Point                                  |*/
+/*+------------------------------------------------------------------------+*/
+/****************************************************************************/
+
+class Point {
+private:
+  double xm, xb, xp, ym, yb, yp;
+  double u;
+  double ux, uy;
+  double phi;
+
+  double b_u;
+  double mp_u[5];
+
+  int    E, EN, ES;
+  int    W, WN, WS;
+  int    N, NE, NW;
+  int    S, SE, SW;
+
+  int    e, en, es;
+  int    w, wn, ws;
+  int    n, ne, nw;
+  int    s, se, sw;
+
+  int    index;
+
+  char   condition;
+  char   axis;
+
+public:
+  Point ();
+  virtual ~Point ();
+  double Coordinate (char);
+  double MinMaxCoordinate (char, char);
+  double Value () const {return u;}
+  double Diff (char);
+  double Phi () const {return phi;}
+  double Boundaryvalue () const {return b_u;}
+  double MaterialProperty (char);
+
+  int Index () {return index;}
+  int EWNS (char, char);
+  int EWNS2nd (char, char);
+
+  char Condition () {return condition;}
+  char Axis () const {return axis;}
+
+  Point & SetCoordinate (char, double);
+  Point & SetMinMaxCoordinate (char, char, double);
+  Point & SetNode (int);
+  Point & SetCondition (char);
+  Point & SetBoundaryvalue (double);
+  Point & SetMinMax (Point*);
+  Point & SetInterfaceMinMax (Point*);
+  Point & SetValue (double);
+  Point & SetDiff (char, double);
+  Point & SetPhi (double);
+  Point & SetMaterialProperty (char, double);
+  Point & FindAxialElement (AxialData*);
+  Point & Find2ndAxialElement (AxialData*);
+  Point & FindBoundaryElement ();
+  Point & CalcMaterialProperty (Point*);
+
+  int FindEastAxialLine(AxialData*);
+  int FindWestAxialLine(AxialData*);
+  int FindNorthAxialLine(AxialData*);
+  int FindSouthAxialLine(AxialData*);
+
+  int FindEast2ndAxialLine(AxialData*);
+  int FindWest2ndAxialLine(AxialData*);
+  int FindNorth2ndAxialLine(AxialData*);
+  int FindSouth2ndAxialLine(AxialData*);
+
+  int FindVerticalPoints(AxialData*, int, char);
+  int FindHorizontalPoints(AxialData*, int, char);
+
+  void Find_extra_point (FILE*, FILE*, FILE*, FILE*, AxialData*, Point*);
+  Point & SetEWNS (char, char, int);
+  Point & Set2ndEWNS (char, char, int);
+};
+
+
+/****************************************************************************/
+/*+------------------------------------------------------------------------+*/
 /*|                         User-Defined functions                         |*/
 /*+------------------------------------------------------------------------+*/
 /****************************************************************************/
@@ -739,5 +939,20 @@ int    CellMemoryCheck( Cell * );
 int    AxialLineMemoryCheck (AxialLine *);
 int    IsEqualDouble (double, double);
 int    IsEqualDouble (double, double, double);
+
+void PrintError (const char*);
+
+double gauss_quadrature (double, double, double, double, int, double);
+double greens_function (double, double, double, double, double, double, int, int, double, double);
+double greens_function_t (double, double, double, double, double, double, int, int, double, double);
+double greens_function_tau (double, double, double, double, double, double, int, int, double, double);
+double greens_function_ttau (double, double, double, double, double, double, int, int, double, double);
+double function_integral (double (*fp) (double, double, double, double, double, double, int, int, double, double),  int, double, double, double, double, double, int, int, double, double);
+double greens_integral (int, double, double, double, double, double, int, int, double, double);
+double greens_integral_t (int, double, double, double, double, double, int, int, double, double);
+double greens_integral_tau (int, double, double, double, double, double, int, int, double, double);
+double greens_integral_ttau (int, double, double, double, double, double, int, int, double, double);
+double greens_coefficient_t (double, double, double, double, double, double, int, int, double, double);
+double greens_coefficient_ttau (double, double, double, double, double, double, int, int, double, double);
 
 #endif

@@ -65,7 +65,6 @@ int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, in
           boundaryPTS.Import(boundaryPTS_region[k], boundaryPTS_region[k].Howmany(), '+');
 
           continue;
-
         }
 
         CrossPTS[k].TakeoffHeadCell();
@@ -110,7 +109,6 @@ int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, in
           }
 
           printf("%s%d%s%d", "\r", ++count, "/", region[k].getXgridnum() + region[k].getYgridnum());
-
         }
 
         printf("\n%s\n", "All background lines met");
@@ -131,12 +129,6 @@ int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, in
 
       break;
     }
-
-    // delete [] CrossPTS;
-    // delete [] CrossPTS_temp;
-    // delete [] XaxialLINE;
-    // delete [] YaxialLINE;
-
   }
 
   return 0;
