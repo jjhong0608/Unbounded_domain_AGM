@@ -144,8 +144,8 @@ int Point::EWNS2nd (char EWNS, char ewns) {
 
 Point & Point::SetCoordinate (char xy, double value) {
 
-  if (xy == 'x' || xy == 'X') xb = value;
-  if (xy == 'y' || xy == 'Y') yb = value;
+  if (xy == 'x' || xy == 'X') {xb = value; return *this;}
+  if (xy == 'y' || xy == 'Y') {yb = value; return *this;}
   PrintError("Point::SetCoordinate");
 
   return *this;

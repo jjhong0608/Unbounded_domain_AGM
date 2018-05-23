@@ -241,7 +241,6 @@ MatrixProcess & MatrixProcess::MakeMatrixSystem (int node, AxialData *adat, Poin
     arrEnt[25] = - ydat->SWphi;
     // InfiniteBoundary(pt, pts);
   }
-
   for (size_t i = 0; i < 26; i++) {
     if (arrEnt[i] == 0.0) {
       arrInt[i] = -1;

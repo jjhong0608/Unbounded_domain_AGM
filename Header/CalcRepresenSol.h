@@ -79,7 +79,7 @@ void CalcRepresenCoef(Point *pt, Point *pts, xData *xdat, yData *ydat) {
 
   ydat->F = - ydat->F;
 
-  if (pt->Axis('y') < 0) {
+  if (pt->Condition() == 'I' && pt->Axis('y') < 0) {
     ydat->F = 0.0;
     ydat->Cu = 0.0, ydat->Cphi = 0.0;
     ydat->Nu = 0.0, ydat->NEu = 0.0, ydat->NWu = 0.0;
@@ -88,7 +88,7 @@ void CalcRepresenCoef(Point *pt, Point *pts, xData *xdat, yData *ydat) {
     ydat->Sphi = 0.0, ydat->SEphi = 0.0, ydat->SWphi = 0.0;
   }
 
-  if (pt->Axis('x') < 0) {
+  if (pt->Condition() == 'I' && pt->Axis('x') < 0) {
     xdat->F  = 0.0;
     xdat->Cu = 0.0, xdat->Cphi = 0.0;
     xdat->Eu = 0.0, xdat->ENu = 0.0, xdat->ESu = 0.0;
