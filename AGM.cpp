@@ -35,7 +35,7 @@ int main(int argc, char const *argv[]) {
 
   if (ALG_Switch == "ON" || ALG_Switch == "on" || ALG_Switch == "On") {
     printf("%s\n", "Run the Axial Line Generator");
-    AXLGEN(Geometry_filename, AGL_output_fileTEMP, nIter);
+    AXLGEN(Geometry_filename, AGL_output_fileTEMP, AGM_output_fileTEMP, max_itr, gmres_tol, krylov_dim, nIter);
   } else printf("%s\n", "Do not run the Axial Green function method solver");
 
 

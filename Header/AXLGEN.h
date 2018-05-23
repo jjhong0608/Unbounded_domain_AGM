@@ -1,6 +1,6 @@
-#include "Read.h"
+#include "AGM.h"
 
-int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, int nIter) {
+int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, const string AGM_output_file_TEMP, const int max_itr, const double gmres_tol, const int krylov_dim, int nIter) {
 
   ifstream GeoInfo;
   FILE *output = NULL;
@@ -20,6 +20,7 @@ int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, in
   int PTSnum = 0; // Total number of points concluding croos points & boundary points
   int count = 0;
   string AGL_output_file;
+  string AGM_output_file;
   stringstream ss;
   string num;
 
@@ -32,6 +33,7 @@ int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, in
     ss << t;
     num = ss.str();
     AGL_output_file = AGL_output_file_TEMP + num;
+    AGM_output_file = AGM_output_file_TEMP + num;
 
     ReadInputFile(Geometry_filename, AGL_output_file, GeoInfo, output, &nD);
 
@@ -66,51 +68,33 @@ int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, in
 
           continue;
         }
-
         CrossPTS[k].TakeoffHeadCell();
         CrossPTS_temp[k].TakeoffHeadCell();
         XaxialLINE[k].TakeoffHeadLine();
         YaxialLINE[k].TakeoffHeadLine();
-
         count = 0;
-
         printf("\n%s%s%s\n", "Region [", region[k].getName().c_str(), "] Start");
-
         printf("\n%s\n", "Meeting background lines with boundary:");
 
         for (size_t j = 0; j < region[k].getXgridnum(); j++) {
-
           for (size_t i = 0; i < region[k].getSectionnum(); i++)
           MasterMeetSlave(1, region[k].get2Dxgrid(j), region[k].getSection(i)->getEltnum(), region[k].getSection(i)->get2DElt(0), boundaryPTS_temp, region[k].getSign(i));
-
           CopyTempToPerm(boundaryPTS, boundaryPTS_temp, XaxialLINE[k], XaxialLINE_temp, 'X');
-
           if (!strncmp("FIX", region[k].getName().c_str(), 3)) {
-
             CopyTempToPerm(boundaryPTS_region[k], boundaryPTS_temp, XaxialLINE[k], XaxialLINE_temp, 'X');
-
           }
-
           printf("%s%d%s%d", "\r", ++count, "/", region[k].getXgridnum() + region[k].getYgridnum());
-
         }
 
         for (size_t j = 0; j < region[k].getYgridnum(); j++) {
-
           for (size_t i = 0; i < region[k].getSectionnum(); i++)
           MasterMeetSlave(1, region[k].get2Dygrid(j), region[k].getSection(i)->getEltnum(), region[k].getSection(i)->get2DElt(0), boundaryPTS_temp, region[k].getSign(i));
-
           CopyTempToPerm(boundaryPTS, boundaryPTS_temp, YaxialLINE[k], YaxialLINE_temp, 'Y');
-
           if (!strncmp("FIX", region[k].getName().c_str(), 3)) {
-
             CopyTempToPerm(boundaryPTS_region[k], boundaryPTS_temp, YaxialLINE[k], YaxialLINE_temp, 'Y');
-
           }
-
           printf("%s%d%s%d", "\r", ++count, "/", region[k].getXgridnum() + region[k].getYgridnum());
         }
-
         printf("\n%s\n", "All background lines met");
 
         Delete2DAxialLine(&region[k], XaxialLINE[k]);
@@ -126,6 +110,8 @@ int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, in
       }
 
       fclose(output);
+
+      AGM(AGL_output_file, AGM_output_file, max_itr, gmres_tol, krylov_dim);
 
       break;
     }

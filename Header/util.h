@@ -4,40 +4,40 @@
 #include "ClassHeader.h"
 #include "ftns.h"
 
-// void strSplit(string strOrigin, string strTok, double *temp, int *numtemp) {
-//
-//   int cutAt;  // 자르는 위치
-//   int index = 0;  // 문자열 인덱스
-//   int i = 0;
-//
-//   // strTok을 찾을 때까지 반복
-//   while ((cutAt = strOrigin.find_first_of(strTok)) != strOrigin.npos) {
-//
-//     if (cutAt > 0) {  // 자르는 위치가 0보다 크면
-//
-//       // 결과 배열에 추가
-//       temp[index++] = stod(strOrigin.substr(0, cutAt));
-//
-//       i++;
-//
-//     }
-//
-//     // 원본은 자른 부분을 제외한 나머지
-//     strOrigin = strOrigin.substr(cutAt + 1);
-//   }
-//
-//   if (strOrigin.length() > 0) { // 원본이 아직 남았으면
-//
-//     // 나머지를 결과 배열에 추가
-//     temp[index++] = stod(strOrigin.substr(0, cutAt));
-//
-//     i++;
-//
-//   }
-//
-//   *numtemp = i;
-//
-// }
+void strSplit(string strOrigin, string strTok, double *temp, int *numtemp) {
+
+  int cutAt;  // 자르는 위치
+  int index = 0;  // 문자열 인덱스
+  int i = 0;
+
+  // strTok을 찾을 때까지 반복
+  while ((cutAt = strOrigin.find_first_of(strTok)) != strOrigin.npos) {
+
+    if (cutAt > 0) {  // 자르는 위치가 0보다 크면
+
+      // 결과 배열에 추가
+      temp[index++] = stod(strOrigin.substr(0, cutAt));
+
+      i++;
+
+    }
+
+    // 원본은 자른 부분을 제외한 나머지
+    strOrigin = strOrigin.substr(cutAt + 1);
+  }
+
+  if (strOrigin.length() > 0) { // 원본이 아직 남았으면
+
+    // 나머지를 결과 배열에 추가
+    temp[index++] = stod(strOrigin.substr(0, cutAt));
+
+    i++;
+
+  }
+
+  *numtemp = i;
+
+}
 //
 // bool is_equal_double (double value1, double value2) {
 //
@@ -53,39 +53,29 @@
 //
 // }
 //
-// int is_member (int target, int *memberSet, int range) {
-//
-//   if (range == 0) return -1;
-//
-//   for (size_t i = 0; i < range; i++) {
-//
-//     if (target == memberSet[i]) return i;
-//
-//   }
-//
-//   return -1;
-//
-// }
-//
-// int is_member (double target, double *memberSet, int range) {
-//
-//   for (size_t i = 0; i < range; i++) {
-//
-//     if (is_equal_double(target, memberSet[i])) return i;
-//
-//   }
-//
-//   return -1;
-//
-// }
-//
-//
-// double point_distance(double x1, double y1, double x2, double y2) {
-//
-//   return sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
-//
-// }
-//
+int is_member (int target, int *memberSet, int range) {
+
+  if (range == 0) return -1;
+  for (size_t i = 0; i < range; i++) {
+    if (target == memberSet[i]) return i;
+  }
+  return -1;
+}
+
+int is_member (double target, double *memberSet, int range) {
+
+  for (size_t i = 0; i < range; i++) {
+    if (IsEqualDouble(target, memberSet[i])) return i;
+  }
+  return -1;
+}
+
+double point_distance(double x1, double y1, double x2, double y2) {
+
+  return sqrt((x1 - x2) * (x1 - x2) + (y1 - y2) * (y1 - y2));
+
+}
+
 // char getMinEWNS(double de, double dw, double dn, double ds) {
 //
 //   double min = de;
@@ -99,82 +89,51 @@
 //
 // }
 //
-// int CountInterface (AxialData *adat, Point *pt) {
-//
-//   int j = 0;
-//
-//   for (size_t i = 0; i < adat->ReturnPts_num(); i++) if (pt[i].ReturnCondition() == 'I') j++;
-//
-//   printf("%s%d\n", "I = ", j);
-//
-//   return j;
-// }
-//
-// void sortPts (AxialData *adat, Point *pt) {
-//
-//   int j = 0;
-//
-//   // for (size_t i = 0; i < adat->ReturnPts_num(); i++)     adat->SetPtsTOpts('T', i, -1);
-//   // for (size_t i = 0; i < adat->ReturnPhi_pts_num(); i++) adat->SetPtsTOpts('H', i, -1);
-//
-//   for (size_t i = 0; i < adat->ReturnPts_num(); i++) {
-//
-//     if (pt[i].ReturnCondition() == 'C') {
-//
-//       adat->SetPtsTOpts('H', j, i);
-//       adat->SetPtsTOpts('T', i, j);
-//
-//       j += 1;
-//
-//     }
-//
-//   }
-//
-//   for (size_t i = 0; i < adat->ReturnPts_num(); i++) {
-//
-//     if (pt[i].ReturnCondition() == 'M') {
-//
-//       adat->SetPtsTOpts('H', j, i);
-//       adat->SetPtsTOpts('T', i, j);
-//
-//       j += 1;
-//
-//     }
-//
-//   }
-//
-//   j = 0;
-//
-//   // for (size_t i = 0; i < adat->ReturnPts_num(); i++)    adat->SetPtsTOpts('P', i, -1);
-//   // for (size_t i = 0; i < adat->ReturnIn_pts_num(); i++) adat->SetPtsTOpts('I', i, -1);
-//
-//   for (size_t i = 0; i < adat->ReturnPts_num(); i++) {
-//
-//     if (pt[i].ReturnCondition() == 'C') {
-//
-//       adat->SetPtsTOpts('I', j, i);
-//       adat->SetPtsTOpts('P', i, j);
-//
-//       j += 1;
-//
-//     }
-//
-//   }
-//
-//   for (size_t i = 0; i < adat->ReturnPts_num(); i++) {
-//
-//     if (pt[i].ReturnCondition() == 'I' || pt[i].ReturnCondition() == 'M') {
-//
-//       adat->SetPtsTOpts('I', j, i);
-//       adat->SetPtsTOpts('P', i, j);
-//
-//       j += 1;
-//
-//     }
-//
-//   }
-//
-// }
+int CountInterface (AxialData *adat, Point *pt) {
+
+  int j = 0;
+
+  for (size_t i = 0; i < adat->Pts_Num(); i++) if (pt[i].Condition() == 'I') j++;
+  return j;
+}
+
+void sortPts (AxialData *adat, Point *pt) {
+
+  int j = 0;
+
+  for (size_t i = 0; i < adat->Pts_Num(); i++) {
+    if (pt[i].Condition() == 'C') {
+      adat->SetPtsTOpts('H', j, i);
+      adat->SetPtsTOpts('T', i, j);
+      j += 1;
+    }
+  }
+
+  for (size_t i = 0; i < adat->Pts_Num(); i++) {
+    if (pt[i].Condition() == 'M') {
+      adat->SetPtsTOpts('H', j, i);
+      adat->SetPtsTOpts('T', i, j);
+      j += 1;
+    }
+  }
+
+  j = 0;
+  for (size_t i = 0; i < adat->Pts_Num(); i++) {
+    if (pt[i].Condition() == 'C') {
+      adat->SetPtsTOpts('I', j, i);
+      adat->SetPtsTOpts('P', i, j);
+      j += 1;
+    }
+  }
+
+  for (size_t i = 0; i < adat->Pts_Num(); i++) {
+    if (pt[i].Condition() == 'I' || pt[i].Condition() == 'M') {
+      adat->SetPtsTOpts('I', j, i);
+      adat->SetPtsTOpts('P', i, j);
+      j += 1;
+    }
+  }
+}
 //
 // double Calc_Error (AxialData *adat, Point *pts) {
 //
@@ -276,6 +235,7 @@
 
 void PrintError(const char* massage) {
 
+  printf("\n");
   for (size_t i = 0; i < 28; i++) printf("%c", '='); printf("%s", "Some error has occured"); for (size_t i = 0; i < 28; i++) printf("%c", '='); printf("\n");
   printf("\t%s%s\n", "Error in ", massage);
   for (size_t i = 0; i < 78; i++) printf("%c", '='); printf("\n"); printf("\n");

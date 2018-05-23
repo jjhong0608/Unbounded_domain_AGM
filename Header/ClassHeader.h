@@ -739,19 +739,19 @@ public:
   ControlData ();
   virtual ~ControlData ();
 
-  double GMRES_Tol () {return this->gmres_tol;}
-  double Dt () {return this->dt;}
-  double Terminal_T () {return this->terminal_t;}
-  double T () {return this->t;}
+  double GMRES_Tol ()  const {return this->gmres_tol;}
+  double Dt ()         const {return this->dt;}
+  double Terminal_T () const {return this->terminal_t;}
+  double T ()          const {return this->t;}
 
-  int Krylov_Dim () {return this->krylov_dim;}
-  int Tstep () {return this->tstep;}
-  int Rest_Out_Intvl () {return this->rest_out_intvl;}
-  int Max_Itr () {return this->max_itr;}
+  int Krylov_Dim ()     const {return this->krylov_dim;}
+  int Tstep ()          const {return this->tstep;}
+  int Rest_Out_Intvl () const {return this->rest_out_intvl;}
+  int Max_Itr ()        const {return this->max_itr;}
 
-  string Axialfile () {return this->AxialFile;};
-  string Output_Sol () {return this->output_sol;}
-  string Output_Del () {return this->output_del;}
+  string Axialfile ()  const {return this->AxialFile;};
+  string Output_Sol () const {return this->output_sol;}
+  string Output_Del () const {return this->output_del;}
 
   ControlData & LoadCtrlData (string, string, int, double, int);
   ControlData & ShowCtrlData ();
@@ -809,15 +809,16 @@ public:
 
   char Boundarycondition (int);
 
-  int Pts_Num ();
-  int In_Pts_Num ();
+  int Pts_Num () const {return pts_num;}
+  int In_Pts_Num () const {return in_pts_num;}
   int Phi_Pts_Num () const {return phi_pts_num;}
+  int XYaxial_Num (char);
   int XXYYaxial_Num (char);
   int EWNS_Index (int, char);
   int XXYYaxial_Index (char, int);
   int XYaxial_Index (char, int);
   int PtsTOPts (char, int);
-  int Axial_index (int, char);
+  int Axial_Index (int, char);
 
   AxialData & SetPtsTOpts (char, int, int);
   AxialData & AllocatePhipts (int);
@@ -855,9 +856,10 @@ private:
   int    s, se, sw;
 
   int    index;
+  int    mtrxindex;
+  int    axis[2];
 
   char   condition;
-  char   axis;
 
 public:
   Point ();
@@ -871,15 +873,17 @@ public:
   double MaterialProperty (char);
 
   int Index () {return index;}
+  int Mtrx_Index () {return mtrxindex;}
   int EWNS (char, char);
   int EWNS2nd (char, char);
 
   char Condition () {return condition;}
-  char Axis () const {return axis;}
+  int Axis (char);
 
   Point & SetCoordinate (char, double);
   Point & SetMinMaxCoordinate (char, char, double);
-  Point & SetNode (int);
+  Point & SetIndex (int);
+  Point & SetMtrx_Index (int);
   Point & SetCondition (char);
   Point & SetBoundaryvalue (double);
   Point & SetMinMax (Point*);
@@ -908,9 +912,69 @@ public:
 
   void Find_extra_point (FILE*, FILE*, FILE*, FILE*, AxialData*, Point*);
   Point & SetEWNS (char, char, int);
-  Point & Set2ndEWNS (char, char, int);
+  Point & SetEWNS2nd (char, char, int);
 };
 
+/****************************************************************************/
+/*+------------------------------------------------------------------------+*/
+/*|                                 xyData                                 |*/
+/*+------------------------------------------------------------------------+*/
+/****************************************************************************/
+
+typedef struct _xData {
+  double F;
+  double Cu, Cphi;
+  double Eu, ENu, ESu;
+  double Wu, WNu, WSu;
+  double Ephi, ENphi, ESphi;
+  double Wphi, WNphi, WSphi;
+}xData;
+
+typedef struct _yData {
+  double F;
+  double Cu, Cphi;
+  double Nu, NEu, NWu;
+  double Su, SEu, SWu;
+  double Nphi, NEphi, NWphi;
+  double Sphi, SEphi, SWphi;
+}yData;
+
+/****************************************************************************/
+/*+------------------------------------------------------------------------+*/
+/*|                             MatrixProcess                              |*/
+/*+------------------------------------------------------------------------+*/
+/****************************************************************************/
+
+class MatrixProcess {
+private:
+  double *rb      ; // vector value    [   3*n + i] (      3 * in_pts_num )
+  int    *ia      ;
+  int    *ja      ;
+  double *ent     ;
+  int     ent_num ; // total number of the matrix elements
+
+  int    *arrInt;
+  double *arrEnt;
+  int    *uniqInt;
+  double *uniqEnt;
+  int    *rowsInt;
+  double *rowsEnt;
+  int     Int_num;
+  int     ja_num;
+  int     matrixSize;
+
+public:
+  MatrixProcess (AxialData*);
+  virtual ~MatrixProcess ();
+
+  MatrixProcess & initialization (AxialData*, int);
+  MatrixProcess & countEnt_num (int, AxialData*, Point*, Point*, xData* ,yData*);
+  MatrixProcess & MakeMatrixSystem (int, AxialData*, Point*, Point*, xData* ,yData*);
+  MatrixProcess & calcMatrix (ControlData*, AxialData*, Point*);
+  MatrixProcess & ExportMatrixData (AxialData*);
+  MatrixProcess & InfiniteBoundary (Point*, Point*);
+  MatrixProcess & InfiniteBoundaryRB (int, Point*, Point*);
+};
 
 /****************************************************************************/
 /*+------------------------------------------------------------------------+*/
@@ -954,5 +1018,18 @@ double greens_integral_tau (int, double, double, double, double, double, int, in
 double greens_integral_ttau (int, double, double, double, double, double, int, int, double, double);
 double greens_coefficient_t (double, double, double, double, double, double, int, int, double, double);
 double greens_coefficient_ttau (double, double, double, double, double, double, int, int, double, double);
+
+double CalcVerticalUCoefficient (char, double, double, double, double, int, double);
+double CalcHorizontalUCoefficient (char, double, double, double, double, int, double);
+double CalcVerticalPHICoefficient (char, double, double, double, double, int, double);
+double CalcHorizontalPHICoefficient (char, double, double, double, double, int, double);
+double CalcVerticalFCoefficient (double, double, double, double, int, double);
+double CalcHorizontalFCoefficient (double, double, double, double, int, double);
+
+double CalcAtNeumannpt (char, Point*, Point*, xData*, yData*);
+void CalcNeumannCoef (Point*, Point*, xData*, yData*);
+
+void CalcDiffCoef(Point*, Point*, xData*, yData*);
+double CalcDiff (char, Point*, Point*, xData*, yData*);
 
 #endif
