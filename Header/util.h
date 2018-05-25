@@ -135,41 +135,41 @@ void sortPts (AxialData *adat, Point *pt) {
   }
 }
 //
-// double Calc_Error (AxialData *adat, Point *pts) {
-//
-//   double x, y, xm, xp, ym, yp;
-//   double error1 = 0.0, error2 = 0.0;
-//   double norm1 = 0.0, norm2 = 0.0;
-//
-//   for (size_t i = 0; i < adat->ReturnPts_num(); i++) {
-//
-//     if (pts[i].ReturnCondition() == 'D' || pts[i].ReturnCondition() == 'N' || pts[i].ReturnCondition() == 'F') continue;
-//
-//     x  = pts[i].ReturnCoordinate('x');
-//     y  = pts[i].ReturnCoordinate('y');
-//     xm = pts[i].ReturnMinMaxCoordinate('x', 'm');
-//     xp = pts[i].ReturnMinMaxCoordinate('x', 'p');
-//     ym = pts[i].ReturnMinMaxCoordinate('y', 'm');
-//     yp = pts[i].ReturnMinMaxCoordinate('y', 'p');
-//
-//     if (fabs(u_ftn(x, y)) > norm1) norm1 = fabs(u_ftn(x, y));
-//     if (fabs(pts[i].ReturnValue() - u_ftn(x, y)) > norm2) norm2 = fabs(pts[i].ReturnValue() - u_ftn(x, y));
-//
-//     error1 += 0.25 * u_ftn(x, y) * u_ftn(x, y) * (xp - xm) * (yp - ym);
-//     error2 += 0.25 * (pts[i].ReturnValue() - u_ftn(x, y)) * (pts[i].ReturnValue() - u_ftn(x, y)) * (xp - xm) * (yp - ym);
-//
-//   }
-//
-//   printf("%s\t%23.16e\n", "norm1 = ", norm1);
-//   printf("%s\t%23.16e\n", "norm2 = ", norm2);
-//
-//   printf("%s\t%23.16e\n", "norm  = ", norm2 / norm1);
-//
-//   printf("%s\t%23.16e\n", "error1 = ", sqrt(error1));
-//   printf("%s\t%23.16e\n", "error2 = ", sqrt(error2));
-//
-//   return sqrt(error2) / sqrt(error1);
-// }
+double Calc_Error (AxialData *adat, Point *pts) {
+
+  double x, y, xm, xp, ym, yp;
+  double error1 = 0.0, error2 = 0.0;
+  double norm1 = 0.0, norm2 = 0.0;
+
+  for (size_t i = 0; i < adat->Pts_Num(); i++) {
+
+    if (pts[i].Condition() == 'D' || pts[i].Condition() == 'N' || pts[i].Condition() == 'F') continue;
+
+    x  = pts[i].Coordinate('x');
+    y  = pts[i].Coordinate('y');
+    xm = pts[i].MinMaxCoordinate('x', 'm');
+    xp = pts[i].MinMaxCoordinate('x', 'p');
+    ym = pts[i].MinMaxCoordinate('y', 'm');
+    yp = pts[i].MinMaxCoordinate('y', 'p');
+
+    if (fabs(u_ftn(x, y)) > norm1) norm1 = fabs(u_ftn(x, y));
+    if (fabs(pts[i].Value() - u_ftn(x, y)) > norm2) norm2 = fabs(pts[i].Value() - u_ftn(x, y));
+
+    error1 += 0.25 * u_ftn(x, y) * u_ftn(x, y) * (xp - xm) * (yp - ym);
+    error2 += 0.25 * (pts[i].Value() - u_ftn(x, y)) * (pts[i].Value() - u_ftn(x, y)) * (xp - xm) * (yp - ym);
+
+  }
+
+  printf("%s\t%23.16e\n", "norm1 = ", norm1);
+  printf("%s\t%23.16e\n", "norm2 = ", norm2);
+
+  printf("%s\t%23.16e\n", "norm  = ", norm2 / norm1);
+
+  printf("%s\t%23.16e\n", "error1 = ", sqrt(error1));
+  printf("%s\t%23.16e\n", "error2 = ", sqrt(error2));
+
+  return sqrt(error2) / sqrt(error1);
+}
 //
 // double Calc_MinMaxvalue (AxialData *adat, Point *pts, char mM) {
 //
@@ -243,8 +243,10 @@ void PrintError(const char* massage) {
   exit(1);
 }
 
-double gauss_quadrature (double alpha, double beta, double xb, double yb, int node, double mp) {
-  double x[4], w[4], c[4];
+double gauss_quadrature (std::function<double (double)> fp, double alpha, double beta) {
+
+  int N = 4;
+  double x[N], w[N], c[2];
   double xx = 0.0;
   double gq = 0.0;
 
@@ -261,44 +263,82 @@ double gauss_quadrature (double alpha, double beta, double xb, double yb, int no
   c[0] = (beta - alpha)/2.0;
   c[1] = (beta + alpha)/2.0;
 
-  if (node == 1){
-    for (size_t i = 0; i < 4; i++) {
-      xx  = c[0] * x[i] + c[1];
-      gq += w[i] / (mp * eps_ftn(xx, yb));
-    }
-  } else if (node == 2) {
-    for (size_t i = 0; i < 4; i++) {
-      xx  = c[0] * x[i] + c[1];
-      gq += w[i] / (mp * eps_ftn(xb, xx));
-    }
-  } else {
-    printf("%s%d\n", "gaussian quadrature node error, node = ", node);
+  for (size_t i = 0; i < N; i++) {
+    xx  = c[0] * x[i] + c[1];
+    gq += w[i] * fp(xx);
   }
   return c[0] * gq;
 }
 
 double greens_function (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {
 
+  if (node > 2) {
+    printf("%s\n", "greens_function node error");
+    exit(1);
+  }
+
   if (bdc == 1) {
-
-    if (t < tb) return - gauss_quadrature(tb, tp, xb, yb, node, mp2);
-    else        return - gauss_quadrature(t, tp, xb, yb, node, mp2);
-
+    if (node == 1) {
+      if (t < tb) return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp);
+      else        return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, t, tp);
+    } else if (node == 2) {
+      if (t < tb) return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp);
+      else        return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, t, tp);
+    }
   } else if (bdc == 2) {
-
-    if (t < tb) return - gauss_quadrature(tm, t, xb, yb, node, mp1);
-    else        return - gauss_quadrature(tm, tb, xb, yb, node, mp1);
-
+    if (node == 1) {
+      if (t < tb) return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, t);
+      else        return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb);
+    } else if (node == 2) {
+      if (t < tb) return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, t);
+      else        return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb);
+    }
   } else if (bdc == 0) {
-
-    if (t < tb) return - gauss_quadrature(tm, t, xb, yb, node, mp1) * gauss_quadrature(tb, tp, xb, yb, node, mp2) / (gauss_quadrature(tm, tb, xb, yb, node, mp1) + gauss_quadrature(tb, tp, xb, yb, node, mp2));
-    else        return - gauss_quadrature(tm, tb, xb, yb, node, mp1) * gauss_quadrature(t, tp, xb, yb, node, mp2) / (gauss_quadrature(tm, tb, xb, yb, node, mp1) + gauss_quadrature(tb, tp, xb, yb, node, mp2));
-
+    if (node == 1) {
+      if (t < tb) return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, t)
+      *                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp));
+      else        return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb)
+      *                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, t, tp)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp));
+    } else if (node == 2) {
+      if (t < tb) return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, t)
+      *                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp));
+      else        return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb)
+      *                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, t, tp)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp));
+    }
+  } else if (bdc == 3) {
+    if (node == 1) {
+      double c0 = gauss_quadrature([&](double x)->double{return exp(-(tp-(1-x)/x)) / eps_ftn(tp-(1-x)/x, yb) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb);}, tb, tp);
+      if (t < tb) return  - gauss_quadrature([&](double x)->double{return exp(-(t-(1-x)/x)) / (c0 * eps_ftn(t-(1-x)/x, yb)) / x / x;}, 0, 1);
+      else        return    gauss_quadrature([&](double x)->double{return (exp(-x) - c0) / (c0 * eps_ftn(x, yb));}, t, tp);
+    } else if (node == 2) {
+      double c0 = gauss_quadrature([&](double x)->double{return exp(-(tp-(1-x)/x)) / eps_ftn(xb, tp-(1-x)/x) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x);}, tb, tp);
+      if (t < tb) return  - gauss_quadrature([&](double x)->double{return exp(-(t-(1-x)/x)) / (c0 * eps_ftn(xb, t-(1-x)/x)) / x / x;}, 0, 1);
+      else        return    gauss_quadrature([&](double x)->double{return (exp(-x) - c0) / (c0 * eps_ftn(xb, x));}, t, tp);
+    }
+  } else if (bdc == 4) {
+    if (node == 1) {
+      double c0 = gauss_quadrature([&](double x)->double{return exp(-(tm+(1-x)/x)) / eps_ftn(tm+(1-x)/x, yb) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb);}, tm, tb);
+      if (t < tb) return   gauss_quadrature([&](double x)->double{return (exp(-x) - c0) / (c0 * eps_ftn(x, yb));}, tm, t);
+      else        return - gauss_quadrature([&](double x)->double{return exp(-(t+(1-x)/x)) / (c0 * eps_ftn(t+(1-x)/x, yb)) / x / x;}, 0, 1);
+    } else if (node == 2) {
+      double c0 = gauss_quadrature([&](double x)->double{return exp(-(tm+(1-x)/x)) / eps_ftn(xb, tm+(1-x)/x) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x);}, tm, tb);
+      if (t < tb) return   gauss_quadrature([&](double x)->double{return (exp(-x) - c0) / (c0 * eps_ftn(xb, x));}, tm, t);
+      else        return - gauss_quadrature([&](double x)->double{return exp(-(t+(1-x)/x)) / (c0 * eps_ftn(xb, t+(1-x)/x)) / x / x;}, 0, 1);
+    }
   } else {
 
     printf("greens_function bdc error, bdc = %d\n", bdc);
     exit(1);
   }
+  exit(1);
 }
 
 double greens_function_t (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {
@@ -333,14 +373,48 @@ double greens_function_t (double t, double tm, double tb, double tp, double xb, 
 
   } else if (bdc == 0) {
 
-    if (t < tb) return - gauss_quadrature(tb, tp, xb, yb, node, mp2) / (gauss_quadrature(tm, tb, xb, yb, node, mp1) + gauss_quadrature(tb, tp, xb, yb, node, mp2)) / eps;
-    else        return   gauss_quadrature(tm, tb, xb, yb, node, mp1) / (gauss_quadrature(tm, tb, xb, yb, node, mp1) + gauss_quadrature(tb, tp, xb, yb, node, mp2)) / eps;
+    if (node == 1) {
+      if (t < tb) return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp)) / eps;
+      else        return   gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp)) / eps;
+    } else if (node == 2) {
+      if (t < tb) return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp)) / eps;
+      else        return   gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp)) / eps;
+    }
 
+  } else if (bdc == 3) {
+    if (node == 1) {
+      double c0 = gauss_quadrature([&](double x)->double{return exp(-(tp-(1-x)/x)) / eps_ftn(tp-(1-x)/x, yb) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb);}, tb, tp);
+      if (t < tb) return  -  exp(-t) / (c0 * eps_ftn(t, yb));
+      else        return  - (exp(-t) - c0) / (c0 * eps_ftn(t, yb));
+    } else if (node == 2) {
+      double c0 = gauss_quadrature([&](double x)->double{return exp(-(tp-(1-x)/x)) / eps_ftn(xb, tp-(1-x)/x) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x);}, tb, tp);
+      if (t < tb) return -  exp(-t) / (c0 * eps_ftn(xb, t));
+      else        return - (exp(-t) - c0) / (c0 * eps_ftn(xb, t));
+    }
+  } else if (bdc == 4) {
+    if (node == 1) {
+      double c0 = gauss_quadrature([&](double x)->double{return exp(-(tm+(1-x)/x)) / eps_ftn(tm+(1-x)/x, yb) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb);}, tm, tb);
+      if (t < tb) return (exp(-t) - c0) / (c0 * eps_ftn(t, yb));
+      else        return  exp(-t) / (c0 * eps_ftn(t, yb));
+    } else if (node == 2) {
+      double c0 = gauss_quadrature([&](double x)->double{return exp(-(tm+(1-x)/x)) / eps_ftn(xb, tm+(1-x)/x) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x);}, tm, tb);
+      if (t < tb) return (exp(-t) - c0) / (c0 * eps_ftn(xb, t));
+      else        return  exp(-t) / (c0 * eps_ftn(xb, t));
+    }
   } else {
 
     printf("greens_function_t bdc error, bdc = %d\n", bdc);
     exit(1);
   }
+  exit(1);
 }
 
 double greens_function_tau (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {
@@ -374,15 +448,27 @@ double greens_function_tau (double t, double tm, double tb, double tp, double xb
     else        return - 1.0 / eps;
 
   } else if (bdc == 0) {
-
-    if (t < tb) return   gauss_quadrature(tm, t, xb, yb, node, mp2) / (gauss_quadrature(tm, tb, xb, yb, node, mp1) + gauss_quadrature(tb, tp, xb, yb, node, mp2)) / eps;
-    else        return - gauss_quadrature(t, tp, xb, yb, node, mp1) / (gauss_quadrature(tm, tb, xb, yb, node, mp1) + gauss_quadrature(tb, tp, xb, yb, node, mp2)) / eps;
-
+    if (node == 1) {
+      if (t < tb) return   gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, t)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp));
+      else        return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, t, tp)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp)) / eps;
+    } else if (node == 2) {
+      if (t < tb) return   gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, t)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp));
+      else        return - gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, t, tp)
+      /                   (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb)
+      +                    gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp)) / eps;
+    }
   } else {
 
     printf("greens_function_tau bdc error, bdc = %d\n", bdc);
     exit(1);
   }
+  exit(1);
 }
 
 double greens_function_ttau (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {
@@ -411,8 +497,8 @@ double greens_function_ttau (double t, double tm, double tb, double tp, double x
     if (t < tb) eps2 = mp1 * eps_ftn(t, yb);
     else        eps2 = mp2 * eps_ftn(t, yb);
 
-  } else if ( node == 2 )
-  {
+  } else if ( node == 2 ) {
+
     if (t < tb) eps2 = mp1 * eps_ftn(xb, t);
     else        eps2 = mp2 * eps_ftn(xb, t);
 
@@ -433,101 +519,143 @@ double greens_function_ttau (double t, double tm, double tb, double tp, double x
     else        return 0.0;
 
   } else if (bdc == 0) {
-
-    if (t < tb) return 1.0 / (gauss_quadrature(tm, tb, xb, yb, node, mp1) + gauss_quadrature(tb, tp, xb, yb, node, mp2)) / eps1 / eps2;
-    else        return 1.0 / (gauss_quadrature(tm, tb, xb, yb, node, mp1) + gauss_quadrature(tb, tp, xb, yb, node, mp2)) / eps1 / eps2;
-
+    if (node == 1) {
+      if (t < tb) return 1.0
+      /                 (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb)
+      +                  gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp)) / eps1 / eps2;
+      else        return 1.0
+      /                 (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp1;}, tm, tb)
+      +                  gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb) / mp2;}, tb, tp)) / eps1 / eps2;
+    } else if (node == 2) {
+      if (t < tb) return 1.0
+      /                 (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb)
+      +                  gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp)) / eps1 / eps2;
+      else        return 1.0
+      /                 (gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp1;}, tm, tb)
+      +                  gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x) / mp2;}, tb, tp)) / eps1 / eps2;
+    }
   } else {
 
     printf("greens_function_ttau bdc error, bdc = %d\n", bdc);
     exit(1);
   }
-}
-
-double function_integral (double (*fp) (double, double, double, double, double, double, int, int, double, double),  int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {
-
-  double gi = 0.0;
-  double x[4], w[4], c[2];
-  double tt;
-
-  x[0] =  sqrt(3.0/7.0 - 2.0/7.0 * sqrt(6.0/5.0));
-  x[1] = -sqrt(3.0/7.0 - 2.0/7.0 * sqrt(6.0/5.0));
-  x[2] =  sqrt(3.0/7.0 + 2.0/7.0 * sqrt(6.0/5.0));
-  x[3] = -sqrt(3.0/7.0 + 2.0/7.0 * sqrt(6.0/5.0));
-
-  w[0] = (18.0 + sqrt(30.0))/36.0;
-  w[1] = (18.0 + sqrt(30.0))/36.0;
-  w[2] = (18.0 - sqrt(30.0))/36.0;
-  w[3] = (18.0 - sqrt(30.0))/36.0;
-
-  if (index == 1 || index == 2) {
-
-    if (IsEqualDouble(tb, tm))  return 0.0;
-    c[0] = (tb - tm) / 2.0;
-    c[1] = (tb + tm) / 2.0;
-
-  } else if (index == 3 || index == 4) {
-
-    if (IsEqualDouble(tb, tp)) return 0.0;
-    c[0] = (tp - tb) / 2.0;
-    c[1] = (tp + tb) / 2.0;
-
-  } else {
-
-    printf("%s%d\n", "greens_integral index error, index = ", index);
-    exit(1);
-  }
-
-  if (index == 1) {
-    for (size_t i = 0; i < 4; i++) {
-      tt = c[0] * x[i] + c[1];
-      if (IsEqualDouble(mp1, mp2))  gi += w[i] * fp(tt, tm ,tb, tp, xb, yb, node, bdc, mp1, mp2) * (tb - tt) / (tb - tm);
-      else                          gi += w[i] * fp(tt, tm ,tb, tp, xb, yb, node, bdc, mp1, mp2);
-    }
-  } else if (index == 2) {
-    for (size_t i = 0; i < 4; i++) {
-      tt = c[0] * x[i] + c[1];
-      if (IsEqualDouble(mp1, mp2))  gi += w[i] * fp(tt, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tt - tm) / (tb - tm);
-      else                          gi += 0.0;
-    }
-  } else if (index == 3) {
-    for (size_t i = 0; i < 4; i++) {
-      tt = c[0] * x[i] + c[1];
-      if (IsEqualDouble(mp1, mp2))  gi += w[i] * fp(tt, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tp - tt) / (tp - tb);
-      else                          gi += 0.0;
-    }
-  } else if (index == 4) {
-    for (size_t i = 0; i < 4; i++) {
-      tt = c[0] * x[i] + c[1];
-      if (IsEqualDouble(mp1, mp2))  gi += w[i] * fp(tt, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tt - tb) / (tp - tb);
-      else                          gi += w[i] * fp(tt, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);
-    }
-  }
-  return c[0] * gi;
+  exit(1);
 }
 
 double greens_integral (int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {
 
-  return function_integral(greens_function, index, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);
+  std::function<double (function<double (double)>)> func = [&](function<double (double)> fp)->double{return fp(tb);};
 
-}
+  if (bdc == 4) {
+    if (IsEqualDouble(mp1, mp2)) {
+      if (node == 1) {
+        if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tb - x) / (tb - tm);}, tm, tb);
+        if (index == 2) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tm) / (tb - tm);}, tm, tb);
+        if (index == 3) return gauss_quadrature([&](double x)->double{return greens_function((tb+(1-x)/x), tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * phi_ftn((tb+(1-x)/x), yb) / phi_ftn(tb, yb) / x / x;}, 0, 1);
+        if (index == 4) return 0.0;
+      } else if (node == 2) {
+        if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tb - x) / (tb - tm);}, tm, tb);
+        if (index == 2) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tm) / (tb - tm);}, tm, tb);
+        if (index == 3) return gauss_quadrature([&](double x)->double{return greens_function((tb+(1-x)/x), tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * phi_ftn(xb, (tb+(1-x)/x)) / phi_ftn(xb, tb) / x / x;}, 0, 1);
+        if (index == 4) return 0.0;
+      }
+    } else {
+      if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tm, tb);
+      if (index == 2) return 0.0;
+      if (index == 3) return 0.0;
+      if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tb, tp);
+    }
+  } else if (bdc == 3) {
+    if (IsEqualDouble(mp1, mp2)) {
+      if (node == 1) {
+        if (index == 1) return 0.0;
+        if (index == 2) return gauss_quadrature([&](double x)->double{return greens_function((tb-(1-x)/x), tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * phi_ftn((tb-(1-x)/x), yb) / phi_ftn(tb, yb) / x / x;}, 0, 1);
+        if (index == 3) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tp - x) / (tp - tb);}, tb, tp);
+        if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tb) / (tp - tb);}, tb, tp);
+      } else if (node == 2) {
+        if (index == 1) return 0.0;
+        if (index == 2) return gauss_quadrature([&](double x)->double{return greens_function((tb-(1-x)/x), tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * phi_ftn(xb, (tb-(1-x)/x)) / phi_ftn(xb, tb) / x / x;}, 0, 1);
+        if (index == 3) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tp - x) / (tp - tb);}, tb, tp);
+        if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tb) / (tp - tb);}, tb, tp);
+      }
+    } else {
+      if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tm, tb);
+      if (index == 2) return 0.0;
+      if (index == 3) return 0.0;
+      if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tb, tp);
+    }
+  } else {
+    if (IsEqualDouble(mp1, mp2)) {
+      if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tb - x) / (tb - tm);}, tm, tb);
+      if (index == 2) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tm) / (tb - tm);}, tm, tb);
+      if (index == 3) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tp - x) / (tp - tb);}, tb, tp);
+      if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tb) / (tp - tb);}, tb, tp);
+    } else {
+      if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tm, tb);
+      if (index == 2) return 0.0;
+      if (index == 3) return 0.0;
+      if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tb, tp);
+    }
+  }
 
-double greens_integral_t (int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {
-
-  return function_integral(greens_function_t, index, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);
-
+  exit(1);
 }
 
 double greens_integral_tau (int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {
 
-  return function_integral(greens_function_tau, index, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);
+  if (bdc == 4) {
+    if (IsEqualDouble(mp1, mp2)) {
+      if (node == 1) {
+        if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tb - x) / (tb - tm);}, tm, tb);
+        if (index == 2) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tm) / (tb - tm);}, tm, tb);
+        if (index == 3) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * phi_ftn(x, yb) / phi_ftn(tb, yb);}, tb, tp);
+        if (index == 4) return 0.0;
+      } else if (node == 2) {
+        if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tb - x) / (tb - tm);}, tm, tb);
+        if (index == 2) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tm) / (tb - tm);}, tm, tb);
+        if (index == 3) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * phi_ftn(xb, x) / phi_ftn(xb, tb);}, tb, tp);
+        if (index == 4) return 0.0;
+      }
+    } else {
+      if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tm, tb);
+      if (index == 2) return 0.0;
+      if (index == 3) return 0.0;
+      if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tb, tp);
+    }
+  } else if (bdc == 3) {
+    if (IsEqualDouble(mp1, mp2)) {
+      if (node == 1) {
+        if (index == 1) return 0.0;
+        if (index == 2) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * phi_ftn(x, yb) / phi_ftn(tb, yb);}, tm, tb);
+        if (index == 3) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tp - x) / (tp - tb);}, tb, tp);
+        if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tb) / (tp - tb);}, tb, tp);
+      } else if (node == 2) {
+        if (index == 1) return 0.0;
+        if (index == 2) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * phi_ftn(xb, x) / phi_ftn(xb, tb);}, tm, tb);
+        if (index == 3) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tp - x) / (tp - tb);}, tb, tp);
+        if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tb) / (tp - tb);}, tb, tp);
+      }
+    } else {
+      if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tm, tb);
+      if (index == 2) return 0.0;
+      if (index == 3) return 0.0;
+      if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tb, tp);
+    }
+  } else {
+    if (IsEqualDouble(mp1, mp2)) {
+      if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tb - x) / (tb - tm);}, tm, tb);
+      if (index == 2) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tm) / (tb - tm);}, tm, tb);
+      if (index == 3) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (tp - x) / (tp - tb);}, tb, tp);
+      if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2) * (x - tb) / (tp - tb);}, tb, tp);
+    } else {
+      if (index == 1) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tm, tb);
+      if (index == 2) return 0.0;
+      if (index == 3) return 0.0;
+      if (index == 4) return gauss_quadrature([&](double x)->double{return greens_function_tau(x, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);}, tb, tp);
+    }
+  }
 
-}
-
-double greens_integral_ttau (int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {
-
-  return function_integral(greens_function_ttau, index, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);
-
+  exit(1);
 }
 
 double greens_coefficient_t (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {
@@ -564,6 +692,16 @@ double greens_coefficient_t (double t, double tm, double tb, double tp, double x
 
     if (t < tb) return - eps * greens_function_t(t, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);
     else        return   eps * greens_function_t(t, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);
+
+  } else if (bdc == 3) {
+
+    if (t < tb) return   0.0;
+    else        return   eps * greens_function_t(t, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);
+
+  } else if (bdc == 4) {
+
+    if (t < tb) return - eps * greens_function_t(t, tm, tb, tp, xb, yb, node, bdc, mp1, mp2);
+    else        return   0.0;
 
   } else {
 

@@ -62,6 +62,16 @@ void CalcRepresenCoef(Point *pt, Point *pts, xData *xdat, yData *ydat) {
   + greens_integral(3, xm, xb, xp, xb, yb, 1, bdx, mpx1, mpx2) * f_ftn(xb, yb)
   + greens_integral(4, xm, xb, xp, xb, yb, 1, bdx, mpx1, mpx2) * f_ftn(xp, yb));
 
+  if (bdx == 3) {
+    double c0 = gauss_quadrature([&](double x)->double{return exp(-(xp-(1-x)/x)) / eps_ftn(xp-(1-x)/x, yb) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb);}, xb, xp);
+    xdat->F += gauss_quadrature([&](double x)->double{return exp(-(xp-(1-x)/x)) * u_ftn((xp-(1-x)/x), yb) / c0 / x / x;}, 0, 1);
+  }
+
+  if (bdx == 4) {
+    double c0 = gauss_quadrature([&](double x)->double{return exp(-(xm+(1-x)/x)) / eps_ftn(xm+(1-x)/x, yb) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(x, yb);}, xm, xb);
+    xdat->F += gauss_quadrature([&](double x)->double{return exp(-(xm+(1-x)/x)) * u_ftn((xm+(1-x)/x), yb) / c0 / x / x;}, 0, 1);
+  }
+
   xdat->F = - xdat->F;
 
   ydat->Cu = - 1.0;
@@ -76,6 +86,16 @@ void CalcRepresenCoef(Point *pt, Point *pts, xData *xdat, yData *ydat) {
   + greens_integral(2, ym ,yb, yp, xb, yb, 2, bdy, mpy1, mpy2) * f_ftn(xb, yb)
   + greens_integral(3, ym ,yb, yp, xb, yb, 2, bdy, mpy1, mpy2) * f_ftn(xb, yb)
   + greens_integral(4, ym, yb, yp, xb, yb, 2, bdy, mpy1, mpy2) * f_ftn(xb, yp));
+
+  if (bdy == 3) {
+    double c0 = gauss_quadrature([&](double x)->double{return exp(-(yp-(1-x)/x)) / eps_ftn(xb, yp-(1-x)/x) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x);}, yb, yp);
+    ydat->F += gauss_quadrature([&](double x)->double{return exp(-(yp-(1-x)/x)) * u_ftn(xb, (yp-(1-x)/x)) / c0 / x / x;}, 0, 1);
+  }
+
+  if (bdy == 4) {
+    double c0 = gauss_quadrature([&](double x)->double{return exp(-(ym+(1-x)/x)) / eps_ftn(xb, ym+(1-x)/x) / x / x;}, 0, 1) / gauss_quadrature([&](double x)->double{return 1.0 / eps_ftn(xb, x);}, ym, yb);
+    ydat->F += gauss_quadrature([&](double x)->double{return exp(-(ym+(1-x)/x)) * u_ftn(xb, (ym+(1-x)/x)) / c0 / x / x;}, 0, 1);
+  }
 
   ydat->F = - ydat->F;
 

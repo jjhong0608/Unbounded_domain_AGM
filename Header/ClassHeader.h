@@ -9,6 +9,7 @@
 #include <complex>
 #include <limits>
 #include <time.h>
+#include <functional>
 
 #ifndef  PI
 #define  PI   M_PI
@@ -1007,7 +1008,7 @@ int    IsEqualDouble (double, double, double);
 
 void PrintError (const char*);
 
-double gauss_quadrature (double, double, double, double, int, double);
+double gauss_quadrature (std::function<double (double)>, double, double);
 double greens_function (double, double, double, double, double, double, int, int, double, double);
 double greens_function_t (double, double, double, double, double, double, int, int, double, double);
 double greens_function_tau (double, double, double, double, double, double, int, int, double, double);

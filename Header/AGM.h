@@ -39,60 +39,6 @@ int AGM(string AGL_output_file, string AGM_output_file, int max_itr, double gmre
   sortPts(&adat, pt);
   // adat.ExportAxialData();
 
-  FILE *point_output = fopen("point.dat", "w");
-
-  for (size_t i = 0; i < adat.Pts_Num(); i++) {
-
-    fprintf(point_output, "%9lu\t%23.16e\t%23.16e\t%23.16e\t%23.16e\t%23.16e\t%23.16e\n",
-    i, pt[i].MinMaxCoordinate('x', 'm'), pt[i].Coordinate('x'), pt[i].MinMaxCoordinate('x', 'p'),
-    pt[i].MinMaxCoordinate('y', 'm'), pt[i].Coordinate('y'), pt[i].MinMaxCoordinate('y', 'p'));
-
-  }
-
-  fclose(point_output);
-
-  FILE *EWNS_output = fopen("EWNS.dat", "w");
-
-  for (size_t i = 0; i < adat.Pts_Num(); i++) {
-
-    fprintf(EWNS_output, "%9lu\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\n",
-    i, pt[i].EWNS('E', 'E'), pt[i].EWNS('W', 'W'), pt[i].EWNS('N', 'N'), pt[i].EWNS('S', 'S'),
-    pt[i].EWNS('E', 'N'), pt[i].EWNS('E', 'S'), pt[i].EWNS('W', 'N'), pt[i].EWNS('W', 'S'),
-    pt[i].EWNS('N', 'E'), pt[i].EWNS('N', 'W'), pt[i].EWNS('S', 'E'), pt[i].EWNS('S', 'W'));
-
-  }
-
-  fclose(EWNS_output);
-
-  FILE *EWNS_output2 = fopen("EWNS2.dat", "w");
-
-  for (size_t i = 0; i < adat.Pts_Num(); i++) {
-
-    fprintf(EWNS_output2, "%9lu\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\t%9d\n",
-    i, pt[i].EWNS2nd('E', 'E'), pt[i].EWNS2nd('W', 'W'), pt[i].EWNS2nd('N', 'N'), pt[i].EWNS2nd('S', 'S'),
-    pt[i].EWNS2nd('E', 'N'), pt[i].EWNS2nd('E', 'S'), pt[i].EWNS2nd('W', 'N'), pt[i].EWNS2nd('W', 'S'),
-    pt[i].EWNS2nd('N', 'E'), pt[i].EWNS2nd('N', 'W'), pt[i].EWNS2nd('S', 'E'), pt[i].EWNS2nd('S', 'W'));
-
-  }
-
-  fclose(EWNS_output2);
-
-  FILE *mp_output = fopen("mp_u.dat", "w");
-
-  for (size_t i = 0; i < adat.Pts_Num(); i++) {
-
-    fprintf(mp_output, "%9lu", i);
-    fprintf(mp_output, "\t%23.16e", pt[i].MaterialProperty('C'));
-    fprintf(mp_output, "\t%23.16e", pt[i].MaterialProperty('E'));
-    fprintf(mp_output, "\t%23.16e", pt[i].MaterialProperty('W'));
-    fprintf(mp_output, "\t%23.16e", pt[i].MaterialProperty('N'));
-    fprintf(mp_output, "\t%23.16e", pt[i].MaterialProperty('S'));
-    fprintf(mp_output, "\n");
-
-  }
-
-  fclose(mp_output);
-
   xData xdat;
   yData ydat;
   MatrixProcess matps(&adat);
@@ -117,7 +63,7 @@ int AGM(string AGL_output_file, string AGM_output_file, int max_itr, double gmre
       j += 1;
     }
   }
-  matps.ExportMatrixData(&adat);
+  // matps.ExportMatrixData(&adat);
   matps.calcMatrix(&cdat, &adat, pt);
 
   for (size_t i = 0; i < adat.Pts_Num(); i++) if (pt[i].Condition() == 'F') pt[i].SetCondition('N');
@@ -137,7 +83,7 @@ int AGM(string AGL_output_file, string AGM_output_file, int max_itr, double gmre
     }
   }
 
-  // printf("%s\t%23.16e\n", "Error = ", Calc_Error(&adat, pt));
+  printf("%s\t%23.16e\n", "Error = ", Calc_Error(&adat, pt));
 
   FILE *sol_output = fopen(cdat.Output_Sol().c_str(), "w");
   for (size_t i = 0; i < adat.Pts_Num(); i++) {

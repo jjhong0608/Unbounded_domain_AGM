@@ -6,7 +6,9 @@
 
 double u_ftn( double x, double y) {
 
+  // return x * x - y * y;
   return 100.0 / sqrt(x * x + y * y);
+  // return 50.0 * (x + 40.0) / 40.0;
 
 }
 
@@ -74,7 +76,8 @@ double b_u_ftn(double x, double y) {
 
 double f_ftn( double x, double y ) {
 
-  return 0.0;
+  // return 100.0 / pow(x*x + y*y, 1.5);
+  return ZeroValue;
 
 }
 
