@@ -51,6 +51,9 @@ int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, co
 
       boundaryPTS.TakeoffHeadCell();
 
+      // FILE *fp; fp = fopen ("XaxialLine.dat","w");
+      // FILE *fq; fq = fopen ("YaxialLine.dat","w");
+
       for (size_t k = 0; k < nR; k++) {
 
         if (!strncmp("FIX", region[k].getName().c_str(), 3) && t > 0) {
@@ -97,6 +100,32 @@ int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, co
         }
         printf("\n%s\n", "All background lines met");
 
+        // XaxialLINE[k].GoHead();
+        // if (fp!=NULL) {
+        //   while (XaxialLINE[k].Run()) {
+        //     fprintf(fp, "%23.16e\t", XaxialLINE[k].Run()->Start()->Item(0));
+        //     fprintf(fp, "%23.16e\t", XaxialLINE[k].Run()->Start()->Item(1));
+        //     fprintf(fp, "%23.16e\t", XaxialLINE[k].Run()->Center()->getvalue(0));
+        //     fprintf(fp, "%23.16e\t", XaxialLINE[k].Run()->Center()->getvalue(1));
+        //     fprintf(fp, "%23.16e\t", XaxialLINE[k].Run()->End()->Item(0));
+        //     fprintf(fp, "%23.16e\n", XaxialLINE[k].Run()->End()->Item(1));
+        //     XaxialLINE[k].GoPost();
+        //   }
+        // }
+        //
+        // YaxialLINE[k].GoHead();
+        // if (fq!=NULL) {
+        //   while (YaxialLINE[k].Run()) {
+        //     fprintf(fq, "%23.16e\t", YaxialLINE[k].Run()->Start()->Item(0));
+        //     fprintf(fq, "%23.16e\t", YaxialLINE[k].Run()->Start()->Item(1));
+        //     fprintf(fq, "%23.16e\t", YaxialLINE[k].Run()->Center()->getvalue(0));
+        //     fprintf(fq, "%23.16e\t", YaxialLINE[k].Run()->Center()->getvalue(1));
+        //     fprintf(fq, "%23.16e\t", YaxialLINE[k].Run()->End()->Item(0));
+        //     fprintf(fq, "%23.16e\n", YaxialLINE[k].Run()->End()->Item(1));
+        //     YaxialLINE[k].GoPost();
+        //   }
+        // }
+
         Delete2DAxialLine(&region[k], XaxialLINE[k]);
         Delete2DAxialLine(&region[k], YaxialLINE[k]);
 
@@ -110,6 +139,8 @@ int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, co
       }
 
       fclose(output);
+      // fclose (fp);
+      // fclose (fq);
 
       AGM(AGL_output_file, AGM_output_file, max_itr, gmres_tol, krylov_dim);
 

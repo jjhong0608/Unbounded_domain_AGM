@@ -294,6 +294,33 @@ MatrixProcess & MatrixProcess::MakeMatrixSystem (int node, AxialData *adat, Poin
     if (rowsInt[i] > -1) {
       ja[ja_num] = rowsInt[i];
       ent[ja_num] = rowsEnt[i];
+      if (ent[ja_num] != ent[ja_num]) {
+        printf("\n\n%s%d\n", "pt->Index() = ", pt->Index());
+        printf("%s%c\n\n", "pt->Condition() = ", pt->Condition());
+        printf("%s( %23.16e, %23.16e)\n", "pt->Coordinate = ", pt->Coordinate('x'), pt->Coordinate('y'));
+        printf("xm = %23.16e, xp = %23.16e\n", pt->MinMaxCoordinate('x', 'm'), pt->MinMaxCoordinate('x', 'p'));
+        printf("ym = %23.16e, yp = %23.16e\n\n", pt->MinMaxCoordinate('y', 'm'), pt->MinMaxCoordinate('y', 'p'));
+
+        printf("%-6s%d\n", "E = ", pt->EWNS('E', 'E'));
+        printf("%-6s%d\n", "W = ", pt->EWNS('W', 'W'));
+        printf("%-6s%d\n", "N = ", pt->EWNS('N', 'N'));
+        printf("%-6s%d\n", "S = ", pt->EWNS('S', 'S'));
+
+        printf("%-6s%d\n", "EN = ", pt->EWNS('E', 'N'));
+        printf("%-6s%d\n", "ES = ", pt->EWNS('E', 'S'));
+        printf("%-6s%d\n", "WN = ", pt->EWNS('W', 'N'));
+        printf("%-6s%d\n", "WS = ", pt->EWNS('W', 'S'));
+        printf("%-6s%d\n", "NE = ", pt->EWNS('N', 'E'));
+        printf("%-6s%d\n", "NW = ", pt->EWNS('N', 'W'));
+        printf("%-6s%d\n", "SE = ", pt->EWNS('S', 'E'));
+        printf("%-6s%d\n", "SW = ", pt->EWNS('S', 'W'));
+
+        for (size_t j = 0; j < 26; j++) {
+          printf("arrEnt[%2zu] = %f\n", j, arrEnt[j]);
+        }
+
+        // exit(1);
+      }
       ja_num += 1;
     }
   }

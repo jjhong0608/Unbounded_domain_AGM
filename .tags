@@ -4,9 +4,104 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-CC	/Users/junhong/github/Unbounded_domain_AGM/Makefile	/^CC = g++$/;"	macro	line:1
-SRC	/Users/junhong/github/Unbounded_domain_AGM/Makefile	/^SRC = AXLGEN$/;"	macro	line:2
 main	/Users/junhong/github/Unbounded_domain_AGM/AGM.cpp	/^int main(int argc, char const *argv[]) {$/;"	function	line:4	signature:(int argc, char const *argv[])
+__MKL_DSS_H	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define __MKL_DSS_H$/;"	macro	line:32
+_MKL_DSS_HANDLE_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^typedef void *             _MKL_DSS_HANDLE_t;$/;"	typedef	line:43
+_CHARACTER_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^typedef char               _CHARACTER_t;$/;"	typedef	line:44
+_CHARACTER_STR_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^typedef char               _CHARACTER_STR_t;$/;"	typedef	line:45
+_INTEGER_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define _INTEGER_t /;"	macro	line:49
+_LONG_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^typedef long               _LONG_t;$/;"	typedef	line:52
+_LONG_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^typedef long long          _LONG_t;$/;"	typedef	line:54
+_REAL_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^typedef float              _REAL_t;$/;"	typedef	line:56
+_DOUBLE_PRECISION_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^typedef double             _DOUBLE_PRECISION_t;$/;"	typedef	line:57
+_DoubleComplexType	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define _DoubleComplexType /;"	macro	line:58
+_DOUBLE_COMPLEX_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^typedef _DoubleComplexType _DOUBLE_COMPLEX_t;$/;"	typedef	line:59
+MKL_DSS_DEFAULTS	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_DEFAULTS /;"	macro	line:65
+MKL_DSS_OOC_VARIABLE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_OOC_VARIABLE /;"	macro	line:73
+MKL_DSS_OOC_STRONG	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_OOC_STRONG /;"	macro	line:74
+MKL_DSS_REFINEMENT_OFF	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_REFINEMENT_OFF /;"	macro	line:80
+MKL_DSS_REFINEMENT_ON	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_REFINEMENT_ON /;"	macro	line:81
+MKL_DSS_FORWARD_SOLVE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_FORWARD_SOLVE	/;"	macro	line:87
+MKL_DSS_DIAGONAL_SOLVE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_DIAGONAL_SOLVE	/;"	macro	line:88
+MKL_DSS_BACKWARD_SOLVE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_BACKWARD_SOLVE	/;"	macro	line:89
+MKL_DSS_TRANSPOSE_SOLVE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_TRANSPOSE_SOLVE	/;"	macro	line:90
+MKL_DSS_CONJUGATE_SOLVE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_CONJUGATE_SOLVE	/;"	macro	line:91
+MKL_DSS_SINGLE_PRECISION	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_SINGLE_PRECISION	/;"	macro	line:97
+MKL_DSS_ZERO_BASED_INDEXING	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_ZERO_BASED_INDEXING	/;"	macro	line:103
+MKL_DSS_MSG_LVL_SUCCESS	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_MSG_LVL_SUCCESS	/;"	macro	line:109
+MKL_DSS_MSG_LVL_DEBUG	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_MSG_LVL_DEBUG /;"	macro	line:110
+MKL_DSS_MSG_LVL_INFO	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_MSG_LVL_INFO /;"	macro	line:111
+MKL_DSS_MSG_LVL_WARNING	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_MSG_LVL_WARNING	/;"	macro	line:112
+MKL_DSS_MSG_LVL_ERROR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_MSG_LVL_ERROR /;"	macro	line:113
+MKL_DSS_MSG_LVL_FATAL	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_MSG_LVL_FATAL /;"	macro	line:114
+MKL_DSS_TERM_LVL_SUCCESS	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_TERM_LVL_SUCCESS	/;"	macro	line:120
+MKL_DSS_TERM_LVL_DEBUG	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_TERM_LVL_DEBUG /;"	macro	line:121
+MKL_DSS_TERM_LVL_INFO	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_TERM_LVL_INFO /;"	macro	line:122
+MKL_DSS_TERM_LVL_WARNING	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_TERM_LVL_WARNING	/;"	macro	line:123
+MKL_DSS_TERM_LVL_ERROR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_TERM_LVL_ERROR /;"	macro	line:124
+MKL_DSS_TERM_LVL_FATAL	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_TERM_LVL_FATAL /;"	macro	line:125
+MKL_DSS_SYMMETRIC	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_SYMMETRIC /;"	macro	line:131
+MKL_DSS_SYMMETRIC_STRUCTURE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_SYMMETRIC_STRUCTURE /;"	macro	line:132
+MKL_DSS_NON_SYMMETRIC	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_NON_SYMMETRIC /;"	macro	line:133
+MKL_DSS_SYMMETRIC_COMPLEX	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_SYMMETRIC_COMPLEX /;"	macro	line:134
+MKL_DSS_SYMMETRIC_STRUCTURE_COMPLEX	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_SYMMETRIC_STRUCTURE_COMPLEX /;"	macro	line:135
+MKL_DSS_NON_SYMMETRIC_COMPLEX	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_NON_SYMMETRIC_COMPLEX /;"	macro	line:136
+MKL_DSS_AUTO_ORDER	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_AUTO_ORDER /;"	macro	line:142
+MKL_DSS_MY_ORDER	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_MY_ORDER /;"	macro	line:143
+MKL_DSS_OPTION1_ORDER	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_OPTION1_ORDER	/;"	macro	line:144
+MKL_DSS_GET_ORDER	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_GET_ORDER /;"	macro	line:145
+MKL_DSS_METIS_ORDER	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_METIS_ORDER	/;"	macro	line:146
+MKL_DSS_METIS_OPENMP_ORDER	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_METIS_OPENMP_ORDER	/;"	macro	line:147
+MKL_DSS_POSITIVE_DEFINITE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_POSITIVE_DEFINITE /;"	macro	line:153
+MKL_DSS_INDEFINITE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_INDEFINITE /;"	macro	line:154
+MKL_DSS_HERMITIAN_POSITIVE_DEFINITE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_HERMITIAN_POSITIVE_DEFINITE	/;"	macro	line:155
+MKL_DSS_HERMITIAN_INDEFINITE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_HERMITIAN_INDEFINITE /;"	macro	line:156
+MKL_DSS_SUCCESS	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_SUCCESS /;"	macro	line:162
+MKL_DSS_ZERO_PIVOT	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_ZERO_PIVOT /;"	macro	line:163
+MKL_DSS_OUT_OF_MEMORY	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_OUT_OF_MEMORY /;"	macro	line:164
+MKL_DSS_FAILURE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_FAILURE /;"	macro	line:165
+MKL_DSS_ROW_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_ROW_ERR /;"	macro	line:166
+MKL_DSS_COL_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_COL_ERR /;"	macro	line:167
+MKL_DSS_TOO_FEW_VALUES	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_TOO_FEW_VALUES /;"	macro	line:168
+MKL_DSS_TOO_MANY_VALUES	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_TOO_MANY_VALUES	/;"	macro	line:169
+MKL_DSS_NOT_SQUARE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_NOT_SQUARE /;"	macro	line:170
+MKL_DSS_STATE_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_STATE_ERR /;"	macro	line:171
+MKL_DSS_INVALID_OPTION	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_INVALID_OPTION /;"	macro	line:172
+MKL_DSS_OPTION_CONFLICT	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_OPTION_CONFLICT	/;"	macro	line:173
+MKL_DSS_MSG_LVL_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_MSG_LVL_ERR /;"	macro	line:174
+MKL_DSS_TERM_LVL_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_TERM_LVL_ERR /;"	macro	line:175
+MKL_DSS_STRUCTURE_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_STRUCTURE_ERR /;"	macro	line:176
+MKL_DSS_REORDER_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_REORDER_ERR /;"	macro	line:177
+MKL_DSS_VALUES_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_VALUES_ERR /;"	macro	line:178
+MKL_DSS_STATISTICS_INVALID_MATRIX	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_STATISTICS_INVALID_MATRIX /;"	macro	line:179
+MKL_DSS_STATISTICS_INVALID_STATE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_STATISTICS_INVALID_STATE /;"	macro	line:180
+MKL_DSS_STATISTICS_INVALID_STRING	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_STATISTICS_INVALID_STRING /;"	macro	line:181
+MKL_DSS_REORDER1_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_REORDER1_ERR /;"	macro	line:182
+MKL_DSS_PREORDER_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_PREORDER_ERR /;"	macro	line:183
+MKL_DSS_DIAG_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_DIAG_ERR /;"	macro	line:184
+MKL_DSS_I32BIT_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_I32BIT_ERR /;"	macro	line:185
+MKL_DSS_OOC_MEM_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_OOC_MEM_ERR /;"	macro	line:186
+MKL_DSS_OOC_OC_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_OOC_OC_ERR /;"	macro	line:187
+MKL_DSS_OOC_RW_ERR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define MKL_DSS_OOC_RW_ERR /;"	macro	line:188
+dss_create	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define dss_create(/;"	macro	line:223
+dss_define_structure	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define dss_define_structure(/;"	macro	line:224
+dss_reorder	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define dss_reorder(/;"	macro	line:227
+dss_factor_real	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define dss_factor_real(/;"	macro	line:229
+dss_factor_complex	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define dss_factor_complex(/;"	macro	line:231
+dss_solve_real	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define dss_solve_real(/;"	macro	line:233
+dss_solve_complex	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define dss_solve_complex(/;"	macro	line:236
+dss_statistics	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define dss_statistics(/;"	macro	line:239
+dss_delete	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define dss_delete(/;"	macro	line:241
+DSS_CREATE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define DSS_CREATE(/;"	macro	line:244
+DSS_DEFINE_STRUCTURE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define DSS_DEFINE_STRUCTURE(/;"	macro	line:245
+DSS_REORDER	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define DSS_REORDER(/;"	macro	line:248
+DSS_FACTOR_REAL	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define DSS_FACTOR_REAL(/;"	macro	line:250
+DSS_FACTOR_COMPLEX	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define DSS_FACTOR_COMPLEX(/;"	macro	line:252
+DSS_SOLVE_REAL	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define DSS_SOLVE_REAL(/;"	macro	line:254
+DSS_SOLVE_COMPLEX	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define DSS_SOLVE_COMPLEX(/;"	macro	line:257
+DSS_STATISTICS	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define DSS_STATISTICS(/;"	macro	line:260
+DSS_DELETE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_dss.h	/^#define DSS_DELETE(/;"	macro	line:262
+AlmostZero	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.h	/^# define AlmostZero /;"	macro	line:6
 BASIC_H	/Users/junhong/github/Unbounded_domain_AGM/Header/Basic++.h	/^#define BASIC_H$/;"	macro	line:2
 Vector	/Users/junhong/github/Unbounded_domain_AGM/Header/Basic++.h	/^Vector::Vector()$/;"	function	line:12	class:Vector	signature:()
 Vector	/Users/junhong/github/Unbounded_domain_AGM/Header/Basic++.h	/^Vector::Vector(int dms)$/;"	function	line:18	class:Vector	signature:(int dms)
@@ -158,6 +253,113 @@ showcontents	/Users/junhong/github/Unbounded_domain_AGM/Header/Basic++.h	/^  Thi
 CONTROLDATA_H	/Users/junhong/github/Unbounded_domain_AGM/Header/ControlData.h	/^#define CONTROLDATA_H$/;"	macro	line:2
 LoadCtrlData	/Users/junhong/github/Unbounded_domain_AGM/Header/ControlData.h	/^ControlData & ControlData::LoadCtrlData (string  AGL_output_file, string AGM_output_file, int max_it, double gmres_toll, int krylov_dimm) {$/;"	function	line:6	class:ControlData	signature:(string AGL_output_file, string AGM_output_file, int max_it, double gmres_toll, int krylov_dimm)
 ShowCtrlData	/Users/junhong/github/Unbounded_domain_AGM/Header/ControlData.h	/^ControlData & ControlData::ShowCtrlData () {$/;"	function	line:21	class:ControlData	signature:()
+POINT_H	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^#define POINT_H$/;"	macro	line:2
+Point	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point::Point () {$/;"	function	line:6	class:Point	signature:()
+~Point	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point::~Point () {$/;"	function	line:25	class:Point	signature:()
+Coordinate	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^double Point::Coordinate (char xy) {$/;"	function	line:29	class:Point	signature:(char xy)
+MinMaxCoordinate	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^double Point::MinMaxCoordinate (char xy, char mp) {$/;"	function	line:38	class:Point	signature:(char xy, char mp)
+Diff	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^double Point::Diff (char xy) {$/;"	function	line:54	class:Point	signature:(char xy)
+MaterialProperty	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^double Point::MaterialProperty (char CEWNS) {$/;"	function	line:63	class:Point	signature:(char CEWNS)
+EWNS	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::EWNS (char EWNS, char ewns) {$/;"	function	line:75	class:Point	signature:(char EWNS, char ewns)
+EWNS2nd	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::EWNS2nd (char EWNS, char ewns) {$/;"	function	line:110	class:Point	signature:(char EWNS, char ewns)
+SetCoordinate	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetCoordinate (char xy, double value) {$/;"	function	line:145	class:Point	signature:(char xy, double value)
+SetMinMaxCoordinate	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetMinMaxCoordinate (char xy, char mp,  double value) {$/;"	function	line:154	class:Point	signature:(char xy, char mp, double value)
+Axis	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::Axis (char xy) {$/;"	function	line:170	class:Point	signature:(char xy)
+SetIndex	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetIndex (int src) {$/;"	function	line:179	class:Point	signature:(int src)
+SetMtrx_Index	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetMtrx_Index (int src) {$/;"	function	line:202	class:Point	signature:(int src)
+SetCondition	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetCondition (char src) {$/;"	function	line:209	class:Point	signature:(char src)
+SetBoundaryvalue	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetBoundaryvalue (double src) {$/;"	function	line:215	class:Point	signature:(double src)
+SetMinMax	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetMinMax (Point * pts) {$/;"	function	line:221	class:Point	signature:(Point * pts)
+SetInterfaceMinMax	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetInterfaceMinMax (Point * pts) {$/;"	function	line:267	class:Point	signature:(Point * pts)
+SetValue	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetValue (double value) {$/;"	function	line:304	class:Point	signature:(double value)
+SetDiff	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetDiff (char xy, double value) {$/;"	function	line:309	class:Point	signature:(char xy, double value)
+SetPhi	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetPhi (double value) {$/;"	function	line:318	class:Point	signature:(double value)
+SetMaterialProperty	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetMaterialProperty (char CEWNS, double value) {$/;"	function	line:323	class:Point	signature:(char CEWNS, double value)
+FindAxialElement	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::FindAxialElement (AxialData *adat) {$/;"	function	line:335	class:Point	signature:(AxialData *adat)
+Find2ndAxialElement	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::Find2ndAxialElement (AxialData *adat) {$/;"	function	line:410	class:Point	signature:(AxialData *adat)
+FindBoundaryElement	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::FindBoundaryElement () {$/;"	function	line:482	class:Point	signature:()
+CalcMaterialProperty	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::CalcMaterialProperty (Point * pt) {$/;"	function	line:525	class:Point	signature:(Point * pt)
+FindEastAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindEastAxialLine (AxialData *adat) {$/;"	function	line:571	class:Point	signature:(AxialData *adat)
+FindWestAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindWestAxialLine (AxialData *adat) {$/;"	function	line:593	class:Point	signature:(AxialData *adat)
+FindNorthAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindNorthAxialLine (AxialData *adat) {$/;"	function	line:615	class:Point	signature:(AxialData *adat)
+FindSouthAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindSouthAxialLine (AxialData *adat) {$/;"	function	line:637	class:Point	signature:(AxialData *adat)
+FindEast2ndAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindEast2ndAxialLine (AxialData *adat) {$/;"	function	line:659	class:Point	signature:(AxialData *adat)
+FindWest2ndAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindWest2ndAxialLine (AxialData *adat) {$/;"	function	line:689	class:Point	signature:(AxialData *adat)
+FindNorth2ndAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindNorth2ndAxialLine (AxialData *adat) {$/;"	function	line:719	class:Point	signature:(AxialData *adat)
+FindSouth2ndAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindSouth2ndAxialLine (AxialData *adat) {$/;"	function	line:749	class:Point	signature:(AxialData *adat)
+FindVerticalPoints	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindVerticalPoints (AxialData *adat, int axialIndex, char EWNS) {$/;"	function	line:779	class:Point	signature:(AxialData *adat, int axialIndex, char EWNS)
+FindHorizontalPoints	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindHorizontalPoints (AxialData *adat, int axialIndex, char EWNS) {$/;"	function	line:824	class:Point	signature:(AxialData *adat, int axialIndex, char EWNS)
+SetEWNS	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetEWNS (char EWNS, char ewns, int src) {$/;"	function	line:869	class:Point	signature:(char EWNS, char ewns, int src)
+SetEWNS2nd	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetEWNS2nd (char EWNS, char ewns, int src) {$/;"	function	line:903	class:Point	signature:(char EWNS, char ewns, int src)
+_MKL_SPBLAS_H_	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^#define _MKL_SPBLAS_H_$/;"	macro	line:31
+SPARSE_STATUS_SUCCESS	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_STATUS_SUCCESS           = 0,    \/* the operation was successful *\/$/;"	enumerator	line:623	enum:__anon1
+SPARSE_STATUS_NOT_INITIALIZED	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_STATUS_NOT_INITIALIZED   = 1,    \/* empty handle or matrix arrays *\/$/;"	enumerator	line:624	enum:__anon1
+SPARSE_STATUS_ALLOC_FAILED	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_STATUS_ALLOC_FAILED      = 2,    \/* internal error: memory allocation failed *\/$/;"	enumerator	line:625	enum:__anon1
+SPARSE_STATUS_INVALID_VALUE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_STATUS_INVALID_VALUE     = 3,    \/* invalid input value *\/$/;"	enumerator	line:626	enum:__anon1
+SPARSE_STATUS_EXECUTION_FAILED	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_STATUS_EXECUTION_FAILED  = 4,    \/* e.g. 0-diagonal element for triangular solver, etc. *\/$/;"	enumerator	line:627	enum:__anon1
+SPARSE_STATUS_INTERNAL_ERROR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_STATUS_INTERNAL_ERROR    = 5,    \/* internal error *\/$/;"	enumerator	line:628	enum:__anon1
+SPARSE_STATUS_NOT_SUPPORTED	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_STATUS_NOT_SUPPORTED     = 6     \/* e.g. operation for double precision doesn't support other types *\/$/;"	enumerator	line:629	enum:__anon1
+sparse_status_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    } sparse_status_t;$/;"	typedef	line:630	typeref:enum:__anon1
+SPARSE_OPERATION_NON_TRANSPOSE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_OPERATION_NON_TRANSPOSE       = 10,$/;"	enumerator	line:635	enum:__anon2
+SPARSE_OPERATION_TRANSPOSE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_OPERATION_TRANSPOSE           = 11,$/;"	enumerator	line:636	enum:__anon2
+SPARSE_OPERATION_CONJUGATE_TRANSPOSE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_OPERATION_CONJUGATE_TRANSPOSE = 12$/;"	enumerator	line:637	enum:__anon2
+sparse_operation_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    } sparse_operation_t;$/;"	typedef	line:638	typeref:enum:__anon2
+SPARSE_MATRIX_TYPE_GENERAL	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_MATRIX_TYPE_GENERAL            = 20,   \/*    General case                    *\/$/;"	enumerator	line:643	enum:__anon3
+SPARSE_MATRIX_TYPE_SYMMETRIC	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_MATRIX_TYPE_SYMMETRIC          = 21,   \/*    Triangular part of              *\/$/;"	enumerator	line:644	enum:__anon3
+SPARSE_MATRIX_TYPE_HERMITIAN	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_MATRIX_TYPE_HERMITIAN          = 22,   \/*    the matrix is to be processed   *\/$/;"	enumerator	line:645	enum:__anon3
+SPARSE_MATRIX_TYPE_TRIANGULAR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_MATRIX_TYPE_TRIANGULAR         = 23,$/;"	enumerator	line:646	enum:__anon3
+SPARSE_MATRIX_TYPE_DIAGONAL	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_MATRIX_TYPE_DIAGONAL           = 24,   \/* diagonal matrix; only diagonal elements will be processed *\/$/;"	enumerator	line:647	enum:__anon3
+SPARSE_MATRIX_TYPE_BLOCK_TRIANGULAR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_MATRIX_TYPE_BLOCK_TRIANGULAR   = 25,$/;"	enumerator	line:648	enum:__anon3
+SPARSE_MATRIX_TYPE_BLOCK_DIAGONAL	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_MATRIX_TYPE_BLOCK_DIAGONAL     = 26    \/* block-diagonal matrix; only diagonal blocks will be processed *\/$/;"	enumerator	line:649	enum:__anon3
+sparse_matrix_type_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    } sparse_matrix_type_t;$/;"	typedef	line:650	typeref:enum:__anon3
+SPARSE_INDEX_BASE_ZERO	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_INDEX_BASE_ZERO  = 0,           \/* C-style *\/$/;"	enumerator	line:655	enum:__anon4
+SPARSE_INDEX_BASE_ONE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_INDEX_BASE_ONE   = 1            \/* Fortran-style *\/$/;"	enumerator	line:656	enum:__anon4
+sparse_index_base_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    } sparse_index_base_t;$/;"	typedef	line:657	typeref:enum:__anon4
+SPARSE_FILL_MODE_LOWER	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_FILL_MODE_LOWER  = 40,           \/* lower triangular part of the matrix is stored *\/$/;"	enumerator	line:662	enum:__anon5
+SPARSE_FILL_MODE_UPPER	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_FILL_MODE_UPPER  = 41            \/* upper triangular part of the matrix is stored *\/$/;"	enumerator	line:663	enum:__anon5
+sparse_fill_mode_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    } sparse_fill_mode_t;$/;"	typedef	line:664	typeref:enum:__anon5
+SPARSE_DIAG_NON_UNIT	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_DIAG_NON_UNIT    = 50,           \/* triangular matrix with non-unit diagonal *\/$/;"	enumerator	line:669	enum:__anon6
+SPARSE_DIAG_UNIT	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_DIAG_UNIT        = 51            \/* triangular matrix with unit diagonal *\/$/;"	enumerator	line:670	enum:__anon6
+sparse_diag_type_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    } sparse_diag_type_t;$/;"	typedef	line:671	typeref:enum:__anon6
+SPARSE_LAYOUT_ROW_MAJOR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_LAYOUT_ROW_MAJOR    = 60,        \/* C-style *\/$/;"	enumerator	line:676	enum:__anon7
+SPARSE_LAYOUT_COLUMN_MAJOR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_LAYOUT_COLUMN_MAJOR = 61         \/* Fortran-style *\/$/;"	enumerator	line:677	enum:__anon7
+sparse_layout_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    } sparse_layout_t;$/;"	typedef	line:678	typeref:enum:__anon7
+SPARSE_VERBOSE_OFF	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_VERBOSE_OFF      = 70,$/;"	enumerator	line:683	enum:__anon8
+SPARSE_VERBOSE_BASIC	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_VERBOSE_BASIC    = 71,           \/* output contains high-level information about optimization algorithms, issues, etc. *\/$/;"	enumerator	line:684	enum:__anon8
+SPARSE_VERBOSE_EXTENDED	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_VERBOSE_EXTENDED = 72            \/* provide detailed output information *\/$/;"	enumerator	line:685	enum:__anon8
+verbose_mode_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    } verbose_mode_t;$/;"	typedef	line:686	typeref:enum:__anon8
+SPARSE_MEMORY_NONE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_MEMORY_NONE          = 80,       \/* no memory should be allocated for matrix values and structures; auxiliary structures could be created only for workload balancing, parallelization, etc. *\/$/;"	enumerator	line:691	enum:__anon9
+SPARSE_MEMORY_AGGRESSIVE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        SPARSE_MEMORY_AGGRESSIVE    = 81        \/* matrix could be converted to any internal format *\/$/;"	enumerator	line:692	enum:__anon9
+sparse_memory_usage_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    } sparse_memory_usage_t;$/;"	typedef	line:693	typeref:enum:__anon9
+sparse_matrix_t	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    typedef struct sparse_matrix *sparse_matrix_t;$/;"	typedef	line:700	typeref:struct:sparse_matrix
+matrix_descr	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^    struct matrix_descr {$/;"	struct	line:703
+type	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        sparse_matrix_type_t  type;       \/* matrix type: general, diagonal or triangular \/ symmetric \/ hermitian *\/$/;"	member	line:704	struct:matrix_descr
+mode	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        sparse_fill_mode_t    mode;       \/* upper or lower triangular part of the matrix ( for triangular \/ symmetric \/ hermitian case) *\/$/;"	member	line:705	struct:matrix_descr
+diag	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_spblas.h	/^        sparse_diag_type_t    diag;       \/* unit or non-unit diagonal ( for triangular \/ symmetric \/ hermitian case) *\/$/;"	member	line:706	struct:matrix_descr
+atx_cr	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void atx_cr ( int n, int nz_num, int ia[], int ja[], double a[], double x[], double w[] )$/;"	function	line:14	signature:( int n, int nz_num, int ia[], int ja[], double a[], double x[], double w[] )
+atx_st	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void atx_st ( int n, int nz_num, int ia[], int ja[], double a[], double x[], double w[] )$/;"	function	line:112	signature:( int n, int nz_num, int ia[], int ja[], double a[], double x[], double w[] )
+ax_cr	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void ax_cr ( int n, int nz_num, int ia[], int ja[], double a[], double x[], double w[] )$/;"	function	line:200	signature:( int n, int nz_num, int ia[], int ja[], double a[], double x[], double w[] )
+ax_st	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void ax_st ( int n, int nz_num, int ia[], int ja[], double a[], double x[], double w[] )$/;"	function	line:298	signature:( int n, int nz_num, int ia[], int ja[], double a[], double x[], double w[] )
+diagonal_pointer_cr	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void diagonal_pointer_cr ( int n, int nz_num, int ia[], int ja[], int ua[] )$/;"	function	line:389	signature:( int n, int nz_num, int ia[], int ja[], int ua[] )
+ilu_cr	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void ilu_cr ( int n, int nz_num, int ia[], int ja[], double a[], int ua[], double l[] )$/;"	function	line:463	signature:( int n, int nz_num, int ia[], int ja[], double a[], int ua[], double l[] )
+lus_cr	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void lus_cr ( int n, int nz_num, int ia[], int ja[], double l[], int ua[], double r[], double z[] )$/;"	function	line:600	signature:( int n, int nz_num, int ia[], int ja[], double l[], int ua[], double r[], double z[] )
+mgmres_st	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void mgmres_st ( int n, int nz_num, int ia[], int ja[], double a[], double x[],$/;"	function	line:702	signature:( int n, int nz_num, int ia[], int ja[], double a[], double x[], double rhs[], int itr_max, int mr, double tol_abs, double tol_rel )
+mult_givens	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void mult_givens ( double c, double s, int k, double g[] )$/;"	function	line:1004	signature:( double c, double s, int k, double g[] )
+pmgmres_ilu_cr	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void pmgmres_ilu_cr ( int n, int nz_num, int ia[], int ja[], double a[], $/;"	function	line:1073	signature:( int n, int nz_num, int ia[], int ja[], double a[], double x[], double rhs[], int itr_max, int mr, double tol_abs, double tol_rel )
+r8vec_dot	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^double r8vec_dot ( int n, double a1[], double a2[] )$/;"	function	line:1390	signature:( int n, double a1[], double a2[] )
+r8vec_uniform_01	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^double *r8vec_uniform_01 ( int n, int &seed )$/;"	function	line:1431	signature:( int n, int &seed )
+rearrange_cr	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void rearrange_cr ( int n, int nz_num, int ia[], int ja[], double a[] )$/;"	function	line:1531	signature:( int n, int nz_num, int ia[], int ja[], double a[] )
+timestamp	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^void timestamp ( )$/;"	function	line:1619	signature:( )
+TIME_SIZE	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^# define TIME_SIZE /;"	macro	line:1648	file:
+TIME_SIZE	/Users/junhong/github/Unbounded_domain_AGM/Header/mgmres.cpp	/^# undef TIME_SIZE$/;"	macro	line:1663	file:
+__MKL_PARDISO_H	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_pardiso.h	/^#define __MKL_PARDISO_H$/;"	macro	line:32
+PARDISO_ENV_PARAM	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_pardiso.h	/^enum PARDISO_ENV_PARAM {$/;"	enum	line:87
+PARDISO_OOC_FILE_NAME	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_pardiso.h	/^       PARDISO_OOC_FILE_NAME = 1$/;"	enumerator	line:88	enum:PARDISO_ENV_PARAM
+PARDISO_NO_ERROR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_pardiso.h	/^#define PARDISO_NO_ERROR /;"	macro	line:92
+PARDISO_UNIMPLEMENTED	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_pardiso.h	/^#define PARDISO_UNIMPLEMENTED /;"	macro	line:93
+PARDISO_NULL_HANDLE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_pardiso.h	/^#define PARDISO_NULL_HANDLE /;"	macro	line:94
+PARDISO_MEMORY_ERROR	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_pardiso.h	/^#define PARDISO_MEMORY_ERROR /;"	macro	line:95
+_MKL_PARDISO_PIVOT_H_	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_pardiso.h	/^#define _MKL_PARDISO_PIVOT_H_$/;"	macro	line:106
 STUFF_H	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^#define STUFF_H$/;"	macro	line:2
 Line2D	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Line2D::Line2D()$/;"	function	line:12	class:Line2D	signature:()
 Line2D	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Line2D::Line2D(Vector & sv, Vector & ev)$/;"	function	line:21	class:Line2D	signature:(Vector & sv, Vector & ev)
@@ -188,28 +390,28 @@ Triangle	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Triangle:
 Triangle	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Triangle::Triangle(Vector & v1, Vector & v2, Vector & v3)$/;"	function	line:388	class:Triangle	signature:(Vector & v1, Vector & v2, Vector & v3)
 Triangle	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Triangle::Triangle(Vector & v1, Vector & v2, Vector & v3, char bdc, double bdv)$/;"	function	line:398	class:Triangle	signature:(Vector & v1, Vector & v2, Vector & v3, char bdc, double bdv)
 ~Triangle	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Triangle::~Triangle()$/;"	function	line:411	class:Triangle	signature:()
-SetArea	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle  &  Triangle::SetArea()$/;"	function	line:414	class:Triangle	signature:()
-SetTriangle	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle & Triangle::SetTriangle(Vector & v1, Vector & v2, Vector & v3)$/;"	function	line:424	class:Triangle	signature:(Vector & v1, Vector & v2, Vector & v3)
-SetTriangle	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle & Triangle::SetTriangle(Vector & v1, Vector & v2, Vector & v3, char bdc, double bdv)$/;"	function	line:435	class:Triangle	signature:(Vector & v1, Vector & v2, Vector & v3, char bdc, double bdv)
-SetBD	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle & Triangle::SetBD(char bdc, double bdv)$/;"	function	line:449	class:Triangle	signature:(char bdc, double bdv)
-PutVertex	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle & Triangle::PutVertex(int offset, Vector & vec)$/;"	function	line:460	class:Triangle	signature:(int offset, Vector & vec)
-SetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle  &  Triangle::SetNormal()$/;"	function	line:472	class:Triangle	signature:()
-SetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle  &  Triangle::SetNormal(Vector &src)$/;"	function	line:485	class:Triangle	signature:(Vector &src)
-PutNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle  &  Triangle::PutNormal(Vector & src)$/;"	function	line:492	class:Triangle	signature:(Vector & src)
-SetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle &  Triangle::SetOPRT(Vector & qvec)$/;"	function	line:504	class:Triangle	signature:(Vector & qvec)
-SetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle &  Triangle::SetOPRT()$/;"	function	line:512	class:Triangle	signature:()
-CalculateProperties	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle &  Triangle::CalculateProperties()$/;"	function	line:519	class:Triangle	signature:()
-Inside	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     int   Triangle::Inside(Vector & vec)$/;"	function	line:528	class:Triangle	signature:(Vector & vec)
-showcontents	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Triangle & Triangle::showcontents(const char * str)$/;"	function	line:549	class:Triangle	signature:(const char * str)
-operator []	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Vector  &  Triangle::operator[](int offset)$/;"	function	line:562	class:Triangle	signature:(int offset)
-Line3D	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Line3D::Line3D()$/;"	function	line:574	class:Line3D	signature:()
-Line3D	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Line3D::Line3D(Vector & sv, Vector & ev)$/;"	function	line:583	class:Line3D	signature:(Vector & sv, Vector & ev)
-Line3D	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Line3D::Line3D(double xs, double ys, double zs, double xe, double ye, double ze)$/;"	function	line:592	class:Line3D	signature:(double xs, double ys, double zs, double xe, double ye, double ze)
-~Line3D	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Line3D::~Line3D(){}$/;"	function	line:601	class:Line3D	signature:()
-SetLength	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Line3D &  Line3D::SetLength()$/;"	function	line:603	class:Line3D	signature:()
-SetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Line3D &  Line3D::SetOPRT(Vector & qvec)$/;"	function	line:610	class:Line3D	signature:(Vector & qvec)
-SetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     Line3D &  Line3D::SetOPRT()$/;"	function	line:618	class:Line3D	signature:()
-IsCross	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^     int  Line3D::IsCross(Triangle & slave, Vector & vecCROSS, double & cptPOS)$/;"	function	line:628	class:Line3D	signature:(Triangle & slave, Vector & vecCROSS, double & cptPOS)
+SetArea	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle  &  Triangle::SetArea()$/;"	function	line:414	class:Triangle	signature:()
+SetTriangle	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle & Triangle::SetTriangle(Vector & v1, Vector & v2, Vector & v3)$/;"	function	line:424	class:Triangle	signature:(Vector & v1, Vector & v2, Vector & v3)
+SetTriangle	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle & Triangle::SetTriangle(Vector & v1, Vector & v2, Vector & v3, char bdc, double bdv)$/;"	function	line:435	class:Triangle	signature:(Vector & v1, Vector & v2, Vector & v3, char bdc, double bdv)
+SetBD	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle & Triangle::SetBD(char bdc, double bdv)$/;"	function	line:449	class:Triangle	signature:(char bdc, double bdv)
+PutVertex	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle & Triangle::PutVertex(int offset, Vector & vec)$/;"	function	line:460	class:Triangle	signature:(int offset, Vector & vec)
+SetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle  &  Triangle::SetNormal()$/;"	function	line:472	class:Triangle	signature:()
+SetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle  &  Triangle::SetNormal(Vector &src)$/;"	function	line:485	class:Triangle	signature:(Vector &src)
+PutNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle  &  Triangle::PutNormal(Vector & src)$/;"	function	line:492	class:Triangle	signature:(Vector & src)
+SetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle &  Triangle::SetOPRT(Vector & qvec)$/;"	function	line:504	class:Triangle	signature:(Vector & qvec)
+SetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle &  Triangle::SetOPRT()$/;"	function	line:512	class:Triangle	signature:()
+CalculateProperties	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle &  Triangle::CalculateProperties()$/;"	function	line:519	class:Triangle	signature:()
+Inside	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  int   Triangle::Inside(Vector & vec)$/;"	function	line:528	class:Triangle	signature:(Vector & vec)
+showcontents	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Triangle & Triangle::showcontents(const char * str)$/;"	function	line:549	class:Triangle	signature:(const char * str)
+operator []	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Vector  &  Triangle::operator[](int offset)$/;"	function	line:562	class:Triangle	signature:(int offset)
+Line3D	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Line3D::Line3D()$/;"	function	line:574	class:Line3D	signature:()
+Line3D	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Line3D::Line3D(Vector & sv, Vector & ev)$/;"	function	line:583	class:Line3D	signature:(Vector & sv, Vector & ev)
+Line3D	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Line3D::Line3D(double xs, double ys, double zs, double xe, double ye, double ze)$/;"	function	line:592	class:Line3D	signature:(double xs, double ys, double zs, double xe, double ye, double ze)
+~Line3D	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Line3D::~Line3D(){}$/;"	function	line:601	class:Line3D	signature:()
+SetLength	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Line3D &  Line3D::SetLength()$/;"	function	line:603	class:Line3D	signature:()
+SetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Line3D &  Line3D::SetOPRT(Vector & qvec)$/;"	function	line:610	class:Line3D	signature:(Vector & qvec)
+SetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  Line3D &  Line3D::SetOPRT()$/;"	function	line:618	class:Line3D	signature:()
+IsCross	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^  int  Line3D::IsCross(Triangle & slave, Vector & vecCROSS, double & cptPOS)$/;"	function	line:628	class:Line3D	signature:(Triangle & slave, Vector & vecCROSS, double & cptPOS)
 ScanCross	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^int  Line3D::ScanCross(int nSlv, Triangle *slave, Thing  & crsPT)$/;"	function	line:731	class:Line3D	signature:(int nSlv, Triangle *slave, Thing & crsPT)
 SetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Line3D &  Line3D::SetNormal()$/;"	function	line:759	class:Line3D	signature:()
 CalculateProperties	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Line3D &  Line3D::CalculateProperties()$/;"	function	line:772	class:Line3D	signature:()
@@ -220,6 +422,392 @@ SetLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Line3D & L
 SetLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Line3D & Line3D::SetLine(double xs, double ys, double zs, double xe, double ye, double ze)$/;"	function	line:832	class:Line3D	signature:(double xs, double ys, double zs, double xe, double ye, double ze)
 operator []	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Vector  &  Line3D::operator[](int offset)$/;"	function	line:842	class:Line3D	signature:(int offset)
 showcontents	/Users/junhong/github/Unbounded_domain_AGM/Header/Stuff++.h	/^Line3D &  Line3D::showcontents(const char *str)$/;"	function	line:848	class:Line3D	signature:(const char *str)
+CLASSHEADER_H	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define CLASSHEADER_H$/;"	macro	line:2
+PI	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define  PI /;"	macro	line:18
+ZeroValue	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define  ZeroValue /;"	macro	line:21
+UnitValue	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define  UnitValue /;"	macro	line:22
+NearZero	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define  NearZero /;"	macro	line:23
+Margin	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define  Margin /;"	macro	line:24
+D2	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define    D2 /;"	macro	line:27
+D3	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define    D3 /;"	macro	line:28
+SIGDIGITS	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define    SIGDIGITS /;"	macro	line:29
+Vector	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Vector$/;"	class	line:62
+getdim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      getdim() const {return dim;}$/;"	function	line:84	class:Vector	signature:() const
+dim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      dim;$/;"	member	line:111	class:Vector
+comp	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double  *comp;$/;"	member	line:112	class:Vector
+CoLMaT	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class  CoLMaT$/;"	class	line:121
+getcoldim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       getcoldim() const {return col_dim;}$/;"	function	line:130	class:CoLMaT	signature:() const
+getrowdim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       getrowdim() const {return vec_n;}$/;"	function	line:131	class:CoLMaT	signature:() const
+getmatrix	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector *  getmatrix() const {return colvec;}$/;"	function	line:132	class:CoLMaT	signature:() const
+col_dim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     col_dim;$/;"	member	line:158	class:CoLMaT
+vec_n	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     vec_n;$/;"	member	line:159	class:CoLMaT
+colvec	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector *colvec;$/;"	member	line:160	class:CoLMaT
+OPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class OPRT$/;"	class	line:169
+getmatrix	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  CoLMaT *  getmatrix() const {return mat;}$/;"	function	line:179	class:OPRT	signature:() const
+getdim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       getdim() const {return dim;}$/;"	function	line:180	class:OPRT	signature:() const
+dim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      dim;$/;"	member	line:198	class:OPRT
+mat	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  CoLMaT  *mat;$/;"	member	line:199	class:OPRT
+Rot	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Rot$/;"	class	line:208
+getRotAxis	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector    getRotAxis() const {return omega;}$/;"	function	line:216	class:Rot	signature:() const
+getPw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      getPw() const {return Pw;}$/;"	function	line:220	class:Rot	signature:() const
+getImPw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      getImPw() const {return ImPw;}$/;"	function	line:221	class:Rot	signature:() const
+getOmg	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      getOmg() const {return Omg;}$/;"	function	line:222	class:Rot	signature:() const
+omega	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector    omega;$/;"	member	line:228	class:Rot
+Pw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      Pw, ImPw, Omg;$/;"	member	line:229	class:Rot
+ImPw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      Pw, ImPw, Omg;$/;"	member	line:229	class:Rot
+Omg	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      Pw, ImPw, Omg;$/;"	member	line:229	class:Rot
+Cell	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class   Cell$/;"	class	line:238
+Index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int         Index() const {return index;}$/;"	function	line:249	class:Cell	signature:() const
+Item	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector      Item() const {return vec;}$/;"	function	line:250	class:Cell	signature:() const
+Item	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double      Item(int offs) {return vec[offs];}$/;"	function	line:251	class:Cell	signature:(int offs)
+Next	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell*       Next() const {return nextcell;}$/;"	function	line:252	class:Cell	signature:() const
+Cond	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char        Cond() const {return cond;}$/;"	function	line:253	class:Cell	signature:() const
+Status	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char        Status() const {return status;}$/;"	function	line:254	class:Cell	signature:() const
+Value	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double      Value() const {return value;}$/;"	function	line:255	class:Cell	signature:() const
+Xaxialline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine * Xaxialline() const {return xaxialline;}$/;"	function	line:256	class:Cell	signature:() const
+Yaxialline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine * Yaxialline() const {return yaxialline;}$/;"	function	line:257	class:Cell	signature:() const
+SetIndex	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell &   SetIndex(int off){index = off; return *this;}$/;"	function	line:259	class:Cell	signature:(int off)
+index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int        index;$/;"	member	line:277	class:Cell
+xaxialline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine *xaxialline;$/;"	member	line:278	class:Cell
+yaxialline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine *yaxialline;$/;"	member	line:279	class:Cell
+vec	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector     vec;$/;"	member	line:281	class:Cell
+cond	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char       cond;$/;"	member	line:282	class:Cell
+status	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char       status;$/;"	member	line:283	class:Cell
+value	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double     value;$/;"	member	line:284	class:Cell
+nextcell	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell      *nextcell;$/;"	member	line:285	class:Cell
+Thing	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class   Thing$/;"	class	line:294
+Howmany	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      Howmany() const {return ncell;}$/;"	function	line:301	class:Thing	signature:() const
+Head	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell  *  Head() const {return  headcell;}$/;"	function	line:302	class:Thing	signature:() const
+Run	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell  *  Run() const {return run;}$/;"	function	line:303	class:Thing	signature:() const
+SetNcell	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Thing &  SetNcell(int nc) {ncell = nc; return *this;}$/;"	function	line:321	class:Thing	signature:(int nc)
+ncell	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      ncell;$/;"	member	line:347	class:Thing
+headcell	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell    *headcell;$/;"	member	line:348	class:Thing
+run	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell    *run;$/;"	member	line:349	class:Thing
+Triangle	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Triangle$/;"	class	line:358
+GetArea	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double      GetArea(){ return Area; }$/;"	function	line:370	class:Triangle	signature:()
+GetVertex	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &    GetVertex(int offset){ return Vertex[offset]; }$/;"	function	line:371	class:Triangle	signature:(int offset)
+GetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &    GetNormal(){ return Normal; }$/;"	function	line:372	class:Triangle	signature:()
+GetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT &      GetOPRT(){ return CP_n; }$/;"	function	line:373	class:Triangle	signature:()
+GetBDcondition	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     char        GetBDcondition() {return cond;}$/;"	function	line:374	class:Triangle	signature:()
+GetBDvalue	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double      GetBDvalue() {return value;}$/;"	function	line:375	class:Triangle	signature:()
+SetIndex	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Triangle &  SetIndex(int offs) { index = offs; return *this; }$/;"	function	line:376	class:Triangle	signature:(int offs)
+index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     int     index;$/;"	member	line:401	class:Triangle
+Area	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double  Area;$/;"	member	line:402	class:Triangle
+Vertex	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  Vertex[D3];$/;"	member	line:403	class:Triangle
+Normal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  Normal;$/;"	member	line:404	class:Triangle
+CP_n	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT    CP_n;$/;"	member	line:405	class:Triangle
+value	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double  value;$/;"	member	line:406	class:Triangle
+cond	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     char    cond;$/;"	member	line:407	class:Triangle
+Line2D	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Line2D$/;"	class	line:416
+GetStart	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetStart(){ return start; }$/;"	function	line:430	class:Line2D	signature:()
+GetEnd	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetEnd(){ return end; }$/;"	function	line:431	class:Line2D	signature:()
+GetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetNormal(){ return Normal; }$/;"	function	line:432	class:Line2D	signature:()
+GetTangent	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetTangent(){ return Tangent; }$/;"	function	line:433	class:Line2D	signature:()
+GetBDcondition	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     char       GetBDcondition() {return cond;}$/;"	function	line:434	class:Line2D	signature:()
+GetBDvalue	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double     GetBDvalue() {return value;}$/;"	function	line:435	class:Line2D	signature:()
+GetLength	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double     GetLength() { return Len; }$/;"	function	line:437	class:Line2D	signature:()
+GetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT &     GetOPRT() { return CP_q; }$/;"	function	line:449	class:Line2D	signature:()
+start	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  start, end;$/;"	member	line:467	class:Line2D
+end	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  start, end;$/;"	member	line:467	class:Line2D
+Normal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  Normal, Tangent;$/;"	member	line:468	class:Line2D
+Tangent	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  Normal, Tangent;$/;"	member	line:468	class:Line2D
+CP_q	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT    CP_q;$/;"	member	line:469	class:Line2D
+Len	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double  Len;$/;"	member	line:470	class:Line2D
+value	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double  value;$/;"	member	line:471	class:Line2D
+cond	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     char    cond;$/;"	member	line:472	class:Line2D
+Line3D	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Line3D$/;"	class	line:481
+GetStart	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetStart(){ return start; }$/;"	function	line:493	class:Line3D	signature:()
+GetEnd	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetEnd(){ return end; }$/;"	function	line:494	class:Line3D	signature:()
+GetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetNormal(){ return Normal; }$/;"	function	line:495	class:Line3D	signature:()
+GetTangent	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetTangent(){ return Tangent; }$/;"	function	line:496	class:Line3D	signature:()
+GetLength	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double     GetLength() { return Len; }$/;"	function	line:498	class:Line3D	signature:()
+GetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT &     GetOPRT() { return CP_q; }$/;"	function	line:505	class:Line3D	signature:()
+start	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector     start, end;$/;"	member	line:523	class:Line3D
+end	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector     start, end;$/;"	member	line:523	class:Line3D
+Normal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector     Normal, Tangent;$/;"	member	line:524	class:Line3D
+Tangent	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector     Normal, Tangent;$/;"	member	line:524	class:Line3D
+CP_q	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT       CP_q;$/;"	member	line:525	class:Line3D
+Len	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double     Len;$/;"	member	line:526	class:Line3D
+Section	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Section {$/;"	class	line:535
+name	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string    name; \/\/ section name$/;"	member	line:537	class:Section
+nE	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       nE;   \/\/ the number of elemens$/;"	member	line:538	class:Section
+SL2D	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D   *SL2D; \/\/ 2D line element$/;"	member	line:539	class:Section
+SL3D	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Triangle *SL3D; \/\/ 3D line element$/;"	member	line:540	class:Section
+setName	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section & setName (string nm) {name = nm; return *this;}$/;"	function	line:551	class:Section	signature:(string nm)
+getName	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string    getName () {return name;}$/;"	function	line:552	class:Section	signature:()
+setEltnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section & setEltnum (int n) {nE = n; return *this;}$/;"	function	line:554	class:Section	signature:(int n)
+getEltnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       getEltnum () {return nE;}$/;"	function	line:555	class:Section	signature:()
+setElt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section   & setElt (Line2D *ln2d) {SL2D = ln2d; return *this;}$/;"	function	line:557	class:Section	signature:(Line2D *ln2d)
+setElt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section   & setElt (Triangle *tr3d) {SL3D = tr3d; return *this;}$/;"	function	line:558	class:Section	signature:(Triangle *tr3d)
+get2DElt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D    * get2DElt (int n) {return &SL2D[n];}$/;"	function	line:559	class:Section	signature:(int n)
+get3DElt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Triangle  * get3DElt (int n) {return &SL3D[n];}$/;"	function	line:560	class:Section	signature:(int n)
+Region	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Region {$/;"	class	line:575
+name	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string    name; \/\/ region name$/;"	member	line:577	class:Region
+nS	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       nS;   \/\/ the number of sections$/;"	member	line:578	class:Region
+sctn	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section **sctn; \/\/ sections$/;"	member	line:579	class:Region
+sign	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   *sign; \/\/ section sign$/;"	member	line:580	class:Region
+gridinfo	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector    gridinfo; \/\/ grid informataion$/;"	member	line:581	class:Region
+xgrid2d	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D   *xgrid2d; \/\/ 2D background linesegment along x-axis$/;"	member	line:582	class:Region
+ygrid2d	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D   *ygrid2d; \/\/ 2D background linesegment along y-axis$/;"	member	line:583	class:Region
+xgrid3d	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D   *xgrid3d; \/\/ 3D background linesegment along x-axis$/;"	member	line:584	class:Region
+ygrid3d	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D   *ygrid3d; \/\/ 3D background linesegment along y-axis$/;"	member	line:585	class:Region
+zgrid3d	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D   *zgrid3d; \/\/ 3D background linesegment along z-axis$/;"	member	line:586	class:Region
+nXgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       nXgrid; \/\/ the number of xgrid$/;"	member	line:587	class:Region
+nYgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       nYgrid; \/\/ the number of ygrid$/;"	member	line:588	class:Region
+nZgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       nZgrid; \/\/ the number of zgrid$/;"	member	line:589	class:Region
+setName	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Region & setName (string nm) {name = nm; return *this;}$/;"	function	line:598	class:Region	signature:(string nm)
+getName	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string   getName () {return name;}$/;"	function	line:599	class:Region	signature:()
+setGridinfo	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Region & setGridinfo (Vector* src) {gridinfo = *src; return *this;}$/;"	function	line:601	class:Region	signature:(Vector* src)
+getGridinfo	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector * getGridinfo () {return &gridinfo;}$/;"	function	line:602	class:Region	signature:()
+setSectionnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Region & setSectionnum (int n) {nS = n; return *this;}$/;"	function	line:604	class:Region	signature:(int n)
+getSectionnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      getSectionnum () {return nS;}$/;"	function	line:605	class:Region	signature:()
+getSection	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section *  getSection (int n) {return sctn[n];}$/;"	function	line:609	class:Region	signature:(int n)
+getSign	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   getSign (int n) {return sign[n];}$/;"	function	line:612	class:Region	signature:(int n)
+getXgridnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int getXgridnum () {return nXgrid;}$/;"	function	line:617	class:Region	signature:()
+getYgridnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int getYgridnum () {return nYgrid;}$/;"	function	line:618	class:Region	signature:()
+getZgridnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int getZgridnum () {return nZgrid;}$/;"	function	line:619	class:Region	signature:()
+get2Dxgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D * get2Dxgrid (int n) {return &xgrid2d[n];}$/;"	function	line:621	class:Region	signature:(int n)
+get2Dygrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D * get2Dygrid (int n) {return &ygrid2d[n];}$/;"	function	line:622	class:Region	signature:(int n)
+get3Dxgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D * get3Dxgrid (int n) {return &xgrid3d[n];}$/;"	function	line:624	class:Region	signature:(int n)
+get3Dygrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D * get3Dygrid (int n) {return &ygrid3d[n];}$/;"	function	line:625	class:Region	signature:(int n)
+get3Dzgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D * get3Dzgrid (int n) {return &zgrid3d[n];}$/;"	function	line:626	class:Region	signature:(int n)
+AxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class AxialLine {$/;"	class	line:640
+start_pt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell      *start_pt;$/;"	member	line:642	class:AxialLine
+end_pt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell      *end_pt;$/;"	member	line:643	class:AxialLine
+index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int        index;$/;"	member	line:644	class:AxialLine
+nextaxialline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine *nextaxialline;$/;"	member	line:645	class:AxialLine
+center_pt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector     center_pt;$/;"	member	line:646	class:AxialLine
+Index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int         Index  () const {return index;}$/;"	function	line:654	class:AxialLine	signature:() const
+Start	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell      * Start  () const {return start_pt;}$/;"	function	line:655	class:AxialLine	signature:() const
+End	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell      * End    () const {return end_pt;}$/;"	function	line:656	class:AxialLine	signature:() const
+Next	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine * Next   () const {return nextaxialline;}$/;"	function	line:657	class:AxialLine	signature:() const
+Center	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector    * Center ()       {return &center_pt;}$/;"	function	line:658	class:AxialLine	signature:()
+Thing_AxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Thing_AxialLine {$/;"	class	line:678
+nline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int        nline;$/;"	member	line:680	class:Thing_AxialLine
+headline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine *headline;$/;"	member	line:681	class:Thing_AxialLine
+run	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine *run;$/;"	member	line:682	class:Thing_AxialLine
+Howmany	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Howmany () const {return nline;}$/;"	function	line:689	class:Thing_AxialLine	signature:() const
+Head	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine * Head () const {return headline;}$/;"	function	line:690	class:Thing_AxialLine	signature:() const
+Run	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine * Run () const {return run;}$/;"	function	line:691	class:Thing_AxialLine	signature:() const
+SetNline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Thing_AxialLine & SetNline(int nl) {nline = nl; return *this;}$/;"	function	line:707	class:Thing_AxialLine	signature:(int nl)
+ControlData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class ControlData {$/;"	class	line:730
+gmres_tol	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   gmres_tol       ; \/\/GMRES tolerance$/;"	member	line:732	class:ControlData
+dt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   dt              ; \/\/time interval$/;"	member	line:733	class:ControlData
+terminal_t	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   terminal_t      ; \/\/terminal time$/;"	member	line:734	class:ControlData
+t	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   t               ; \/\/Present time$/;"	member	line:735	class:ControlData
+krylov_dim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      krylov_dim      ; \/\/Dimension of krylov subspace$/;"	member	line:736	class:ControlData
+tstep	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      tstep           ; \/\/time step$/;"	member	line:737	class:ControlData
+rest_out_intvl	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      rest_out_intvl  ; \/\/out interval$/;"	member	line:738	class:ControlData
+max_itr	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      max_itr         ; \/\/maximum ieration number of GMRES$/;"	member	line:739	class:ControlData
+AxialFile	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string   AxialFile       ; \/\/axial data file name$/;"	member	line:740	class:ControlData
+output_sol	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string   output_sol      ; \/\/output solution file name$/;"	member	line:741	class:ControlData
+output_del	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string   output_del      ; \/\/output derivative file name$/;"	member	line:742	class:ControlData
+GMRES_Tol	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double GMRES_Tol ()  const {return this->gmres_tol;}$/;"	function	line:748	class:ControlData	signature:() const
+Dt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Dt ()         const {return this->dt;}$/;"	function	line:749	class:ControlData	signature:() const
+Terminal_T	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Terminal_T () const {return this->terminal_t;}$/;"	function	line:750	class:ControlData	signature:() const
+T	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double T ()          const {return this->t;}$/;"	function	line:751	class:ControlData	signature:() const
+Krylov_Dim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Krylov_Dim ()     const {return this->krylov_dim;}$/;"	function	line:753	class:ControlData	signature:() const
+Tstep	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Tstep ()          const {return this->tstep;}$/;"	function	line:754	class:ControlData	signature:() const
+Rest_Out_Intvl	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Rest_Out_Intvl () const {return this->rest_out_intvl;}$/;"	function	line:755	class:ControlData	signature:() const
+Max_Itr	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Max_Itr ()        const {return this->max_itr;}$/;"	function	line:756	class:ControlData	signature:() const
+Axialfile	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string Axialfile ()  const {return this->AxialFile;};$/;"	function	line:758	class:ControlData	signature:() const
+Output_Sol	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string Output_Sol () const {return this->output_sol;}$/;"	function	line:759	class:ControlData	signature:() const
+Output_Del	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string Output_Del () const {return this->output_del;}$/;"	function	line:760	class:ControlData	signature:() const
+ControlData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^ControlData::ControlData () {}$/;"	function	line:766	class:ControlData	signature:()
+~ControlData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^ControlData::~ControlData () {}$/;"	function	line:767	class:ControlData	signature:()
+AxialData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class AxialData {$/;"	class	line:775
+nx	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      nx           ; \/\/ total number of x-axial line$/;"	member	line:777	class:AxialData
+ny	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      ny           ; \/\/ total number of y-axial line$/;"	member	line:778	class:AxialData
+bd_pts_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      bd_pts_num   ; \/\/ total number of the boundary poins$/;"	member	line:779	class:AxialData
+xaxial_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      xaxial_num   ; \/\/ total number of x-axial lines$/;"	member	line:780	class:AxialData
+yaxial_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      yaxial_num   ; \/\/ total number of y-axial lines$/;"	member	line:781	class:AxialData
+xxaxial_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      xxaxial_num  ; \/\/ size of xxaxial$/;"	member	line:782	class:AxialData
+yyaxial_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      yyaxial_num  ; \/\/ size of yyaxial$/;"	member	line:783	class:AxialData
+in_pts_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      in_pts_num   ; \/\/ total number of the cross points$/;"	member	line:784	class:AxialData
+phi_pts_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      phi_pts_num  ; \/\/ total number of the cross points except interface points$/;"	member	line:785	class:AxialData
+pts_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      pts_num      ; \/\/ total number of points$/;"	member	line:786	class:AxialData
+EWNS_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    **EWNS_index   ; \/\/ EWNS index of the point    [ 4 * n + i ] ( 6 * in_pts_num   )$/;"	member	line:788	class:AxialData
+xaxial_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *xaxial_index ; \/\/ index of points along x-axial line$/;"	member	line:789	class:AxialData
+yaxial_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *yaxial_index ; \/\/ index of points along y-axial line$/;"	member	line:790	class:AxialData
+xxaxial_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *xxaxial_index; \/\/ first number of each x-axial line$/;"	member	line:791	class:AxialData
+yyaxial_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *yyaxial_index; \/\/ first number of each y-axial line$/;"	member	line:792	class:AxialData
+ptsTOin_pts	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *ptsTOin_pts  ; \/\/ all points to inner points$/;"	member	line:793	class:AxialData
+in_ptsTOpts	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *in_ptsTOpts  ; \/\/ inner points to all points$/;"	member	line:794	class:AxialData
+ptsTOphi_pts	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *ptsTOphi_pts ; \/\/ all points to inner points$/;"	member	line:795	class:AxialData
+phi_ptsTOpts	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *phi_ptsTOpts ; \/\/ inner points to all points$/;"	member	line:796	class:AxialData
+axial_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    **axial_index  ; \/\/ index of the axial line      [ 3 * n + i ] ( 3 * nx * ny * nz )$/;"	member	line:797	class:AxialData
+pts	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double **pts          ; \/\/ coordinate of the points     [ 2 * n + i ] ( 2 * pts_num      )$/;"	member	line:799	class:AxialData
+xaxial	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double **xaxial       ; \/\/ x-axial lines                [ 4 * l + i ] ( 4 * nx           )$/;"	member	line:800	class:AxialData
+yaxial	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double **yaxial       ; \/\/ y-axial lines                [ 4 * l + i ] ( 4 * ny           )$/;"	member	line:801	class:AxialData
+b_u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double  *b_u          ; \/\/ bd value u      [      n + i ] (      1 * in_pts_num )$/;"	member	line:802	class:AxialData
+mp_u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double  *mp_u         ; \/\/ material property$/;"	member	line:803	class:AxialData
+bc_u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char    *bc_u         ; \/\/ bd condition u  [      n + i ] (      1 * in_pts_num )$/;"	member	line:805	class:AxialData
+Pts_Num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Pts_Num () const {return pts_num;}$/;"	function	line:818	class:AxialData	signature:() const
+In_Pts_Num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int In_Pts_Num () const {return in_pts_num;}$/;"	function	line:819	class:AxialData	signature:() const
+Phi_Pts_Num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Phi_Pts_Num () const {return phi_pts_num;}$/;"	function	line:820	class:AxialData	signature:() const
+Point	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Point {$/;"	class	line:844
+xm	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:846	class:Point
+xb	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:846	class:Point
+xp	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:846	class:Point
+ym	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:846	class:Point
+yb	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:846	class:Point
+yp	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:846	class:Point
+u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double u;$/;"	member	line:847	class:Point
+ux	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double ux, uy;$/;"	member	line:848	class:Point
+uy	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double ux, uy;$/;"	member	line:848	class:Point
+phi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double phi;$/;"	member	line:849	class:Point
+b_u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double b_u;$/;"	member	line:851	class:Point
+mp_u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double mp_u[5];$/;"	member	line:852	class:Point
+E	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    E, EN, ES;$/;"	member	line:854	class:Point
+EN	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    E, EN, ES;$/;"	member	line:854	class:Point
+ES	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    E, EN, ES;$/;"	member	line:854	class:Point
+W	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    W, WN, WS;$/;"	member	line:855	class:Point
+WN	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    W, WN, WS;$/;"	member	line:855	class:Point
+WS	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    W, WN, WS;$/;"	member	line:855	class:Point
+N	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    N, NE, NW;$/;"	member	line:856	class:Point
+NE	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    N, NE, NW;$/;"	member	line:856	class:Point
+NW	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    N, NE, NW;$/;"	member	line:856	class:Point
+S	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    S, SE, SW;$/;"	member	line:857	class:Point
+SE	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    S, SE, SW;$/;"	member	line:857	class:Point
+SW	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    S, SE, SW;$/;"	member	line:857	class:Point
+e	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    e, en, es;$/;"	member	line:859	class:Point
+en	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    e, en, es;$/;"	member	line:859	class:Point
+es	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    e, en, es;$/;"	member	line:859	class:Point
+w	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    w, wn, ws;$/;"	member	line:860	class:Point
+wn	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    w, wn, ws;$/;"	member	line:860	class:Point
+ws	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    w, wn, ws;$/;"	member	line:860	class:Point
+n	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    n, ne, nw;$/;"	member	line:861	class:Point
+ne	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    n, ne, nw;$/;"	member	line:861	class:Point
+nw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    n, ne, nw;$/;"	member	line:861	class:Point
+s	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    s, se, sw;$/;"	member	line:862	class:Point
+se	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    s, se, sw;$/;"	member	line:862	class:Point
+sw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    s, se, sw;$/;"	member	line:862	class:Point
+index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    index;$/;"	member	line:864	class:Point
+mtrxindex	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    mtrxindex;$/;"	member	line:865	class:Point
+axis	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    axis[2];$/;"	member	line:866	class:Point
+condition	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char   condition;$/;"	member	line:868	class:Point
+Value	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Value () const {return u;}$/;"	function	line:875	class:Point	signature:() const
+Phi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Phi () const {return phi;}$/;"	function	line:877	class:Point	signature:() const
+Boundaryvalue	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Boundaryvalue () const {return b_u;}$/;"	function	line:878	class:Point	signature:() const
+Index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Index () {return index;}$/;"	function	line:881	class:Point	signature:()
+Mtrx_Index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Mtrx_Index () {return mtrxindex;}$/;"	function	line:882	class:Point	signature:()
+Condition	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char Condition () {return condition;}$/;"	function	line:886	class:Point	signature:()
+_xData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^typedef struct _xData {$/;"	struct	line:930
+F	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double F;$/;"	member	line:931	struct:_xData
+Cu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Cu, Cphi;$/;"	member	line:932	struct:_xData
+Cphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Cu, Cphi;$/;"	member	line:932	struct:_xData
+Eu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Eu, ENu, ESu;$/;"	member	line:933	struct:_xData
+ENu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Eu, ENu, ESu;$/;"	member	line:933	struct:_xData
+ESu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Eu, ENu, ESu;$/;"	member	line:933	struct:_xData
+Wu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wu, WNu, WSu;$/;"	member	line:934	struct:_xData
+WNu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wu, WNu, WSu;$/;"	member	line:934	struct:_xData
+WSu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wu, WNu, WSu;$/;"	member	line:934	struct:_xData
+Ephi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Ephi, ENphi, ESphi;$/;"	member	line:935	struct:_xData
+ENphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Ephi, ENphi, ESphi;$/;"	member	line:935	struct:_xData
+ESphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Ephi, ENphi, ESphi;$/;"	member	line:935	struct:_xData
+Wphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wphi, WNphi, WSphi;$/;"	member	line:936	struct:_xData
+WNphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wphi, WNphi, WSphi;$/;"	member	line:936	struct:_xData
+WSphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wphi, WNphi, WSphi;$/;"	member	line:936	struct:_xData
+xData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^}xData;$/;"	typedef	line:937	typeref:struct:_xData
+_yData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^typedef struct _yData {$/;"	struct	line:939
+F	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double F;$/;"	member	line:940	struct:_yData
+Cu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Cu, Cphi;$/;"	member	line:941	struct:_yData
+Cphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Cu, Cphi;$/;"	member	line:941	struct:_yData
+Nu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nu, NEu, NWu;$/;"	member	line:942	struct:_yData
+NEu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nu, NEu, NWu;$/;"	member	line:942	struct:_yData
+NWu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nu, NEu, NWu;$/;"	member	line:942	struct:_yData
+Su	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Su, SEu, SWu;$/;"	member	line:943	struct:_yData
+SEu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Su, SEu, SWu;$/;"	member	line:943	struct:_yData
+SWu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Su, SEu, SWu;$/;"	member	line:943	struct:_yData
+Nphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nphi, NEphi, NWphi;$/;"	member	line:944	struct:_yData
+NEphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nphi, NEphi, NWphi;$/;"	member	line:944	struct:_yData
+NWphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nphi, NEphi, NWphi;$/;"	member	line:944	struct:_yData
+Sphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Sphi, SEphi, SWphi;$/;"	member	line:945	struct:_yData
+SEphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Sphi, SEphi, SWphi;$/;"	member	line:945	struct:_yData
+SWphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Sphi, SEphi, SWphi;$/;"	member	line:945	struct:_yData
+yData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^}yData;$/;"	typedef	line:946	typeref:struct:_yData
+MatrixProcess	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class MatrixProcess {$/;"	class	line:954
+rb	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double *rb      ; \/\/ vector value    [   3*n + i] (      3 * in_pts_num )$/;"	member	line:956	class:MatrixProcess
+ia	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    *ia      ;$/;"	member	line:957	class:MatrixProcess
+ja	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    *ja      ;$/;"	member	line:958	class:MatrixProcess
+ent	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double *ent     ;$/;"	member	line:959	class:MatrixProcess
+ent_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     ent_num ; \/\/ total number of the matrix elements$/;"	member	line:960	class:MatrixProcess
+arrInt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    *arrInt;$/;"	member	line:962	class:MatrixProcess
+arrEnt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double *arrEnt;$/;"	member	line:963	class:MatrixProcess
+uniqInt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    *uniqInt;$/;"	member	line:964	class:MatrixProcess
+uniqEnt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double *uniqEnt;$/;"	member	line:965	class:MatrixProcess
+rowsInt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    *rowsInt;$/;"	member	line:966	class:MatrixProcess
+rowsEnt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double *rowsEnt;$/;"	member	line:967	class:MatrixProcess
+Int_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     Int_num;$/;"	member	line:968	class:MatrixProcess
+ja_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     ja_num;$/;"	member	line:969	class:MatrixProcess
+matrixSize	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     matrixSize;$/;"	member	line:970	class:MatrixProcess
+epsilon	/Users/junhong/github/Unbounded_domain_AGM/Header/exponential_integral_Ei.h	/^static const long double epsilon = 10.0 * LDBL_EPSILON;$/;"	variable	line:21
+Exponential_Integral_Ei	/Users/junhong/github/Unbounded_domain_AGM/Header/exponential_integral_Ei.h	/^double Exponential_Integral_Ei( double x )$/;"	function	line:50	signature:( double x )
+xExponential_Integral_Ei	/Users/junhong/github/Unbounded_domain_AGM/Header/exponential_integral_Ei.h	/^long double xExponential_Integral_Ei( long double x )$/;"	function	line:84	signature:( long double x )
+Continued_Fraction_Ei	/Users/junhong/github/Unbounded_domain_AGM/Header/exponential_integral_Ei.h	/^static long double Continued_Fraction_Ei( long double x )$/;"	function	line:112	signature:( long double x )
+Power_Series_Ei	/Users/junhong/github/Unbounded_domain_AGM/Header/exponential_integral_Ei.h	/^static long double Power_Series_Ei( long double x )$/;"	function	line:169	signature:( long double x )
+Argument_Addition_Series_Ei	/Users/junhong/github/Unbounded_domain_AGM/Header/exponential_integral_Ei.h	/^static long double Argument_Addition_Series_Ei(long double x)$/;"	function	line:213	signature:(long double x)
+CALCNEUMANNPT	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcNeumannpt.h	/^#define CALCNEUMANNPT$/;"	macro	line:2
+CalcAtNeumannpt	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcNeumannpt.h	/^double CalcAtNeumannpt (char xy, Point *pt, Point *pts, xData *xdat, yData *ydat) {$/;"	function	line:9	signature:(char xy, Point *pt, Point *pts, xData *xdat, yData *ydat)
+CalcNeumannCoef	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcNeumannpt.h	/^void CalcNeumannCoef(Point *pt, Point *pts, xData *xdat, yData *ydat) {$/;"	function	line:50	signature:(Point *pt, Point *pts, xData *xdat, yData *ydat)
+CALCDIFF_H	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcDiff.h	/^#define CALCDIFF_H$/;"	macro	line:2
+CalcDiffCoef	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcDiff.h	/^void CalcDiffCoef(Point *pt, Point *pts, xData *xdat, yData *ydat) {$/;"	function	line:6	signature:(Point *pt, Point *pts, xData *xdat, yData *ydat)
+CalcDiff	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcDiff.h	/^double CalcDiff (char xy, Point *pt, Point *pts, xData *xdat, yData *ydat) {$/;"	function	line:129	signature:(char xy, Point *pt, Point *pts, xData *xdat, yData *ydat)
+_MKL_TYPES_H_	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define _MKL_TYPES_H_$/;"	macro	line:28
+_MKL_Complex8	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^struct _MKL_Complex8 {$/;"	struct	line:37
+real	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    float real;$/;"	member	line:38	struct:_MKL_Complex8
+imag	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    float imag;$/;"	member	line:39	struct:_MKL_Complex8
+MKL_Complex8	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^} MKL_Complex8;$/;"	typedef	line:40	typeref:struct:_MKL_Complex8
+_MKL_Complex16	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^struct _MKL_Complex16 {$/;"	struct	line:46
+real	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    double real;$/;"	member	line:47	struct:_MKL_Complex16
+imag	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    double imag;$/;"	member	line:48	struct:_MKL_Complex16
+MKL_Complex16	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^} MKL_Complex16;$/;"	typedef	line:49	typeref:struct:_MKL_Complex16
+MajorVersion	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    int    MajorVersion;$/;"	member	line:55	struct:__anon10
+MinorVersion	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    int    MinorVersion;$/;"	member	line:56	struct:__anon10
+UpdateVersion	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    int    UpdateVersion;$/;"	member	line:57	struct:__anon10
+ProductStatus	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    char * ProductStatus;$/;"	member	line:58	struct:__anon10
+Build	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    char * Build;$/;"	member	line:59	struct:__anon10
+Processor	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    char * Processor;$/;"	member	line:60	struct:__anon10
+Platform	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    char * Platform;$/;"	member	line:61	struct:__anon10
+MKLVersion	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^} MKLVersion;$/;"	typedef	line:62	typeref:struct:__anon10
+MKL_INT64	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    #define MKL_INT64 /;"	macro	line:66
+MKL_UINT64	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    #define MKL_UINT64 /;"	macro	line:67
+MKL_INT64	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    #define MKL_INT64 /;"	macro	line:69
+MKL_UINT64	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    #define MKL_UINT64 /;"	macro	line:70
+MKL_INT	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    #define MKL_INT /;"	macro	line:77
+MKL_UINT	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    #define MKL_UINT /;"	macro	line:80
+MKL_LONG	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_LONG /;"	macro	line:82
+MKL_INT	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    #define MKL_INT /;"	macro	line:88
+MKL_UINT	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^    #define MKL_UINT /;"	macro	line:91
+MKL_LONG	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_LONG /;"	macro	line:93
+MKL_DOMAIN_ALL	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_DOMAIN_ALL /;"	macro	line:98
+MKL_DOMAIN_BLAS	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_DOMAIN_BLAS /;"	macro	line:99
+MKL_DOMAIN_FFT	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_DOMAIN_FFT /;"	macro	line:100
+MKL_DOMAIN_VML	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_DOMAIN_VML /;"	macro	line:101
+MKL_DOMAIN_PARDISO	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_DOMAIN_PARDISO /;"	macro	line:102
+MKL_CBWR_BRANCH	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_BRANCH /;"	macro	line:107
+MKL_CBWR_ALL	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_ALL /;"	macro	line:108
+MKL_CBWR_UNSET_ALL	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_UNSET_ALL /;"	macro	line:111
+MKL_CBWR_OFF	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_OFF /;"	macro	line:112
+MKL_CBWR_BRANCH_OFF	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_BRANCH_OFF /;"	macro	line:115
+MKL_CBWR_AUTO	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_AUTO /;"	macro	line:116
+MKL_CBWR_COMPATIBLE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_COMPATIBLE /;"	macro	line:117
+MKL_CBWR_SSE2	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_SSE2 /;"	macro	line:118
+MKL_CBWR_SSSE3	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_SSSE3 /;"	macro	line:119
+MKL_CBWR_SSE4_1	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_SSE4_1 /;"	macro	line:120
+MKL_CBWR_SSE4_2	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_SSE4_2 /;"	macro	line:121
+MKL_CBWR_AVX	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_AVX /;"	macro	line:122
+MKL_CBWR_AVX2	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_AVX2 /;"	macro	line:123
+MKL_CBWR_AVX512_MIC	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_AVX512_MIC /;"	macro	line:124
+MKL_CBWR_AVX512	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_AVX512 /;"	macro	line:125
+MKL_CBWR_AVX512_MIC_E1	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_AVX512_MIC_E1 /;"	macro	line:126
+MKL_CBWR_SUCCESS	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_SUCCESS /;"	macro	line:129
+MKL_CBWR_ERR_INVALID_SETTINGS	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_ERR_INVALID_SETTINGS /;"	macro	line:130
+MKL_CBWR_ERR_INVALID_INPUT	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_ERR_INVALID_INPUT /;"	macro	line:131
+MKL_CBWR_ERR_UNSUPPORTED_BRANCH	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_ERR_UNSUPPORTED_BRANCH /;"	macro	line:132
+MKL_CBWR_ERR_UNKNOWN_BRANCH	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_ERR_UNKNOWN_BRANCH /;"	macro	line:133
+MKL_CBWR_ERR_MODE_CHANGE_FAILURE	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_ERR_MODE_CHANGE_FAILURE /;"	macro	line:134
+MKL_CBWR_SSE3	/Users/junhong/github/Unbounded_domain_AGM/Header/mkl_types.h	/^#define MKL_CBWR_SSE3 /;"	macro	line:137
 CLASS	/Users/junhong/github/Unbounded_domain_AGM/Header/Class++.h	/^#define CLASS$/;"	macro	line:2
 Section	/Users/junhong/github/Unbounded_domain_AGM/Header/Class++.h	/^Section::Section () {$/;"	function	line:12	class:Section	signature:()
 Section	/Users/junhong/github/Unbounded_domain_AGM/Header/Class++.h	/^Section::Section (string nm) {$/;"	function	line:21	class:Section	signature:(string nm)
@@ -321,45 +909,8 @@ CellMemoryCheck	/Users/junhong/github/Unbounded_domain_AGM/Header/Read.h	/^int C
 AxialLineMemoryCheck	/Users/junhong/github/Unbounded_domain_AGM/Header/Read.h	/^int AxialLineMemoryCheck (AxialLine *src) {$/;"	function	line:1198	signature:(AxialLine *src)
 IsEqualDouble	/Users/junhong/github/Unbounded_domain_AGM/Header/Read.h	/^int IsEqualDouble (double v1, double v2) {$/;"	function	line:1208	signature:(double v1, double v2)
 IsEqualDouble	/Users/junhong/github/Unbounded_domain_AGM/Header/Read.h	/^int IsEqualDouble (double v1, double v2, double tol) {$/;"	function	line:1215	signature:(double v1, double v2, double tol)
-AXLGEN	/Users/junhong/github/Unbounded_domain_AGM/Header/AXLGEN.h	/^int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, int nIter) {$/;"	function	line:3	signature:(const string Geometry_filename, const string AGL_output_file_TEMP, int nIter)
-POINT_H	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^#define POINT_H$/;"	macro	line:2
-Point	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point::Point () {$/;"	function	line:6	class:Point	signature:()
-~Point	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point::~Point () {$/;"	function	line:25	class:Point	signature:()
-Coordinate	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^double Point::Coordinate (char xy) {$/;"	function	line:29	class:Point	signature:(char xy)
-MinMaxCoordinate	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^double Point::MinMaxCoordinate (char xy, char mp) {$/;"	function	line:38	class:Point	signature:(char xy, char mp)
-Diff	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^double Point::Diff (char xy) {$/;"	function	line:54	class:Point	signature:(char xy)
-MaterialProperty	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^double Point::MaterialProperty (char CEWNS) {$/;"	function	line:63	class:Point	signature:(char CEWNS)
-EWNS	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::EWNS (char EWNS, char ewns) {$/;"	function	line:75	class:Point	signature:(char EWNS, char ewns)
-EWNS2nd	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::EWNS2nd (char EWNS, char ewns) {$/;"	function	line:110	class:Point	signature:(char EWNS, char ewns)
-SetCoordinate	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetCoordinate (char xy, double value) {$/;"	function	line:145	class:Point	signature:(char xy, double value)
-SetMinMaxCoordinate	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetMinMaxCoordinate (char xy, char mp,  double value) {$/;"	function	line:154	class:Point	signature:(char xy, char mp, double value)
-Axis	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::Axis (char xy) {$/;"	function	line:170	class:Point	signature:(char xy)
-SetIndex	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetIndex (int src) {$/;"	function	line:179	class:Point	signature:(int src)
-SetMtrx_Index	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetMtrx_Index (int src) {$/;"	function	line:202	class:Point	signature:(int src)
-SetCondition	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetCondition (char src) {$/;"	function	line:209	class:Point	signature:(char src)
-SetBoundaryvalue	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetBoundaryvalue (double src) {$/;"	function	line:215	class:Point	signature:(double src)
-SetMinMax	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetMinMax (Point * pts) {$/;"	function	line:221	class:Point	signature:(Point * pts)
-SetInterfaceMinMax	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetInterfaceMinMax (Point * pts) {$/;"	function	line:267	class:Point	signature:(Point * pts)
-SetValue	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetValue (double value) {$/;"	function	line:292	class:Point	signature:(double value)
-SetDiff	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetDiff (char xy, double value) {$/;"	function	line:297	class:Point	signature:(char xy, double value)
-SetPhi	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetPhi (double value) {$/;"	function	line:306	class:Point	signature:(double value)
-SetMaterialProperty	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetMaterialProperty (char CEWNS, double value) {$/;"	function	line:311	class:Point	signature:(char CEWNS, double value)
-FindAxialElement	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::FindAxialElement (AxialData *adat) {$/;"	function	line:323	class:Point	signature:(AxialData *adat)
-Find2ndAxialElement	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::Find2ndAxialElement (AxialData *adat) {$/;"	function	line:398	class:Point	signature:(AxialData *adat)
-FindBoundaryElement	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::FindBoundaryElement () {$/;"	function	line:470	class:Point	signature:()
-CalcMaterialProperty	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::CalcMaterialProperty (Point * pt) {$/;"	function	line:513	class:Point	signature:(Point * pt)
-FindEastAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindEastAxialLine (AxialData *adat) {$/;"	function	line:559	class:Point	signature:(AxialData *adat)
-FindWestAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindWestAxialLine (AxialData *adat) {$/;"	function	line:581	class:Point	signature:(AxialData *adat)
-FindNorthAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindNorthAxialLine (AxialData *adat) {$/;"	function	line:603	class:Point	signature:(AxialData *adat)
-FindSouthAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindSouthAxialLine (AxialData *adat) {$/;"	function	line:625	class:Point	signature:(AxialData *adat)
-FindEast2ndAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindEast2ndAxialLine (AxialData *adat) {$/;"	function	line:647	class:Point	signature:(AxialData *adat)
-FindWest2ndAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindWest2ndAxialLine (AxialData *adat) {$/;"	function	line:677	class:Point	signature:(AxialData *adat)
-FindNorth2ndAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindNorth2ndAxialLine (AxialData *adat) {$/;"	function	line:707	class:Point	signature:(AxialData *adat)
-FindSouth2ndAxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindSouth2ndAxialLine (AxialData *adat) {$/;"	function	line:737	class:Point	signature:(AxialData *adat)
-FindVerticalPoints	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindVerticalPoints (AxialData *adat, int axialIndex, char EWNS) {$/;"	function	line:767	class:Point	signature:(AxialData *adat, int axialIndex, char EWNS)
-FindHorizontalPoints	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^int Point::FindHorizontalPoints (AxialData *adat, int axialIndex, char EWNS) {$/;"	function	line:812	class:Point	signature:(AxialData *adat, int axialIndex, char EWNS)
-SetEWNS	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetEWNS (char EWNS, char ewns, int src) {$/;"	function	line:857	class:Point	signature:(char EWNS, char ewns, int src)
-SetEWNS2nd	/Users/junhong/github/Unbounded_domain_AGM/Header/Point.h	/^Point & Point::SetEWNS2nd (char EWNS, char ewns, int src) {$/;"	function	line:891	class:Point	signature:(char EWNS, char ewns, int src)
+AGM	/Users/junhong/github/Unbounded_domain_AGM/Header/AGM.h	/^int AGM(string AGL_output_file, string AGM_output_file, int max_itr, double gmres_tol, int krylov_dim) {$/;"	function	line:3	signature:(string AGL_output_file, string AGM_output_file, int max_itr, double gmres_tol, int krylov_dim)
+AXLGEN	/Users/junhong/github/Unbounded_domain_AGM/Header/AXLGEN.h	/^int AXLGEN(const string Geometry_filename, const string AGL_output_file_TEMP, const string AGM_output_file_TEMP, const int max_itr, const double gmres_tol, const int krylov_dim, int nIter) {$/;"	function	line:3	signature:(const string Geometry_filename, const string AGL_output_file_TEMP, const string AGM_output_file_TEMP, const int max_itr, const double gmres_tol, const int krylov_dim, int nIter)
 AXIALDATA_H	/Users/junhong/github/Unbounded_domain_AGM/Header/AxialData.h	/^#define AXIALDATA_H$/;"	macro	line:2
 AxialData	/Users/junhong/github/Unbounded_domain_AGM/Header/AxialData.h	/^AxialData::AxialData () {$/;"	function	line:6	class:AxialData	signature:()
 ~AxialData	/Users/junhong/github/Unbounded_domain_AGM/Header/AxialData.h	/^AxialData::~AxialData () {$/;"	function	line:20	class:AxialData	signature:()
@@ -380,375 +931,64 @@ AllocatePhipts	/Users/junhong/github/Unbounded_domain_AGM/Header/AxialData.h	/^A
 SortEWNS	/Users/junhong/github/Unbounded_domain_AGM/Header/AxialData.h	/^AxialData & AxialData::SortEWNS () {$/;"	function	line:309	class:AxialData	signature:()
 ExportAxialData	/Users/junhong/github/Unbounded_domain_AGM/Header/AxialData.h	/^AxialData & AxialData::ExportAxialData () {$/;"	function	line:321	class:AxialData	signature:()
 LoadAxialData	/Users/junhong/github/Unbounded_domain_AGM/Header/AxialData.h	/^AxialData & AxialData::LoadAxialData (string AxialFile_input) {$/;"	function	line:494	class:AxialData	signature:(string AxialFile_input)
-AssignBoundaryValue	/Users/junhong/github/Unbounded_domain_AGM/Header/AxialData.h	/^AxialData & AxialData::AssignBoundaryValue () {$/;"	function	line:714	class:AxialData	signature:()
+AssignBoundaryValue	/Users/junhong/github/Unbounded_domain_AGM/Header/AxialData.h	/^AxialData & AxialData::AssignBoundaryValue () {$/;"	function	line:715	class:AxialData	signature:()
 MATRIXPROCESS_H	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^#define MATRIXPROCESS_H$/;"	macro	line:2
 MatrixProcess	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess::MatrixProcess (AxialData *adat) {$/;"	function	line:7	class:MatrixProcess	signature:(AxialData *adat)
 ~MatrixProcess	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess::~MatrixProcess () {$/;"	function	line:19	class:MatrixProcess	signature:()
 initialization	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::initialization (AxialData *adat, int k) {$/;"	function	line:23	class:MatrixProcess	signature:(AxialData *adat, int k)
 countEnt_num	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::countEnt_num (int node, AxialData *adat, Point *pt, Point *pts, xData *xdat, yData *ydat) {$/;"	function	line:34	class:MatrixProcess	signature:(int node, AxialData *adat, Point *pt, Point *pts, xData *xdat, yData *ydat)
 MakeMatrixSystem	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::MakeMatrixSystem (int node, AxialData *adat, Point *pt, Point *pts, xData *xdat, yData *ydat) {$/;"	function	line:150	class:MatrixProcess	signature:(int node, AxialData *adat, Point *pt, Point *pts, xData *xdat, yData *ydat)
-calcMatrix	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::calcMatrix (ControlData *cdat, AxialData *adat, Point *pts) {$/;"	function	line:305	class:MatrixProcess	signature:(ControlData *cdat, AxialData *adat, Point *pts)
-ExportMatrixData	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::ExportMatrixData (AxialData *adat) {$/;"	function	line:381	class:MatrixProcess	signature:(AxialData *adat)
-InfiniteBoundary	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::InfiniteBoundary (Point *pt, Point *pts) {$/;"	function	line:412	class:MatrixProcess	signature:(Point *pt, Point *pts)
-InfiniteBoundaryRB	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::InfiniteBoundaryRB (int node, Point *pt, Point *pts) {$/;"	function	line:425	class:MatrixProcess	signature:(int node, Point *pt, Point *pts)
-is_error_tol	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^bool is_error_tol (double tol, AxialData *adat, Point *pt, int *k) {$/;"	function	line:437	signature:(double tol, AxialData *adat, Point *pt, int *k)
-CLASSHEADER_H	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define CLASSHEADER_H$/;"	macro	line:2
-PI	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define  PI /;"	macro	line:15
-ZeroValue	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define  ZeroValue /;"	macro	line:18
-UnitValue	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define  UnitValue /;"	macro	line:19
-NearZero	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define  NearZero /;"	macro	line:20
-D2	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define    D2 /;"	macro	line:23
-D3	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define    D3 /;"	macro	line:24
-SIGDIGITS	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^#define    SIGDIGITS /;"	macro	line:25
-Vector	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Vector$/;"	class	line:58
-getdim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      getdim() const {return dim;}$/;"	function	line:80	class:Vector	signature:() const
-dim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      dim;$/;"	member	line:107	class:Vector
-comp	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double  *comp;$/;"	member	line:108	class:Vector
-CoLMaT	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class  CoLMaT$/;"	class	line:117
-getcoldim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       getcoldim() const {return col_dim;}$/;"	function	line:126	class:CoLMaT	signature:() const
-getrowdim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       getrowdim() const {return vec_n;}$/;"	function	line:127	class:CoLMaT	signature:() const
-getmatrix	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector *  getmatrix() const {return colvec;}$/;"	function	line:128	class:CoLMaT	signature:() const
-col_dim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     col_dim;$/;"	member	line:154	class:CoLMaT
-vec_n	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     vec_n;$/;"	member	line:155	class:CoLMaT
-colvec	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector *colvec;$/;"	member	line:156	class:CoLMaT
-OPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class OPRT$/;"	class	line:165
-getmatrix	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  CoLMaT *  getmatrix() const {return mat;}$/;"	function	line:175	class:OPRT	signature:() const
-getdim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       getdim() const {return dim;}$/;"	function	line:176	class:OPRT	signature:() const
-dim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      dim;$/;"	member	line:194	class:OPRT
-mat	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  CoLMaT  *mat;$/;"	member	line:195	class:OPRT
-Rot	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Rot$/;"	class	line:204
-getRotAxis	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector    getRotAxis() const {return omega;}$/;"	function	line:212	class:Rot	signature:() const
-getPw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      getPw() const {return Pw;}$/;"	function	line:216	class:Rot	signature:() const
-getImPw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      getImPw() const {return ImPw;}$/;"	function	line:217	class:Rot	signature:() const
-getOmg	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      getOmg() const {return Omg;}$/;"	function	line:218	class:Rot	signature:() const
-omega	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector    omega;$/;"	member	line:224	class:Rot
-Pw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      Pw, ImPw, Omg;$/;"	member	line:225	class:Rot
-ImPw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      Pw, ImPw, Omg;$/;"	member	line:225	class:Rot
-Omg	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  OPRT      Pw, ImPw, Omg;$/;"	member	line:225	class:Rot
-Cell	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class   Cell$/;"	class	line:234
-Index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int         Index() const {return index;}$/;"	function	line:245	class:Cell	signature:() const
-Item	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector      Item() const {return vec;}$/;"	function	line:246	class:Cell	signature:() const
-Item	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double      Item(int offs) {return vec[offs];}$/;"	function	line:247	class:Cell	signature:(int offs)
-Next	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell*       Next() const {return nextcell;}$/;"	function	line:248	class:Cell	signature:() const
-Cond	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char        Cond() const {return cond;}$/;"	function	line:249	class:Cell	signature:() const
-Status	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char        Status() const {return status;}$/;"	function	line:250	class:Cell	signature:() const
-Value	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double      Value() const {return value;}$/;"	function	line:251	class:Cell	signature:() const
-Xaxialline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine * Xaxialline() const {return xaxialline;}$/;"	function	line:252	class:Cell	signature:() const
-Yaxialline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine * Yaxialline() const {return yaxialline;}$/;"	function	line:253	class:Cell	signature:() const
-SetIndex	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell &   SetIndex(int off){index = off; return *this;}$/;"	function	line:255	class:Cell	signature:(int off)
-index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int        index;$/;"	member	line:273	class:Cell
-xaxialline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine *xaxialline;$/;"	member	line:274	class:Cell
-yaxialline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine *yaxialline;$/;"	member	line:275	class:Cell
-vec	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector     vec;$/;"	member	line:277	class:Cell
-cond	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char       cond;$/;"	member	line:278	class:Cell
-status	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char       status;$/;"	member	line:279	class:Cell
-value	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double     value;$/;"	member	line:280	class:Cell
-nextcell	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell      *nextcell;$/;"	member	line:281	class:Cell
-Thing	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class   Thing$/;"	class	line:290
-Howmany	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      Howmany() const {return ncell;}$/;"	function	line:297	class:Thing	signature:() const
-Head	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell  *  Head() const {return  headcell;}$/;"	function	line:298	class:Thing	signature:() const
-Run	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell  *  Run() const {return run;}$/;"	function	line:299	class:Thing	signature:() const
-SetNcell	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Thing &  SetNcell(int nc) {ncell = nc; return *this;}$/;"	function	line:317	class:Thing	signature:(int nc)
-ncell	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      ncell;$/;"	member	line:343	class:Thing
-headcell	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell    *headcell;$/;"	member	line:344	class:Thing
-run	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell    *run;$/;"	member	line:345	class:Thing
-Triangle	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Triangle$/;"	class	line:354
-GetArea	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double      GetArea(){ return Area; }$/;"	function	line:366	class:Triangle	signature:()
-GetVertex	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &    GetVertex(int offset){ return Vertex[offset]; }$/;"	function	line:367	class:Triangle	signature:(int offset)
-GetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &    GetNormal(){ return Normal; }$/;"	function	line:368	class:Triangle	signature:()
-GetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT &      GetOPRT(){ return CP_n; }$/;"	function	line:369	class:Triangle	signature:()
-GetBDcondition	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     char        GetBDcondition() {return cond;}$/;"	function	line:370	class:Triangle	signature:()
-GetBDvalue	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double      GetBDvalue() {return value;}$/;"	function	line:371	class:Triangle	signature:()
-SetIndex	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Triangle &  SetIndex(int offs) { index = offs; return *this; }$/;"	function	line:372	class:Triangle	signature:(int offs)
-index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     int     index;$/;"	member	line:397	class:Triangle
-Area	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double  Area;$/;"	member	line:398	class:Triangle
-Vertex	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  Vertex[D3];$/;"	member	line:399	class:Triangle
-Normal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  Normal;$/;"	member	line:400	class:Triangle
-CP_n	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT    CP_n;$/;"	member	line:401	class:Triangle
-value	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double  value;$/;"	member	line:402	class:Triangle
-cond	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     char    cond;$/;"	member	line:403	class:Triangle
-Line2D	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Line2D$/;"	class	line:412
-GetStart	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetStart(){ return start; }$/;"	function	line:426	class:Line2D	signature:()
-GetEnd	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetEnd(){ return end; }$/;"	function	line:427	class:Line2D	signature:()
-GetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetNormal(){ return Normal; }$/;"	function	line:428	class:Line2D	signature:()
-GetTangent	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetTangent(){ return Tangent; }$/;"	function	line:429	class:Line2D	signature:()
-GetBDcondition	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     char       GetBDcondition() {return cond;}$/;"	function	line:430	class:Line2D	signature:()
-GetBDvalue	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double     GetBDvalue() {return value;}$/;"	function	line:431	class:Line2D	signature:()
-GetLength	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double     GetLength() { return Len; }$/;"	function	line:433	class:Line2D	signature:()
-GetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT &     GetOPRT() { return CP_q; }$/;"	function	line:445	class:Line2D	signature:()
-start	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  start, end;$/;"	member	line:463	class:Line2D
-end	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  start, end;$/;"	member	line:463	class:Line2D
-Normal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  Normal, Tangent;$/;"	member	line:464	class:Line2D
-Tangent	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector  Normal, Tangent;$/;"	member	line:464	class:Line2D
-CP_q	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT    CP_q;$/;"	member	line:465	class:Line2D
-Len	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double  Len;$/;"	member	line:466	class:Line2D
-value	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double  value;$/;"	member	line:467	class:Line2D
-cond	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     char    cond;$/;"	member	line:468	class:Line2D
-Line3D	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Line3D$/;"	class	line:477
-GetStart	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetStart(){ return start; }$/;"	function	line:489	class:Line3D	signature:()
-GetEnd	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetEnd(){ return end; }$/;"	function	line:490	class:Line3D	signature:()
-GetNormal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetNormal(){ return Normal; }$/;"	function	line:491	class:Line3D	signature:()
-GetTangent	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector &   GetTangent(){ return Tangent; }$/;"	function	line:492	class:Line3D	signature:()
-GetLength	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double     GetLength() { return Len; }$/;"	function	line:494	class:Line3D	signature:()
-GetOPRT	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT &     GetOPRT() { return CP_q; }$/;"	function	line:501	class:Line3D	signature:()
-start	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector     start, end;$/;"	member	line:519	class:Line3D
-end	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector     start, end;$/;"	member	line:519	class:Line3D
-Normal	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector     Normal, Tangent;$/;"	member	line:520	class:Line3D
-Tangent	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     Vector     Normal, Tangent;$/;"	member	line:520	class:Line3D
-CP_q	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     OPRT       CP_q;$/;"	member	line:521	class:Line3D
-Len	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^     double     Len;$/;"	member	line:522	class:Line3D
-Section	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Section {$/;"	class	line:531
-name	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string    name; \/\/ section name$/;"	member	line:533	class:Section
-nE	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       nE;   \/\/ the number of elemens$/;"	member	line:534	class:Section
-SL2D	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D   *SL2D; \/\/ 2D line element$/;"	member	line:535	class:Section
-SL3D	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Triangle *SL3D; \/\/ 3D line element$/;"	member	line:536	class:Section
-setName	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section & setName (string nm) {name = nm; return *this;}$/;"	function	line:547	class:Section	signature:(string nm)
-getName	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string    getName () {return name;}$/;"	function	line:548	class:Section	signature:()
-setEltnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section & setEltnum (int n) {nE = n; return *this;}$/;"	function	line:550	class:Section	signature:(int n)
-getEltnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       getEltnum () {return nE;}$/;"	function	line:551	class:Section	signature:()
-setElt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section   & setElt (Line2D *ln2d) {SL2D = ln2d; return *this;}$/;"	function	line:553	class:Section	signature:(Line2D *ln2d)
-setElt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section   & setElt (Triangle *tr3d) {SL3D = tr3d; return *this;}$/;"	function	line:554	class:Section	signature:(Triangle *tr3d)
-get2DElt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D    * get2DElt (int n) {return &SL2D[n];}$/;"	function	line:555	class:Section	signature:(int n)
-get3DElt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Triangle  * get3DElt (int n) {return &SL3D[n];}$/;"	function	line:556	class:Section	signature:(int n)
-Region	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Region {$/;"	class	line:571
-name	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string    name; \/\/ region name$/;"	member	line:573	class:Region
-nS	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       nS;   \/\/ the number of sections$/;"	member	line:574	class:Region
-sctn	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section **sctn; \/\/ sections$/;"	member	line:575	class:Region
-sign	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   *sign; \/\/ section sign$/;"	member	line:576	class:Region
-gridinfo	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector    gridinfo; \/\/ grid informataion$/;"	member	line:577	class:Region
-xgrid2d	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D   *xgrid2d; \/\/ 2D background linesegment along x-axis$/;"	member	line:578	class:Region
-ygrid2d	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D   *ygrid2d; \/\/ 2D background linesegment along y-axis$/;"	member	line:579	class:Region
-xgrid3d	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D   *xgrid3d; \/\/ 3D background linesegment along x-axis$/;"	member	line:580	class:Region
-ygrid3d	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D   *ygrid3d; \/\/ 3D background linesegment along y-axis$/;"	member	line:581	class:Region
-zgrid3d	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D   *zgrid3d; \/\/ 3D background linesegment along z-axis$/;"	member	line:582	class:Region
-nXgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       nXgrid; \/\/ the number of xgrid$/;"	member	line:583	class:Region
-nYgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       nYgrid; \/\/ the number of ygrid$/;"	member	line:584	class:Region
-nZgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int       nZgrid; \/\/ the number of zgrid$/;"	member	line:585	class:Region
-setName	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Region & setName (string nm) {name = nm; return *this;}$/;"	function	line:594	class:Region	signature:(string nm)
-getName	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string   getName () {return name;}$/;"	function	line:595	class:Region	signature:()
-setGridinfo	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Region & setGridinfo (Vector* src) {gridinfo = *src; return *this;}$/;"	function	line:597	class:Region	signature:(Vector* src)
-getGridinfo	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector * getGridinfo () {return &gridinfo;}$/;"	function	line:598	class:Region	signature:()
-setSectionnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Region & setSectionnum (int n) {nS = n; return *this;}$/;"	function	line:600	class:Region	signature:(int n)
-getSectionnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      getSectionnum () {return nS;}$/;"	function	line:601	class:Region	signature:()
-getSection	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Section *  getSection (int n) {return sctn[n];}$/;"	function	line:605	class:Region	signature:(int n)
-getSign	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   getSign (int n) {return sign[n];}$/;"	function	line:608	class:Region	signature:(int n)
-getXgridnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int getXgridnum () {return nXgrid;}$/;"	function	line:613	class:Region	signature:()
-getYgridnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int getYgridnum () {return nYgrid;}$/;"	function	line:614	class:Region	signature:()
-getZgridnum	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int getZgridnum () {return nZgrid;}$/;"	function	line:615	class:Region	signature:()
-get2Dxgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D * get2Dxgrid (int n) {return &xgrid2d[n];}$/;"	function	line:617	class:Region	signature:(int n)
-get2Dygrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line2D * get2Dygrid (int n) {return &ygrid2d[n];}$/;"	function	line:618	class:Region	signature:(int n)
-get3Dxgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D * get3Dxgrid (int n) {return &xgrid3d[n];}$/;"	function	line:620	class:Region	signature:(int n)
-get3Dygrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D * get3Dygrid (int n) {return &ygrid3d[n];}$/;"	function	line:621	class:Region	signature:(int n)
-get3Dzgrid	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Line3D * get3Dzgrid (int n) {return &zgrid3d[n];}$/;"	function	line:622	class:Region	signature:(int n)
-AxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class AxialLine {$/;"	class	line:636
-start_pt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell      *start_pt;$/;"	member	line:638	class:AxialLine
-end_pt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell      *end_pt;$/;"	member	line:639	class:AxialLine
-index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int        index;$/;"	member	line:640	class:AxialLine
-nextaxialline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine *nextaxialline;$/;"	member	line:641	class:AxialLine
-center_pt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector     center_pt;$/;"	member	line:642	class:AxialLine
-Index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int         Index  () const {return index;}$/;"	function	line:650	class:AxialLine	signature:() const
-Start	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell      * Start  () const {return start_pt;}$/;"	function	line:651	class:AxialLine	signature:() const
-End	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Cell      * End    () const {return end_pt;}$/;"	function	line:652	class:AxialLine	signature:() const
-Next	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine * Next   () const {return nextaxialline;}$/;"	function	line:653	class:AxialLine	signature:() const
-Center	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Vector    * Center ()       {return &center_pt;}$/;"	function	line:654	class:AxialLine	signature:()
-Thing_AxialLine	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Thing_AxialLine {$/;"	class	line:674
-nline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int        nline;$/;"	member	line:676	class:Thing_AxialLine
-headline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine *headline;$/;"	member	line:677	class:Thing_AxialLine
-run	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine *run;$/;"	member	line:678	class:Thing_AxialLine
-Howmany	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Howmany () const {return nline;}$/;"	function	line:685	class:Thing_AxialLine	signature:() const
-Head	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine * Head () const {return headline;}$/;"	function	line:686	class:Thing_AxialLine	signature:() const
-Run	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  AxialLine * Run () const {return run;}$/;"	function	line:687	class:Thing_AxialLine	signature:() const
-SetNline	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  Thing_AxialLine & SetNline(int nl) {nline = nl; return *this;}$/;"	function	line:703	class:Thing_AxialLine	signature:(int nl)
-ControlData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class ControlData {$/;"	class	line:726
-gmres_tol	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   gmres_tol       ; \/\/GMRES tolerance$/;"	member	line:728	class:ControlData
-dt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   dt              ; \/\/time interval$/;"	member	line:729	class:ControlData
-terminal_t	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   terminal_t      ; \/\/terminal time$/;"	member	line:730	class:ControlData
-t	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double   t               ; \/\/Present time$/;"	member	line:731	class:ControlData
-krylov_dim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      krylov_dim      ; \/\/Dimension of krylov subspace$/;"	member	line:732	class:ControlData
-tstep	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      tstep           ; \/\/time step$/;"	member	line:733	class:ControlData
-rest_out_intvl	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      rest_out_intvl  ; \/\/out interval$/;"	member	line:734	class:ControlData
-max_itr	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      max_itr         ; \/\/maximum ieration number of GMRES$/;"	member	line:735	class:ControlData
-AxialFile	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string   AxialFile       ; \/\/axial data file name$/;"	member	line:736	class:ControlData
-output_sol	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string   output_sol      ; \/\/output solution file name$/;"	member	line:737	class:ControlData
-output_del	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string   output_del      ; \/\/output derivative file name$/;"	member	line:738	class:ControlData
-GMRES_Tol	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double GMRES_Tol ()  const {return this->gmres_tol;}$/;"	function	line:744	class:ControlData	signature:() const
-Dt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Dt ()         const {return this->dt;}$/;"	function	line:745	class:ControlData	signature:() const
-Terminal_T	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Terminal_T () const {return this->terminal_t;}$/;"	function	line:746	class:ControlData	signature:() const
-T	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double T ()          const {return this->t;}$/;"	function	line:747	class:ControlData	signature:() const
-Krylov_Dim	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Krylov_Dim ()     const {return this->krylov_dim;}$/;"	function	line:749	class:ControlData	signature:() const
-Tstep	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Tstep ()          const {return this->tstep;}$/;"	function	line:750	class:ControlData	signature:() const
-Rest_Out_Intvl	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Rest_Out_Intvl () const {return this->rest_out_intvl;}$/;"	function	line:751	class:ControlData	signature:() const
-Max_Itr	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Max_Itr ()        const {return this->max_itr;}$/;"	function	line:752	class:ControlData	signature:() const
-Axialfile	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string Axialfile ()  const {return this->AxialFile;};$/;"	function	line:754	class:ControlData	signature:() const
-Output_Sol	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string Output_Sol () const {return this->output_sol;}$/;"	function	line:755	class:ControlData	signature:() const
-Output_Del	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  string Output_Del () const {return this->output_del;}$/;"	function	line:756	class:ControlData	signature:() const
-ControlData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^ControlData::ControlData () {}$/;"	function	line:762	class:ControlData	signature:()
-~ControlData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^ControlData::~ControlData () {}$/;"	function	line:763	class:ControlData	signature:()
-AxialData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class AxialData {$/;"	class	line:771
-nx	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      nx           ; \/\/ total number of x-axial line$/;"	member	line:773	class:AxialData
-ny	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      ny           ; \/\/ total number of y-axial line$/;"	member	line:774	class:AxialData
-bd_pts_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      bd_pts_num   ; \/\/ total number of the boundary poins$/;"	member	line:775	class:AxialData
-xaxial_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      xaxial_num   ; \/\/ total number of x-axial lines$/;"	member	line:776	class:AxialData
-yaxial_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      yaxial_num   ; \/\/ total number of y-axial lines$/;"	member	line:777	class:AxialData
-xxaxial_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      xxaxial_num  ; \/\/ size of xxaxial$/;"	member	line:778	class:AxialData
-yyaxial_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      yyaxial_num  ; \/\/ size of yyaxial$/;"	member	line:779	class:AxialData
-in_pts_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      in_pts_num   ; \/\/ total number of the cross points$/;"	member	line:780	class:AxialData
-phi_pts_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      phi_pts_num  ; \/\/ total number of the cross points except interface points$/;"	member	line:781	class:AxialData
-pts_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int      pts_num      ; \/\/ total number of points$/;"	member	line:782	class:AxialData
-EWNS_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    **EWNS_index   ; \/\/ EWNS index of the point    [ 4 * n + i ] ( 6 * in_pts_num   )$/;"	member	line:784	class:AxialData
-xaxial_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *xaxial_index ; \/\/ index of points along x-axial line$/;"	member	line:785	class:AxialData
-yaxial_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *yaxial_index ; \/\/ index of points along y-axial line$/;"	member	line:786	class:AxialData
-xxaxial_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *xxaxial_index; \/\/ first number of each x-axial line$/;"	member	line:787	class:AxialData
-yyaxial_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *yyaxial_index; \/\/ first number of each y-axial line$/;"	member	line:788	class:AxialData
-ptsTOin_pts	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *ptsTOin_pts  ; \/\/ all points to inner points$/;"	member	line:789	class:AxialData
-in_ptsTOpts	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *in_ptsTOpts  ; \/\/ inner points to all points$/;"	member	line:790	class:AxialData
-ptsTOphi_pts	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *ptsTOphi_pts ; \/\/ all points to inner points$/;"	member	line:791	class:AxialData
-phi_ptsTOpts	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     *phi_ptsTOpts ; \/\/ inner points to all points$/;"	member	line:792	class:AxialData
-axial_index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    **axial_index  ; \/\/ index of the axial line      [ 3 * n + i ] ( 3 * nx * ny * nz )$/;"	member	line:793	class:AxialData
-pts	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double **pts          ; \/\/ coordinate of the points     [ 2 * n + i ] ( 2 * pts_num      )$/;"	member	line:795	class:AxialData
-xaxial	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double **xaxial       ; \/\/ x-axial lines                [ 4 * l + i ] ( 4 * nx           )$/;"	member	line:796	class:AxialData
-yaxial	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double **yaxial       ; \/\/ y-axial lines                [ 4 * l + i ] ( 4 * ny           )$/;"	member	line:797	class:AxialData
-b_u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double  *b_u          ; \/\/ bd value u      [      n + i ] (      1 * in_pts_num )$/;"	member	line:798	class:AxialData
-mp_u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double  *mp_u         ; \/\/ material property$/;"	member	line:799	class:AxialData
-bc_u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char    *bc_u         ; \/\/ bd condition u  [      n + i ] (      1 * in_pts_num )$/;"	member	line:801	class:AxialData
-Pts_Num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Pts_Num () const {return pts_num;}$/;"	function	line:814	class:AxialData	signature:() const
-In_Pts_Num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int In_Pts_Num () const {return in_pts_num;}$/;"	function	line:815	class:AxialData	signature:() const
-Phi_Pts_Num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Phi_Pts_Num () const {return phi_pts_num;}$/;"	function	line:816	class:AxialData	signature:() const
-Point	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class Point {$/;"	class	line:840
-xm	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:842	class:Point
-xb	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:842	class:Point
-xp	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:842	class:Point
-ym	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:842	class:Point
-yb	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:842	class:Point
-yp	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double xm, xb, xp, ym, yb, yp;$/;"	member	line:842	class:Point
-u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double u;$/;"	member	line:843	class:Point
-ux	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double ux, uy;$/;"	member	line:844	class:Point
-uy	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double ux, uy;$/;"	member	line:844	class:Point
-phi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double phi;$/;"	member	line:845	class:Point
-b_u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double b_u;$/;"	member	line:847	class:Point
-mp_u	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double mp_u[5];$/;"	member	line:848	class:Point
-E	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    E, EN, ES;$/;"	member	line:850	class:Point
-EN	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    E, EN, ES;$/;"	member	line:850	class:Point
-ES	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    E, EN, ES;$/;"	member	line:850	class:Point
-W	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    W, WN, WS;$/;"	member	line:851	class:Point
-WN	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    W, WN, WS;$/;"	member	line:851	class:Point
-WS	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    W, WN, WS;$/;"	member	line:851	class:Point
-N	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    N, NE, NW;$/;"	member	line:852	class:Point
-NE	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    N, NE, NW;$/;"	member	line:852	class:Point
-NW	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    N, NE, NW;$/;"	member	line:852	class:Point
-S	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    S, SE, SW;$/;"	member	line:853	class:Point
-SE	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    S, SE, SW;$/;"	member	line:853	class:Point
-SW	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    S, SE, SW;$/;"	member	line:853	class:Point
-e	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    e, en, es;$/;"	member	line:855	class:Point
-en	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    e, en, es;$/;"	member	line:855	class:Point
-es	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    e, en, es;$/;"	member	line:855	class:Point
-w	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    w, wn, ws;$/;"	member	line:856	class:Point
-wn	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    w, wn, ws;$/;"	member	line:856	class:Point
-ws	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    w, wn, ws;$/;"	member	line:856	class:Point
-n	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    n, ne, nw;$/;"	member	line:857	class:Point
-ne	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    n, ne, nw;$/;"	member	line:857	class:Point
-nw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    n, ne, nw;$/;"	member	line:857	class:Point
-s	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    s, se, sw;$/;"	member	line:858	class:Point
-se	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    s, se, sw;$/;"	member	line:858	class:Point
-sw	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    s, se, sw;$/;"	member	line:858	class:Point
-index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    index;$/;"	member	line:860	class:Point
-mtrxindex	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    mtrxindex;$/;"	member	line:861	class:Point
-axis	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    axis[2];$/;"	member	line:862	class:Point
-condition	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char   condition;$/;"	member	line:864	class:Point
-Value	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Value () const {return u;}$/;"	function	line:871	class:Point	signature:() const
-Phi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Phi () const {return phi;}$/;"	function	line:873	class:Point	signature:() const
-Boundaryvalue	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Boundaryvalue () const {return b_u;}$/;"	function	line:874	class:Point	signature:() const
-Index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Index () {return index;}$/;"	function	line:877	class:Point	signature:()
-Mtrx_Index	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int Mtrx_Index () {return mtrxindex;}$/;"	function	line:878	class:Point	signature:()
-Condition	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  char Condition () {return condition;}$/;"	function	line:882	class:Point	signature:()
-_xData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^typedef struct _xData {$/;"	struct	line:926
-F	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double F;$/;"	member	line:927	struct:_xData
-Cu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Cu, Cphi;$/;"	member	line:928	struct:_xData
-Cphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Cu, Cphi;$/;"	member	line:928	struct:_xData
-Eu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Eu, ENu, ESu;$/;"	member	line:929	struct:_xData
-ENu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Eu, ENu, ESu;$/;"	member	line:929	struct:_xData
-ESu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Eu, ENu, ESu;$/;"	member	line:929	struct:_xData
-Wu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wu, WNu, WSu;$/;"	member	line:930	struct:_xData
-WNu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wu, WNu, WSu;$/;"	member	line:930	struct:_xData
-WSu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wu, WNu, WSu;$/;"	member	line:930	struct:_xData
-Ephi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Ephi, ENphi, ESphi;$/;"	member	line:931	struct:_xData
-ENphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Ephi, ENphi, ESphi;$/;"	member	line:931	struct:_xData
-ESphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Ephi, ENphi, ESphi;$/;"	member	line:931	struct:_xData
-Wphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wphi, WNphi, WSphi;$/;"	member	line:932	struct:_xData
-WNphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wphi, WNphi, WSphi;$/;"	member	line:932	struct:_xData
-WSphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Wphi, WNphi, WSphi;$/;"	member	line:932	struct:_xData
-xData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^}xData;$/;"	typedef	line:933	typeref:struct:_xData
-_yData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^typedef struct _yData {$/;"	struct	line:935
-F	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double F;$/;"	member	line:936	struct:_yData
-Cu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Cu, Cphi;$/;"	member	line:937	struct:_yData
-Cphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Cu, Cphi;$/;"	member	line:937	struct:_yData
-Nu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nu, NEu, NWu;$/;"	member	line:938	struct:_yData
-NEu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nu, NEu, NWu;$/;"	member	line:938	struct:_yData
-NWu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nu, NEu, NWu;$/;"	member	line:938	struct:_yData
-Su	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Su, SEu, SWu;$/;"	member	line:939	struct:_yData
-SEu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Su, SEu, SWu;$/;"	member	line:939	struct:_yData
-SWu	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Su, SEu, SWu;$/;"	member	line:939	struct:_yData
-Nphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nphi, NEphi, NWphi;$/;"	member	line:940	struct:_yData
-NEphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nphi, NEphi, NWphi;$/;"	member	line:940	struct:_yData
-NWphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Nphi, NEphi, NWphi;$/;"	member	line:940	struct:_yData
-Sphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Sphi, SEphi, SWphi;$/;"	member	line:941	struct:_yData
-SEphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Sphi, SEphi, SWphi;$/;"	member	line:941	struct:_yData
-SWphi	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double Sphi, SEphi, SWphi;$/;"	member	line:941	struct:_yData
-yData	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^}yData;$/;"	typedef	line:942	typeref:struct:_yData
-MatrixProcess	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^class MatrixProcess {$/;"	class	line:950
-rb	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double *rb      ; \/\/ vector value    [   3*n + i] (      3 * in_pts_num )$/;"	member	line:952	class:MatrixProcess
-ia	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    *ia      ;$/;"	member	line:953	class:MatrixProcess
-ja	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    *ja      ;$/;"	member	line:954	class:MatrixProcess
-ent	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double *ent     ;$/;"	member	line:955	class:MatrixProcess
-ent_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     ent_num ; \/\/ total number of the matrix elements$/;"	member	line:956	class:MatrixProcess
-arrInt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    *arrInt;$/;"	member	line:958	class:MatrixProcess
-arrEnt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double *arrEnt;$/;"	member	line:959	class:MatrixProcess
-uniqInt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    *uniqInt;$/;"	member	line:960	class:MatrixProcess
-uniqEnt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double *uniqEnt;$/;"	member	line:961	class:MatrixProcess
-rowsInt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int    *rowsInt;$/;"	member	line:962	class:MatrixProcess
-rowsEnt	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  double *rowsEnt;$/;"	member	line:963	class:MatrixProcess
-Int_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     Int_num;$/;"	member	line:964	class:MatrixProcess
-ja_num	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     ja_num;$/;"	member	line:965	class:MatrixProcess
-matrixSize	/Users/junhong/github/Unbounded_domain_AGM/Header/ClassHeader.h	/^  int     matrixSize;$/;"	member	line:966	class:MatrixProcess
+calcMatrix	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::calcMatrix (ControlData *cdat, AxialData *adat, Point *pts) {$/;"	function	line:332	class:MatrixProcess	signature:(ControlData *cdat, AxialData *adat, Point *pts)
+ExportMatrixData	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::ExportMatrixData (AxialData *adat) {$/;"	function	line:408	class:MatrixProcess	signature:(AxialData *adat)
+InfiniteBoundary	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::InfiniteBoundary (Point *pt, Point *pts) {$/;"	function	line:439	class:MatrixProcess	signature:(Point *pt, Point *pts)
+InfiniteBoundaryRB	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^MatrixProcess & MatrixProcess::InfiniteBoundaryRB (int node, Point *pt, Point *pts) {$/;"	function	line:452	class:MatrixProcess	signature:(int node, Point *pt, Point *pts)
+is_error_tol	/Users/junhong/github/Unbounded_domain_AGM/Header/MatrixProcess.h	/^bool is_error_tol (double tol, AxialData *adat, Point *pt, int *k) {$/;"	function	line:464	signature:(double tol, AxialData *adat, Point *pt, int *k)
+CC	/Users/junhong/github/Unbounded_domain_AGM/Makefile	/^CC = icpc$/;"	macro	line:1
+AGMS	/Users/junhong/github/Unbounded_domain_AGM/Makefile	/^AGMS=AGM.cpp$/;"	macro	line:2
+HEADERDIR	/Users/junhong/github/Unbounded_domain_AGM/Makefile	/^HEADERDIR=Header$/;"	macro	line:3
+HEADER	/Users/junhong/github/Unbounded_domain_AGM/Makefile	/^HEADER=$(HEADERDIR)\/AXLGEN.h $(HEADERDIR)\/Basic++.h $(HEADERDIR)\/Class++.h $(HEADERDIR)\/Read.h $(HEADERDIR)\/Stuff++.h $(HEADERDIR)\/AGM.h $(HEADERDIR)\/AxialData.h $(HEADERDIR)\/CalcRepresenSol.h $(HEADERDIR)\/ControlData.h $(HEADERDIR)\/ftns.h $(HEADERDIR)\/MatrixProcess.h $(HEADERDIR)\/Point.h $(HEADERDIR)\/util.h $(HEADERDIR)\/CalcDiff.h $(HEADERDIR)\/CalcNeumannpt.h$/;"	macro	line:4
+SOURCE	/Users/junhong/github/Unbounded_domain_AGM/Makefile	/^SOURCE=AGM$/;"	macro	line:5
+SERVERPATH	/Users/junhong/github/Unbounded_domain_AGM/Makefile	/^SERVERPATH=jhjo@165.246.142.45$/;"	macro	line:6
+TARGETPATH	/Users/junhong/github/Unbounded_domain_AGM/Makefile	/^TARGETPATH=$(SERVERPATH):\/home\/jhjo\/180523$/;"	macro	line:7
+RESULTPATH	/Users/junhong/github/Unbounded_domain_AGM/Makefile	/^RESULTPATH=\/Users\/junhong\/github\/Unbounded_domain_AGM\/results$/;"	macro	line:8
 FTNS_H	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^#define FTNS_H$/;"	macro	line:2
 _USE_MATH_DEFINES	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^#define _USE_MATH_DEFINES$/;"	macro	line:4
-u_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double u_ftn( double x, double y) {$/;"	function	line:7	signature:( double x, double y)
-dudx_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double dudx_ftn( double x, double y) {$/;"	function	line:13	signature:( double x, double y)
-dudy_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double dudy_ftn( double x, double y) {$/;"	function	line:41	signature:( double x, double y)
-b_u_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double b_u_ftn(double x, double y) {$/;"	function	line:69	signature:(double x, double y)
-f_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double f_ftn( double x, double y ) {$/;"	function	line:75	signature:( double x, double y )
-eps_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double eps_ftn( double x, double y ) {$/;"	function	line:81	signature:( double x, double y )
-phi_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double phi_ftn(double z, double r) {$/;"	function	line:87	signature:(double z, double r)
-integral_phi	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double integral_phi (double z, double r, char xy) {$/;"	function	line:93	signature:(double z, double r, char xy)
-AGM	/Users/junhong/github/Unbounded_domain_AGM/Header/AGM.h	/^int AGM(string AGL_output_file, string AGM_output_file, int max_itr, double gmres_tol, int krylov_dim) {$/;"	function	line:3	signature:(string AGL_output_file, string AGM_output_file, int max_itr, double gmres_tol, int krylov_dim)
-CALCREPRESENSOL_H	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^#define CALCREPRESENSOL_H$/;"	macro	line:2
-CalcRepresenCoef	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^void CalcRepresenCoef(Point *pt, Point *pts, xData *xdat, yData *ydat) {$/;"	function	line:12	signature:(Point *pt, Point *pts, xData *xdat, yData *ydat)
-TransposeBoundaryData	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^void TransposeBoundaryData (Point *pt, Point *pts, xData *xdat, yData *ydat) {$/;"	function	line:182	signature:(Point *pt, Point *pts, xData *xdat, yData *ydat)
-AssignPhivalue	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^void AssignPhivalue (AxialData *adat, Point *pt) {$/;"	function	line:457	signature:(AxialData *adat, Point *pt)
-SetInterfaceBoundary	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^int SetInterfaceBoundary (Point *pt, Point *pts, char EWNS) {$/;"	function	line:485	signature:(Point *pt, Point *pts, char EWNS)
-CalcVerticalUCoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcVerticalUCoefficient (char NS, double xb, double yb, double yp, double ym, int bdy, double mp) {$/;"	function	line:517	signature:(char NS, double xb, double yb, double yp, double ym, int bdy, double mp)
-CalcHorizontalUCoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcHorizontalUCoefficient (char EW, double xb, double yb, double xp, double xm, int bdx, double mp) {$/;"	function	line:526	signature:(char EW, double xb, double yb, double xp, double xm, int bdx, double mp)
-CalcVerticalPHICoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcVerticalPHICoefficient (char NS, double xb, double yb, double yp, double ym, int bdy, double mp) {$/;"	function	line:535	signature:(char NS, double xb, double yb, double yp, double ym, int bdy, double mp)
-CalcHorizontalPHICoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcHorizontalPHICoefficient (char EW, double xb, double yb, double xp, double xm, int bdx, double mp) {$/;"	function	line:544	signature:(char EW, double xb, double yb, double xp, double xm, int bdx, double mp)
-CalcVerticalFCoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcVerticalFCoefficient (double xb, double yb, double yp, double ym, int bdy, double mp) {$/;"	function	line:553	signature:(double xb, double yb, double yp, double ym, int bdy, double mp)
-CalcHorizontalFCoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcHorizontalFCoefficient (double xb, double yb, double xp, double xm, int bdx, double mp) {$/;"	function	line:564	signature:(double xb, double yb, double xp, double xm, int bdx, double mp)
+u_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double u_ftn( double z, double r) {$/;"	function	line:7	signature:( double z, double r)
+dudx_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double dudx_ftn( double x, double y) {$/;"	function	line:23	signature:( double x, double y)
+dudy_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double dudy_ftn( double x, double y) {$/;"	function	line:27	signature:( double x, double y)
+b_u_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double b_u_ftn(double x, double y) {$/;"	function	line:31	signature:(double x, double y)
+f_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double f_ftn( double z, double r ) {$/;"	function	line:37	signature:( double z, double r )
+eps_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double eps_ftn( double x, double y ) {$/;"	function	line:48	signature:( double x, double y )
+phi_ftn	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double phi_ftn(double z, double r) {$/;"	function	line:55	signature:(double z, double r)
+integral_phi	/Users/junhong/github/Unbounded_domain_AGM/Header/ftns.h	/^double integral_phi (double z, double r, char xy) {$/;"	function	line:62	signature:(double z, double r, char xy)
 UTIL_H	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^#define UTIL_H$/;"	macro	line:2
-strSplit	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^void strSplit(string strOrigin, string strTok, double *temp, int *numtemp) {$/;"	function	line:7	signature:(string strOrigin, string strTok, double *temp, int *numtemp)
-is_member	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^int is_member (int target, int *memberSet, int range) {$/;"	function	line:56	signature:(int target, int *memberSet, int range)
-is_member	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^int is_member (double target, double *memberSet, int range) {$/;"	function	line:65	signature:(double target, double *memberSet, int range)
-point_distance	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double point_distance(double x1, double y1, double x2, double y2) {$/;"	function	line:73	signature:(double x1, double y1, double x2, double y2)
-CountInterface	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^int CountInterface (AxialData *adat, Point *pt) {$/;"	function	line:92	signature:(AxialData *adat, Point *pt)
-sortPts	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^void sortPts (AxialData *adat, Point *pt) {$/;"	function	line:100	signature:(AxialData *adat, Point *pt)
-PrintError	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^void PrintError(const char* massage) {$/;"	function	line:236	signature:(const char* massage)
-gauss_quadrature	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double gauss_quadrature (std::function<double (double)> fp, double alpha, double beta) {$/;"	function	line:246	signature:(std::function<double (double)> fp, double alpha, double beta)
-greens_function	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_function (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:310	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
-greens_function_t	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_function_t (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:381	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
-greens_function_tau	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_function_tau (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:458	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
-greens_function_ttau	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_function_ttau (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:512	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
-function_integral	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double function_integral (double (*fp) (double, double, double, double, double, double, int, int, double, double),  int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:798	signature:(double (*fp) (double, double, double, double, double, double, int, int, double, double), int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
-greens_integral	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_integral (int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:860	signature:(int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
-greens_integral_t	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_integral_t (int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:866	signature:(int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
-greens_integral_tau	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_integral_tau (int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:872	signature:(int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
-greens_integral_ttau	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_integral_ttau (int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:878	signature:(int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
-greens_coefficient_t	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_coefficient_t (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:884	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
-greens_coefficient_ttau	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_coefficient_ttau (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:936	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
+strSplit	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^void strSplit (string strOrigin, string strTok, double *temp, int *numtemp) {$/;"	function	line:7	signature:(string strOrigin, string strTok, double *temp, int *numtemp)
+is_member	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^int is_member (int target, int *memberSet, int range) {$/;"	function	line:42	signature:(int target, int *memberSet, int range)
+is_member	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^int is_member (double target, double *memberSet, int range) {$/;"	function	line:51	signature:(double target, double *memberSet, int range)
+point_distance	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double point_distance (double x1, double y1, double x2, double y2) {$/;"	function	line:59	signature:(double x1, double y1, double x2, double y2)
+round	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double round (double value, int pos) {$/;"	function	line:65	signature:(double value, int pos)
+CountInterface	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^int CountInterface (AxialData *adat, Point *pt) {$/;"	function	line:74	signature:(AxialData *adat, Point *pt)
+sortPts	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^void sortPts (AxialData *adat, Point *pt) {$/;"	function	line:82	signature:(AxialData *adat, Point *pt)
+Calc_Error	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double Calc_Error (AxialData *adat, Point *pts) {$/;"	function	line:120	signature:(AxialData *adat, Point *pts)
+PrintError	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^void PrintError (const char* massage) {$/;"	function	line:156	signature:(const char* massage)
+gauss_quadrature	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double gauss_quadrature (std::function<double (double)> fp, double alpha, double beta) {$/;"	function	line:166	signature:(std::function<double (double)> fp, double alpha, double beta)
+greens_function	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_function (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:193	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
+greens_function_t	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_function_t (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:280	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
+greens_function_tau	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_function_tau (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:367	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
+greens_function_ttau	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_function_ttau (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:448	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
+greens_integral	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_integral (int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:520	signature:(int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
+greens_integral_tau	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_integral_tau (int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:651	signature:(int index, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
+greens_coefficient_t	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_coefficient_t (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:843	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
+greens_coefficient_ttau	/Users/junhong/github/Unbounded_domain_AGM/Header/util.h	/^double greens_coefficient_ttau (double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2) {$/;"	function	line:909	signature:(double t, double tm, double tb, double tp, double xb, double yb, int node, int bdc, double mp1, double mp2)
+CALCREPRESENSOL_H	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^#define CALCREPRESENSOL_H$/;"	macro	line:2
+CalcRepresenCoef	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^void CalcRepresenCoef (Point *pt, Point *pts, xData *xdat, yData *ydat) {$/;"	function	line:13	signature:(Point *pt, Point *pts, xData *xdat, yData *ydat)
+TransposeBoundaryData	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^void TransposeBoundaryData (Point *pt, Point *pts, xData *xdat, yData *ydat) {$/;"	function	line:432	signature:(Point *pt, Point *pts, xData *xdat, yData *ydat)
+AssignPhivalue	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^void AssignPhivalue (AxialData *adat, Point *pt) {$/;"	function	line:707	signature:(AxialData *adat, Point *pt)
+SetInterfaceBoundary	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^int SetInterfaceBoundary (Point *pt, Point *pts, char EWNS) {$/;"	function	line:735	signature:(Point *pt, Point *pts, char EWNS)
+SetInterfaceCoordinate	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^int SetInterfaceCoordinate (Point *pt, Point *pts, double *xm, double *xb, double *xp, double *ym, double *yb, double *yp) {$/;"	function	line:779	signature:(Point *pt, Point *pts, double *xm, double *xb, double *xp, double *ym, double *yb, double *yp)
+CalcVerticalUCoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcVerticalUCoefficient (char NS, double xb, double yb, double yp, double ym, int bdy, double mp) {$/;"	function	line:820	signature:(char NS, double xb, double yb, double yp, double ym, int bdy, double mp)
+CalcHorizontalUCoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcHorizontalUCoefficient (char EW, double xb, double yb, double xp, double xm, int bdx, double mp) {$/;"	function	line:829	signature:(char EW, double xb, double yb, double xp, double xm, int bdx, double mp)
+CalcVerticalPHICoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcVerticalPHICoefficient (char NS, double xb, double yb, double yp, double ym, int bdy, double mp) {$/;"	function	line:838	signature:(char NS, double xb, double yb, double yp, double ym, int bdy, double mp)
+CalcHorizontalPHICoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcHorizontalPHICoefficient (char EW, double xb, double yb, double xp, double xm, int bdx, double mp) {$/;"	function	line:847	signature:(char EW, double xb, double yb, double xp, double xm, int bdx, double mp)
+CalcVerticalFCoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcVerticalFCoefficient (double xb, double yb, double yp, double ym, int bdy, double mp) {$/;"	function	line:856	signature:(double xb, double yb, double yp, double ym, int bdy, double mp)
+CalcHorizontalFCoefficient	/Users/junhong/github/Unbounded_domain_AGM/Header/CalcRepresenSol.h	/^double CalcHorizontalFCoefficient (double xb, double yb, double xp, double xm, int bdx, double mp) {$/;"	function	line:867	signature:(double xb, double yb, double xp, double xm, int bdx, double mp)

@@ -239,13 +239,13 @@ Region & Region::make2Dgrid () {
 
   for (double i = gridinfo[2] + gridinfo[6]; i < gridinfo[4] - 0.5 * gridinfo[6]; i += gridinfo[6]) {
 
-    xgrid2d[nXgrid].SetLine(gridinfo[1] - 0.5 * gridinfo[6], i, gridinfo[3] + 0.5 * gridinfo[6], i); nXgrid++;
+    xgrid2d[nXgrid].SetLine(round(gridinfo[1] - 0.5 * gridinfo[6], Margin), round(i, Margin), round(gridinfo[3] + 0.5 * gridinfo[6], Margin), round(i, Margin)); nXgrid++;
 
   }
 
   for (double i = gridinfo[1] + gridinfo[5]; i < gridinfo[3] - 0.5 * gridinfo[5]; i += gridinfo[5]) {
 
-    ygrid2d[nYgrid].SetLine(i, gridinfo[2] - 0.5 * gridinfo[5], i, gridinfo[4] + 0.5 * gridinfo[5]); nYgrid++;
+    ygrid2d[nYgrid].SetLine(round(i, Margin), round(gridinfo[2] - 0.5 * gridinfo[5], Margin), round(i, Margin), round(gridinfo[4] + 0.5 * gridinfo[5], Margin)); nYgrid++;
 
   }
 

@@ -10,6 +10,9 @@
 #include <limits>
 #include <time.h>
 #include <functional>
+#include <stdarg.h>
+#include <cstdlib>
+#include "exponential_integral_Ei.h"
 
 #ifndef  PI
 #define  PI   M_PI
@@ -18,6 +21,7 @@
 #define  ZeroValue        0.00000000000000000000E+00
 #define  UnitValue        1.00000000000000000000E+00
 #define  NearZero         5.00000000000000000000E-14  // marginal zero
+#define  Margin           10
 
 // dimensions
 #define    D2    2
@@ -1005,6 +1009,7 @@ int    CellMemoryCheck( Cell * );
 int    AxialLineMemoryCheck (AxialLine *);
 int    IsEqualDouble (double, double);
 int    IsEqualDouble (double, double, double);
+double round(double, int);
 
 void PrintError (const char*);
 

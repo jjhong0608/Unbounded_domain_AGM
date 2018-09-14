@@ -625,6 +625,7 @@ AxialData & AxialData::LoadAxialData (string AxialFile_input) {
         for (size_t i = Oin_pts_num; i < pts_num; i++) {
           AxialFile >> tmp >> pts[i][0] >> pts[i][1] >> bc_u[i];
           if (bc_u[i] != 'I') AxialFile >> b_u[i];
+          // if (pts[i][1] < 1.0000000000000000e-8 && bc_u[i] == 'I') bc_u[i] = 'N';
           mp_u[i] = mp;
         }
         Opts_num = pts_num;
@@ -713,7 +714,11 @@ AxialData & AxialData::LoadAxialData (string AxialFile_input) {
 
 AxialData & AxialData::AssignBoundaryValue () {
 
-  for (size_t i = 0; i < pts_num; i++) if (IsEqualDouble(b_u[i], 0) && bc_u[i] == 'D') b_u[i] = b_u_ftn(pts[i][0], pts[i][1]);
+  for (size_t i = 0; i < pts_num; i++) {
+    if (IsEqualDouble(b_u[i], 0) && bc_u[i] == 'D') b_u[i] = b_u_ftn(pts[i][0], pts[i][1]);
+    if (IsEqualDouble (pts[i][0], 0.0) && IsEqualDouble (pts[i][1], 0.0)) bc_u[i] = 'S';
+  }
+
 
   return *this;
 }

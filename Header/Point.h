@@ -267,21 +267,33 @@ Point & Point::SetMinMax (Point * pts) {
 Point & Point::SetInterfaceMinMax (Point * pts) {
 
   if (this->EWNS('E', 'E') == this->Index()) {
+    if (this->EWNS('N', 'N') != -1) if (pts[this->EWNS('N', 'N')].EWNS('E', 'E') != -1) SetMinMaxCoordinate('x', 'p', pts[pts[this->EWNS('N', 'N')].EWNS('E', 'E')].Coordinate('x'));
+    if (this->EWNS('S', 'S') != -1) if (pts[this->EWNS('S', 'S')].EWNS('E', 'E') != -1) SetMinMaxCoordinate('x', 'p', pts[pts[this->EWNS('S', 'S')].EWNS('E', 'E')].Coordinate('x'));
+
     if (this->EWNS('N', 'E') != -1) SetMinMaxCoordinate('x', 'p', pts[NE].Coordinate('x'));
     if (this->EWNS('S', 'E') != -1) SetMinMaxCoordinate('x', 'p', pts[SE].Coordinate('x'));
   }
 
   if (this->EWNS('W', 'W') == this->Index()) {
+    if (this->EWNS('N', 'N') != -1) if (pts[this->EWNS('N', 'N')].EWNS('W', 'W') != -1) SetMinMaxCoordinate('x', 'm', pts[pts[this->EWNS('N', 'N')].EWNS('W', 'W')].Coordinate('x'));
+    if (this->EWNS('S', 'S') != -1) if (pts[this->EWNS('S', 'S')].EWNS('W', 'W') != -1) SetMinMaxCoordinate('x', 'm', pts[pts[this->EWNS('S', 'S')].EWNS('W', 'W')].Coordinate('x'));
+
     if (this->EWNS('N', 'W') != -1) SetMinMaxCoordinate('x', 'm', pts[NW].Coordinate('x'));
     if (this->EWNS('S', 'W') != -1) SetMinMaxCoordinate('x', 'm', pts[SW].Coordinate('x'));
   }
 
   if (this->EWNS('N', 'N') == this->Index()) {
+    if (this->EWNS('E', 'E') != -1) if (pts[this->EWNS('E', 'E')].EWNS('N', 'N') != -1) SetMinMaxCoordinate('y', 'p', pts[pts[this->EWNS('E', 'E')].EWNS('N', 'N')].Coordinate('y'));
+    if (this->EWNS('W', 'W') != -1) if (pts[this->EWNS('W', 'W')].EWNS('N', 'N') != -1) SetMinMaxCoordinate('y', 'p', pts[pts[this->EWNS('W', 'W')].EWNS('N', 'N')].Coordinate('y'));
+
     if (this->EWNS('E', 'N') != -1) SetMinMaxCoordinate('y', 'p', pts[EN].Coordinate('y'));
     if (this->EWNS('W', 'N') != -1) SetMinMaxCoordinate('y', 'p', pts[WN].Coordinate('y'));
   }
 
   if (this->EWNS('S', 'S') == this->Index()) {
+    if (this->EWNS('E', 'E') != -1) if (pts[this->EWNS('E', 'E')].EWNS('S', 'S') != -1) SetMinMaxCoordinate('y', 'm', pts[pts[this->EWNS('E', 'E')].EWNS('S', 'S')].Coordinate('y'));
+    if (this->EWNS('W', 'W') != -1) if (pts[this->EWNS('W', 'W')].EWNS('S', 'S') != -1) SetMinMaxCoordinate('y', 'm', pts[pts[this->EWNS('W', 'W')].EWNS('S', 'S')].Coordinate('y'));
+
     if (this->EWNS('E', 'S') != -1) SetMinMaxCoordinate('y', 'm', pts[ES].Coordinate('y'));
     if (this->EWNS('W', 'S') != -1) SetMinMaxCoordinate('y', 'm', pts[WS].Coordinate('y'));
   }
